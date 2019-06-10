@@ -3,6 +3,9 @@
 # FB config
 ./config
 
+# db
+/api/database.json
+
 # dependencies
 /node_modules
 /.pnp
