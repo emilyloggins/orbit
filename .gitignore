@@ -4,7 +4,7 @@
 ./config
 
 # db
-/api/database.json
+*.json
 
 # dependencies
 /node_modules
