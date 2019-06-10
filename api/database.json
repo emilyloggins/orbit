@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "email": "em.loggins7@gmail.com",
+      "username": "emloggins",
+      "password": "kate4032",
+      "id": 1
+    },
+    {
+      "email": "em.loggins7@gmail.com",
+      "username": "emloggins",
+      "password": null,
+      "id": "KKHHDPpSrufcFUMeysyNuyGDtrX2"
+    },
+    {
+      "email": "new@gmail.com",
+      "username": "new",
+      "password": "newnewnew",
+      "id": 2
+    }
+  ]
+}
