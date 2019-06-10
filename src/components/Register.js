@@ -32,7 +32,7 @@ export default class Example extends Component {
     saveUserToJsonServer(user)
       .then((user) => {
         console.log(user)
-        this.props.history.push('/');
+        this.props.history.push('/home');
         this.props.onRegister(user);
       });
   }

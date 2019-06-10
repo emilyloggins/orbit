@@ -139,7 +139,11 @@ export const getUserFromLocalStorage = () => {
 }
 
 export const logout = () => {
-  localStorage.removeItem('user');
+  localStorage.removeItem('user')
+  const nullUser = {
+    user: ''
+  }
+  this.setState(nullUser)
 }
 
 export const registerWithFirebase = (email, password) => {
