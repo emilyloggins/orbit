@@ -6,6 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-css/semantic.min.css';
 import * as firebase from 'firebase'
 import { FBApiKey, FBAuthDomain, FBDatabaseURL, FBProjectID, FBStorageBucket, FBMessageSenderID, FBAppID } from './config'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const firebaseConfig = {
   apiKey: FBApiKey,

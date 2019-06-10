@@ -1,22 +1,13 @@
 {
   "users": [
     {
-      "email": "em.loggins7@gmail.com",
-      "username": "emloggins",
-      "password": "kate4032",
-      "id": 1
-    },
-    {
-      "email": "em.loggins7@gmail.com",
+      "email": "emily@climbnashville.com",
       "username": "emloggins",
       "password": null,
-      "id": "KKHHDPpSrufcFUMeysyNuyGDtrX2"
-    },
-    {
-      "email": "new@gmail.com",
-      "username": "new",
-      "password": "newnewnew",
-      "id": 2
+      "street": "1708 Acklen Ave., Apt. 25",
+      "city": "Nashville",
+      "zip": "37212",
+      "id": "Wsrl3YaQ4WPIJKRCm67cdfD84xH3"
     }
   ]
 }
