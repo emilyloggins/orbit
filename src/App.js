@@ -4,6 +4,7 @@ import Navbar from './components/nav/NavBar'
 import ApplicationViews from './components/ApplicationViews'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { getUserFromLocalStorage } from "./auth/userManager"
+import { withRouter } from 'react-router'
 
 class App extends Component {
 
@@ -19,14 +20,21 @@ class App extends Component {
     })
   }
 
+  clearUser = () => {
+    localStorage.clear("user")
+    this.setState({
+      activeUser: null
+    })
+  }
+
   render () {
     return (
       <React.Fragment>
-        <Navbar setUser={ this.setUser } activeUser={ this.state.activeUser } />
-        <ApplicationViews setUser={ this.setUser } activeUser={ this.state.activeUser } />
+        <Navbar activeUser={this.state.activeUser} clearUser={this.clearUser}/>
+        <ApplicationViews {...this.props} setUser={ this.setUser } clearUser={this.clearUser} activeUser={ this.state.activeUser } />
       </React.Fragment>
     )
   }
 }
 
-export default App
+export default withRouter(App)

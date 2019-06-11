@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import "./NavBar.css"
 
 class NavBar extends Component {
     constructor(props) {
@@ -19,19 +20,22 @@ class NavBar extends Component {
     render() {
         return (
             <div>
-                <Navbar color="light" light expand="md">
-                    <NavbarBrand href="/">Orbit</NavbarBrand>
+                <Navbar className="nav-bar-main" light expand="md">
+                    <NavbarBrand className="nav-text" href="/">ORBIT</NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink href="/components/">Pack</NavLink>
+                                <NavLink className="nav-text-side" href="/components/">Pack</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/components/">Connect</NavLink>
+                                <NavLink className="nav-text-side" href="/components/">Connect</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink href="/components/">GET OUT</NavLink>
+                                <NavLink className="nav-text-side" href="/components/"></NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink className="nav-text-side" id="alert-nav" href="/components/">GET OUT</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>

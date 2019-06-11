@@ -1,0 +1,16 @@
+.nav-bar-main {
+    background-color: #86C232;
+}
+.nav-text {
+    font-weight: bold;
+    letter-spacing: .5em;
+}
+.nav-text-side {
+    color: #1D343C;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+#alert-nav {
+color: red;
+margin: 0;
+}

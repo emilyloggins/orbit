@@ -3,29 +3,30 @@ import { Form, Button, Container, Grid, Segment, Header, Message } from 'semanti
 import { Link } from 'react-router-dom';
 import { loginFunction } from '../auth/userManager';
 import './Login.css'
+import { withRouter } from 'react-router-dom'
 
-export default class Login extends Component {
-  state = {
-    email: '',
-    password: ''
-  }
+class Login extends Component {
+state = {
+  email: '',
+  password: '',
+}
+  handleFieldChange = evt => {
+    const stateToChange = {};
+    stateToChange[evt.target.id] = evt.target.value;
+    this.setState(stateToChange);
+  };
 
   submit = () => {
     loginFunction(this.state.email, this.state.password)
       .then((user) => {
         this.props.onLogin(user);
-        this.props.history.push('/');
+        this.props.history.push("/home")
       });
-      const user = {
-        email: this.state.email,
-        password: this.state.password
-      }
-      // this.props.setUser(user)
   }
 
   render() {
     return (
-      
+
       <Container className="auth--container">
         <Grid>
           <Grid.Row centered>
@@ -38,16 +39,18 @@ export default class Login extends Component {
                   <Form.Field
                     control="input"
                     type="email"
-                    label="Email Address"
+                    name="email"
+                    id="email"
                     placeholder="Enter an email"
-                    onChange={(e) => this.setState({ email: e.target.value })}
+                    onChange={this.handleFieldChange}
                   />
                   <Form.Field
                     control="input"
                     type="password"
-                    label="Password"
+                    name="password"
+                    id="password"
                     placeholder="Password"
-                    onChange={(e) => this.setState({ password: e.target.value })}
+                    onChange={this.handleFieldChange}
                   />
                   <Form.Field control="input" type="hidden" />
                   <Button fluid content="Log in" color="green" />
@@ -63,3 +66,5 @@ export default class Login extends Component {
     )
   }
 }
+
+export default withRouter(Login)

@@ -63,9 +63,6 @@ export const register = (user) => {
       setUserInLocalStorage(newUserFromJSONServer);
       return newUserFromJSONServer;
     })
-    .catch(function (error) {
-      alert(`Yikes`)
-    })
 }
 
 export const loginFunction = (email, password) => {

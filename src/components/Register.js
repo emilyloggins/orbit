@@ -1,45 +1,50 @@
 import React, { Component } from 'react';
-import { saveUserToJsonServer } from '../auth/userManager';
 import { register } from '../auth/userManager'
 import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { withRouter } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-export default class Example extends Component {
+class Register extends Component {
   state = {
+    firstName: '',
+    lastName: '',
     email: '',
     username: '',
     password: '',
     street: '',
-    street2: '',
     city: '',
     state: '',
     zip: ''
   }
 
+
   submit = () => {
-    const user = {
+    register({
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
       email: this.state.email,
       username: this.state.username,
       password: this.state.password,
       street: this.state.street,
       city: this.state.city,
       zip: this.state.zip
-    }
-
-    register(user)
-      .then(newUser => {
-        this.props.onRegister(newUser);
-        this.props.setUser(newUser)
-        this.props.history.push('/home');
-
-        // saveUserToJsonServer(user)
-        //   .then((user) => {
-        //     console.log(user)
-        //     this.props.onRegister(user);
-        //     this.props.history.push('/home');
-      });
+    }).then(newUser => {
+      this.props.onRegister(newUser);
+      this.props.history.push('/home');
+    });
   }
+
+  //   register(user)
+  //     .then(newUser => {
+  //       this.props.onRegister(newUser)
+  //       this.props.history.push('/home');
+  //     });
+  // }
+
+  // renderDashboard = () => {
+  //   this.props.history.push("/home/")
+  // }
 
   render() {
     return (
@@ -102,3 +107,6 @@ export default class Example extends Component {
     );
   }
 }
+
+
+export default withRouter(Register)
