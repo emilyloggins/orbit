@@ -1,13 +1,42 @@
 {
   "users": [
     {
-      "email": "emily@climbnashville.com",
+      "firstName": "Emily",
+      "lastName": "Loggins",
+      "email": "em@gmail.com",
       "username": "emloggins",
       "password": null,
-      "street": "1708 Acklen Ave., Apt. 25",
-      "city": "Nashville",
-      "zip": "37212",
-      "id": "Wsrl3YaQ4WPIJKRCm67cdfD84xH3"
+      "street": "1222 street",
+      "city": "nashville",
+      "zip": "30291",
+      "id": "sqdePbnxmZhhSYR2VMMmrnfW4Ea2"
+    }
+  ],
+  "packItems": [
+    {
+      "id": 1,
+      "userId": "L0lGdLf",
+      "packId": 1,
+      "itemId": 1
+    }
+  ],
+  "packs": [
+    {
+      "id": 1,
+      "name": "Fire",
+      "description": "I created this pack to prepare for the possibility that the aliens rely heavily on fire as a weapon"
+    },
+    {
+      "id": 1,
+      "name": "Ice",
+      "description": "I created this pack to prepare for the possibility that the aliens rely heavily on ice as a weapon"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "Water",
+      "quantity": 3
     }
   ]
 }

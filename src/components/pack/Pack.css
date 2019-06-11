@@ -1,0 +1,37 @@
+
+.pack-main-container {
+    display: flex;
+    padding-top: 3em;
+}
+.new-pack-div {
+    width: 45%;
+    margin: 5%;
+    color: #FFFFFF;
+}
+.pack-blurb {
+    font-size: 1.5em;
+    padding-bottom: 3em;
+}
+.new-pack-inputgroup {
+    display: flex;
+    padding: 1em;
+}
+.pack-list-header {
+    color: #ffffff;
+}
+.pack-title-header {
+    background-color: #86C232;
+    color: #1D343C;
+}
+.pack-item-div {
+    margin: 5%;
+}
+.main-btn {
+    background-color: #86C232;
+    color: #1D343C;
+    border: none;
+}
+.main-btn:hover {
+    background-color: #474b4f;
+    color:#ffffff;
+}
