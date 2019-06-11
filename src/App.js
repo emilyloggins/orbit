@@ -8,14 +8,22 @@ import { getUserFromLocalStorage } from "./auth/userManager"
 class App extends Component {
 
   state = {
-    user: getUserFromLocalStorage()
+    activeUser: getUserFromLocalStorage()
+  }
+
+  setUser = (user) => {
+    //puts the active user in local storage, necessary for editing user profile
+    localStorage.setItem("user", JSON.stringify(user));
+    this.setState({
+      activeUser: user
+    })
   }
 
   render () {
     return (
       <React.Fragment>
-        <Navbar />
-        <ApplicationViews user={this.state.user} getUserFromLocalStorage={this.getUserFromLocalStorage} />
+        <Navbar setUser={ this.setUser } activeUser={ this.state.activeUser } />
+        <ApplicationViews setUser={ this.setUser } activeUser={ this.state.activeUser } />
       </React.Fragment>
     )
   }

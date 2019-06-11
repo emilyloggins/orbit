@@ -14,13 +14,17 @@ export default class Login extends Component {
     loginFunction(this.state.email, this.state.password)
       .then((user) => {
         this.props.onLogin(user);
-        this.props.history.push('/home');
+        this.props.history.push('/');
       });
+      const user = {
+        email: this.state.email,
+        password: this.state.password
+      }
+      // this.props.setUser(user)
   }
 
   render() {
     return (
-// working
       
       <Container className="auth--container">
         <Grid>

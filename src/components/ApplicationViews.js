@@ -14,16 +14,20 @@ class ApplicationViews extends Component {
     return (
       <div className="App">
         <Router>
-          <Route path="/welcome" render={(props) => <Landing user={this.props.user} />} />
-          <Route path="/login" render={(props) => <Login {...props} loginFunction={loginFunction} onLogin={(user) => this.setState({ user: user })} />} />
-          <Route path="/register" render={(props) => <Register {...props} onRegister={(user) => this.setState({ user: user })} />} />
-          <Route exact path="/home" render={(props) => {
-            return this.props.user ? (
-              <Home {...props} user={this.props.user} onLogout={logout} />
-            ) : (
-                <Redirect to="/login" />
-              )
-          }} />
+          <Route path="/" render={(props) => <Landing user={this.props.user} />} />
+          <Route exact path="/home" render={(props) => <Home                   {...props}
+            {...this.props}
+            user={ this.state.user }
+            onLogout={logout} />
+          } />
+          <Route path="/login" render={(props) =>
+            <Login {...props} setUser={this.setUser}
+              onLogin={(user) => this.setState({ user: user })} />}
+          />
+          <Route path="/register" render={(props) =>
+            <Register {...props}
+              onRegister={(user) => this.setState({ user: user })} setUser={this.setUser} />}
+          />
         </Router>
       </div>
     );

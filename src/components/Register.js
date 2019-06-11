@@ -12,9 +12,9 @@ export default class Example extends Component {
     password: '',
     street: '',
     street2: '',
-    city:'',
+    city: '',
     state: '',
-    zip:''
+    zip: ''
   }
 
   submit = () => {
@@ -28,12 +28,16 @@ export default class Example extends Component {
     }
 
     register(user)
-
-    saveUserToJsonServer(user)
-      .then((user) => {
-        console.log(user)
+      .then(newUser => {
+        this.props.onRegister(newUser);
+        this.props.setUser(newUser)
         this.props.history.push('/home');
-        this.props.onRegister(user);
+
+        // saveUserToJsonServer(user)
+        //   .then((user) => {
+        //     console.log(user)
+        //     this.props.onRegister(user);
+        //     this.props.history.push('/home');
       });
   }
 
@@ -64,17 +68,17 @@ export default class Example extends Component {
           <Col md={6}>
             <FormGroup>
               <Label for="password">Password</Label>
-              <Input type="password" name="password" id="password" placeholder="password"  onChange={(e) => this.setState({ password: e.target.value })} />
+              <Input type="password" name="password" id="password" placeholder="password" onChange={(e) => this.setState({ password: e.target.value })} />
             </FormGroup>
           </Col>
         </Row>
         <FormGroup>
           <Label for="street">Email</Label>
-          <Input type="email" name="email" id="email" placeholder="email" onChange={(e) => this.setState({ email: e.target.value })}/>
+          <Input type="email" name="email" id="email" placeholder="email" onChange={(e) => this.setState({ email: e.target.value })} />
         </FormGroup>
         <FormGroup>
           <Label for="street">Address</Label>
-          <Input type="text" name="street" id="street" placeholder="1234 Main St" onChange={(e) => this.setState({ street: e.target.value })}/>
+          <Input type="text" name="street" id="street" placeholder="1234 Main St" onChange={(e) => this.setState({ street: e.target.value })} />
         </FormGroup>
         <Row form>
           <Col md={6}>
@@ -84,13 +88,13 @@ export default class Example extends Component {
           </Col>
           <Col md={4}>
             <FormGroup>
-              <Input type="text" name="state" id="state" placeholder="State" onChange={(e) => this.setState({ state: e.target.value })}/>
+              <Input type="text" name="state" id="state" placeholder="State" onChange={(e) => this.setState({ state: e.target.value })} />
             </FormGroup>
           </Col>
           <Col md={2}>
             <FormGroup>
-              <Input type="text" name="zip" id="zip" placeholder="Zip Code" onChange={(e) => this.setState({ zip: e.target.value })}/>
-            </FormGroup>  
+              <Input type="text" name="zip" id="zip" placeholder="Zip Code" onChange={(e) => this.setState({ zip: e.target.value })} />
+            </FormGroup>
           </Col>
         </Row>
         <Button onClick={this.submit}>Register</Button>
