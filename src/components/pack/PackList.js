@@ -9,6 +9,7 @@ class PackList extends Component {
         return (
             <div className="pack-list-div">
                 <h1 className="pack-list-header">YOUR PACKS</h1>
+                <div className="scrolling-pack-div">
                 {
                     this.props.packs.map(item => {
                         return (
@@ -18,6 +19,7 @@ class PackList extends Component {
                         )
                     })
                 }
+                </div>
             </div>
 
         )

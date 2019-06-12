@@ -31,7 +31,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navbar activeUser={this.state.activeUser} clearUser={this.clearUser}/>
-        <ApplicationViews {...this.props} setUser={ this.setUser } clearUser={this.clearUser} activeUser={ this.state.activeUser } />
+        <ApplicationViews setUser={ this.setUser } clearUser={this.clearUser} activeUser={ this.state.activeUser } />
       </React.Fragment>
     )
   }

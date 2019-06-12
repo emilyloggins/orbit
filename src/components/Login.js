@@ -6,10 +6,11 @@ import './Login.css'
 import { withRouter } from 'react-router-dom'
 
 class Login extends Component {
-state = {
-  email: '',
-  password: '',
-}
+  state = {
+    email: '',
+    password: '',
+  }
+
   handleFieldChange = evt => {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
@@ -19,7 +20,7 @@ state = {
   submit = () => {
     loginFunction(this.state.email, this.state.password)
       .then((user) => {
-        this.props.onLogin(user);
+        this.props.setUser(user);
         this.props.history.push("/home")
       });
   }

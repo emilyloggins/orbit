@@ -4,28 +4,23 @@ import { userInfo } from 'os';
 
 export default class Home extends Component {
 
-  state = {
-    activeUser: this.props.activeUser
-  }
-
   logout = () => {
     this.props.clearUser();
     this.props.history.push('/');
   }
 
   render() {
-    this.forceUpdate()
 
     return (
       <Container className="home--container">
         <Grid>
           <Button
-            onClick={this.logout()}
+            onClick={this.logout}
             content="Log Out"
             color="purple" />
           <Grid.Row centered>
             <Grid.Column largeScreen={8} computer={10} tablet={12} mobile={16}>
-              <Header textAlign="center">Welcome!</Header>
+              <Header textAlign="center">Welcome {this.props.activeUser.firstName}!</Header>
               <Message
                 icon="lock"
                 header="Protected Content"
