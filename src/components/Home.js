@@ -4,17 +4,12 @@ import { userInfo } from 'os';
 
 export default class Home extends Component {
 
-  state = {
-    activeUser: this.props.activeUser
-  }
-
   logout = () => {
     this.props.clearUser();
     this.props.history.push('/');
   }
 
   render() {
-    this.forceUpdate()
 
     return (
       <Container className="home--container">

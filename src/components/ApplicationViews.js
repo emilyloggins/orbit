@@ -29,7 +29,7 @@ class ApplicationViews extends Component {
         <Router>
           <Route path="/welcome" render={(props) => <Landing user={this.props.user} />} />
           <Route exact path="/home" render={props => {
-            if (this.isAuthenticated()) {
+            if (this.props.activeUser) {
               return <Home {...props}
                 activeUser={this.props.activeUser}
                 clearUser={this.props.clearUser} />
@@ -38,9 +38,8 @@ class ApplicationViews extends Component {
             }
           }} />
           <Route path="/login" render={(props) =>
-            <Login {...props} setUser={this.props.setUser}
-            onLogin={(user) => this.setState({ user: user })}
-            />}
+            <Login {...props} {...this.props} 
+            /> }
           />
           <Route path="/register" render={(props) =>
             <Register {...props}
