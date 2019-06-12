@@ -10,15 +10,21 @@ class PackList extends Component {
             <div className="pack-list-div">
                 <h1 className="pack-list-header">YOUR PACKS</h1>
                 <div className="scrolling-pack-div">
-                {
-                    this.props.packs.map(item => {
-                        return (
-                            <>
-                                <PackItem key={item.id} name={item.name} description={item.description} />
-                            </>
-                        )
-                    })
-                }
+                    {
+                        this.props.packs.map(item => {
+                            return (
+                                <>
+                                    <PackItem
+                                        {...this.props}
+                                        key={item.id}
+                                        item={item}
+                                        name={item.name}
+                                        description={item.description}
+                                        removePack={this.props.removePack} />
+                                </>
+                            )
+                        })
+                    }
                 </div>
             </div>
 

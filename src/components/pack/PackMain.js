@@ -11,13 +11,17 @@ class PackMain extends Component {
         newForm: false
     }
 
+    removePack = (id) => {
+        this.props.deletePack(id);
+    }
     render() {
         return (
-            <div className="pack-main-container">
+            <div className="pack-main-container bgImage">
                 <NewPack addPack={this.props.addPack}/>
                 <PackList 
                 {...this.props}
-                packs={this.props.packs} />
+                packs={this.props.packs}
+                removePack={this.props.removePack} />
             </div>
         )
     }

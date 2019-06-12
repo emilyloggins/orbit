@@ -1,0 +1,12 @@
+.bgImage {
+    background: url(../../img/starmap.jpg) no-repeat center center;
+    background-size: 100% 100%;
+    padding-bottom: 50%
+  }
+  .welcome-card-div {
+    background-color: #1D343C;
+    color: #86C232;
+    width: 40%;
+    height: auto;
+    padding: 3%;
+  }

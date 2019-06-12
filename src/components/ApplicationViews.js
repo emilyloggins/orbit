@@ -29,6 +29,17 @@ class ApplicationViews extends Component {
       });
   };
 
+  deletePack = id => {
+    const newState = {};
+    PackManager.deletePack(id)
+      .then(PackManager.getAllPacks)
+      .then(packs => (newState.packs = packs))
+      .then(() => {
+        this.props.history.push("/packs");
+        this.setState(newState);
+      });
+  };
+
   componentDidMount () {
     const newState = {};
     PackManager.getAllPacks()
@@ -63,7 +74,8 @@ class ApplicationViews extends Component {
               return <PackMain {...props}
                 addPack={this.addPack}
                 packs={this.state.packs}
-                activeUser={this.props.activeUser} />
+                activeUser={this.props.activeUser}
+                deletePack={this.deletePack} />
             // } else {
             //   return <Redirect to="/" />
             // }
