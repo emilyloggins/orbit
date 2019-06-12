@@ -18,7 +18,6 @@ class Register extends Component {
     zip: ''
   }
 
-
   submit = () => {
     register({
       firstName: this.state.firstName,
@@ -30,7 +29,7 @@ class Register extends Component {
       city: this.state.city,
       zip: this.state.zip
     }).then(newUser => {
-      this.props.onRegister(newUser);
+      this.props.setUser(newUser);
       this.props.history.push('/home');
     });
   }

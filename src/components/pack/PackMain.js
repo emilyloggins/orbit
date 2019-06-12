@@ -14,7 +14,7 @@ class PackMain extends Component {
     render() {
         return (
             <div className="pack-main-container">
-                <NewPack />
+                <NewPack addPack={this.props.addPack}/>
                 <PackList 
                 {...this.props}
                 packs={this.props.packs} />

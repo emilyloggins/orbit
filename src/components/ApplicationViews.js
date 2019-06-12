@@ -16,6 +16,19 @@ class ApplicationViews extends Component {
 
   isAuthenticated = () => localStorage.getItem("user") !== null;
 
+  addPack = pack => {
+    const newState = {};
+    return PackManager.addPack(pack)
+      .then(() => PackManager.getAllPacks())
+      .then(packs => newState.packs = packs)
+      .then((packs) => {
+        this.props.history.push("/packs")
+        this.setState(newState)
+        //return tasks so it can be used in the form
+        return packs;
+      });
+  };
+
   componentDidMount () {
     const newState = {};
     PackManager.getAllPacks()
@@ -43,11 +56,12 @@ class ApplicationViews extends Component {
           />
           <Route path="/register" render={(props) =>
             <Register {...props}
-              onRegister={(user) => this.setState({ user: user })} setUser={this.props.setUser} />}
+            setUser={this.props.setUser} /> }
           />
-          <Route exact path="/pack" render={props => {
+          <Route exact path="/packs" render={props => {
             // if (this.isAuthenticated()) {
               return <PackMain {...props}
+                addPack={this.addPack}
                 packs={this.state.packs}
                 activeUser={this.props.activeUser} />
             // } else {

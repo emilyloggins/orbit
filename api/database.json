@@ -10,6 +10,28 @@
       "city": "nashville",
       "zip": "30291",
       "id": "sqdePbnxmZhhSYR2VMMmrnfW4Ea2"
+    },
+    {
+      "firstName": "Shelley",
+      "lastName": "Arnold",
+      "email": "shelley@gmail.com",
+      "username": "shelley",
+      "password": null,
+      "street": "111 her house street",
+      "city": "Nashville",
+      "zip": "37206",
+      "id": "kZKiQq3nCjWuAY49pm0OYy8MnKy2"
+    },
+    {
+      "firstName": "Emily",
+      "lastName": "Loggins",
+      "email": "emily@gmail.com",
+      "username": "emloggins",
+      "password": null,
+      "street": "1038 Zophi Street",
+      "city": "Nashville",
+      "zip": "37216",
+      "id": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
     }
   ],
   "packItems": [
@@ -27,9 +49,14 @@
       "description": "I created this pack to prepare for the possibility that the aliens rely heavily on fire as a weapon"
     },
     {
-      "id": 1,
+      "id": 2,
       "name": "Ice",
       "description": "I created this pack to prepare for the possibility that the aliens rely heavily on ice as a weapon"
+    },
+    {
+      "name": "Emily",
+      "description": "Test",
+      "id": 2
     }
   ],
   "items": [

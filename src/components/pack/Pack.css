@@ -1,9 +1,9 @@
-
 .pack-main-container {
     display: flex;
     padding-top: 3em;
-    padding-bottom: 30%;
+    padding-bottom: 280px;
 }
+
 .new-pack-div {
     width: 45%;
     margin: 5%;
@@ -35,4 +35,8 @@
 .main-btn:hover {
     background-color: #474b4f;
     color:#ffffff;
+}
+.scrolling-pack-div {
+    height: 600px;
+    overflow-y: scroll;
 }
