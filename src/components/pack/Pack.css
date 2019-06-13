@@ -1,9 +1,12 @@
+.bgImage {
+    background: url(../../img/starmap.jpg) no-repeat center center;
+    background-size: 100% 100%;
+  }
 .pack-main-container {
     display: flex;
     padding-top: 3em;
-    padding-bottom: 280px;
+    padding-bottom: 180px;
 }
-
 .new-pack-div {
     width: 45%;
     margin: 5%;
@@ -20,9 +23,10 @@
 .pack-list-header {
     color: #ffffff;
 }
-.pack-title-header {
+.pack-title-header1 {
     background-color: #86C232;
     color: #1D343C;
+    /* display: flex; */
 }
 .pack-item-div {
     margin: 5%;
@@ -37,6 +41,25 @@
     color:#ffffff;
 }
 .scrolling-pack-div {
-    height: 600px;
+    height: 700px;
     overflow-y: scroll;
+}
+.pack-icon {
+    width: 15px;
+    height: auto;
+    margin-left: 10px;
+}
+.pack-icon:hover {
+    cursor: pointer;
+}
+.pack-title-text {
+    margin: 0;
+}
+.pack-icons-div {
+    display: flex;
+    justify-content: flex-end;
+}
+.pack-title-header2 {
+    display: flex;
+    justify-content: center;
 }

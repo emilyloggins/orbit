@@ -1,14 +1,13 @@
-
-const URL = "http://localhost:8088/items"
+const URL = "http://localhost:8088/packItems"
 
 export default {
-  getItem (id) {
+  getJoin (id) {
     return fetch(`${URL}/${id}`).then(e => e.json())
   },
-    getAllItems () {
+    getAllJoins () {
       return fetch(`${URL}`).then(e => e.json())
     },
-    deleteItem (id) {
+    deleteJoin (id) {
       return fetch(`${URL}/${id}`, {
         method: "DELETE",
         headers: {
@@ -16,7 +15,7 @@ export default {
         }
       }).then(e => e.json())
     },
-    addItem (obj) {
+    addJoin (obj) {
       return fetch(`${URL}/`, {
         method: "POST",
         headers: {
@@ -25,13 +24,13 @@ export default {
         body: JSON.stringify(obj)
       }).then(e => e.json())
     },
-    editItem (editedItem) {
-      return fetch(`${URL}/${editedItem.id}`, {
+    editJoin (editedPack) {
+      return fetch(`${URL}/${editedPack.id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify(editedItem)
+        body: JSON.stringify(editedPack)
       }).then(data => data.json());
     }
 }
