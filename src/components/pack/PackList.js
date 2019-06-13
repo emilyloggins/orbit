@@ -16,11 +16,12 @@ class PackList extends Component {
                                 <>
                                     <PackItem
                                         {...this.props}
+                                        packItems={this.props.packItems}
                                         key={item.id}
                                         item={item}
                                         name={item.name}
                                         description={item.description}
-                                        removePack={this.props.removePack} />
+                                        deleteJoin={this.props.deleteJoin} />
                                 </>
                             )
                         })

@@ -9,19 +9,29 @@ import { FaEdit } from 'react-icons/fa'
 import './Pack.css'
 
 class PackItem extends Component {
-    constructor(props) {
-        super(props);
-    }
 
-    handleDelete() {
-        this.props.removePack(this.props.item.id);
+    // handleDelete() {
+    //     this.props.packs.map((join) => {
+    //         this.props.packItems.filter((item) => {
+    //             if (join.packId === item.id) {
+    //                 let selectedPackId = item.id
+    //                 this.props.deleteJoin(selectedPackId)
+    //             }
+    //         })
+    //     })
+    // }
+
+    handleItemClick = () => {
+        this.props.history.push("/items")
     }
 
     render() {
+        console.log("join", this.props.packItems)
+        console.log("item", this.props.item)
         return (
             <div className="pack-item-div">
                 <Card>
-                    <CardHeader className="pack-title-header1" tag="h3">
+                    <CardHeader className="pack-title-header1" tag="h3" value={this.props.item.id}>
                         <div className="pack-title-header2">
                             <h3 className="pack-title-text">{this.props.name}</h3>
                         </div>

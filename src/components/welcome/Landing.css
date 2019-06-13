@@ -4,9 +4,22 @@
     padding-bottom: 50%
   }
   .welcome-card-div {
-    background-color: #1D343C;
-    color: #86C232;
+    /* background-color: #1D343C; */
+    color: #FFFFFF;
     width: 40%;
     height: auto;
     padding: 3%;
+    float: center;
   }
+  .orbit-header-main {
+    font-size: 5em;
+    letter-spacing: .5em;
+  }
+  .description-main {
+    font-size: 1.5em;
+  }
+  .heading-bulrb-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+ }

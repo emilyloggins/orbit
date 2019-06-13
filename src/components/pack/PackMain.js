@@ -21,7 +21,8 @@ class PackMain extends Component {
                 <PackList 
                 {...this.props}
                 packs={this.props.packs}
-                removePack={this.props.removePack} />
+                packItems={this.props.packItems}
+                deleteJoin={this.props.deleteJoin} />
             </div>
         )
     }

@@ -6,15 +6,22 @@ import Home from "../components/Home"
 import Landing from "../components/welcome/Landing"
 import PackMain from "../components/pack/PackMain"
 import PackManager from "../modules/PackManager"
+import PackItemManager from "../modules/PackItemManager"
+import ItemManager from '../modules/ItemManager';
+import ItemMain from '../components/item/ItemMain'
+
 
 class ApplicationViews extends Component {
 
   state = {
+    packItems: [],
     packs: [],
     items: [],
   }
 
   isAuthenticated = () => localStorage.getItem("user") !== null;
+
+  // pack calls
 
   addPack = pack => {
     const newState = {};
@@ -40,11 +47,44 @@ class ApplicationViews extends Component {
       });
   };
 
-  componentDidMount () {
+  // Join table db calls
+  deleteJoin = id => {
+    const newState = {};
+    PackItemManager.deleteJoin(id)
+      .then(PackItemManager.getAllJoins)
+      .then(packItems => (newState.packItems = packItems))
+      .then(() => {
+        this.props.history.push("/packs");
+        this.setState(newState);
+      });
+  };
+
+  // item calls
+
+  componentDidMount() {
     const newState = {};
     PackManager.getAllPacks()
       .then(packs => { newState.packs = packs })
       .then(() => this.setState(newState));
+    PackItemManager.getAllJoins()
+      .then(packItems => { newState.packItems = packItems })
+      .then(() => this.setState(newState));
+    ItemManager.getAllItems()
+    .then(items => { newState.items = items })
+    .then(() => this.setState(newState));
+  }
+
+  componentDidUpdate() {
+    const newState = {};
+    PackManager.getAllPacks()
+      .then(packs => { newState.packs = packs })
+      .then(() => this.setState(newState));
+    PackItemManager.getAllJoins()
+      .then(packItems => { newState.packItems = packItems })
+      .then(() => this.setState(newState));
+    ItemManager.getAllItems()
+    .then(items => { newState.items = items })
+    .then(() => this.setState(newState));
   }
 
   render() {
@@ -58,27 +98,39 @@ class ApplicationViews extends Component {
                 activeUser={this.props.activeUser}
                 clearUser={this.props.clearUser} />
             } else {
-              return <Redirect to="/" />
+              return <Redirect to="/welcome" />
             }
           }} />
           <Route path="/login" render={(props) =>
-            <Login {...props} {...this.props} 
-            /> }
+            <Login {...props} {...this.props}
+            />}
           />
           <Route path="/register" render={(props) =>
             <Register {...props}
-            setUser={this.props.setUser} /> }
+              setUser={this.props.setUser} />}
           />
-          <Route exact path="/packs" render={props => {
-            // if (this.isAuthenticated()) {
+          <Route path="/packs" render={props => {
+            if (this.props.activeUser) {
               return <PackMain {...props}
                 addPack={this.addPack}
                 packs={this.state.packs}
                 activeUser={this.props.activeUser}
-                deletePack={this.deletePack} />
-            // } else {
-            //   return <Redirect to="/" />
-            // }
+                deleteJoin={this.deleteJoin}
+                packItems={this.state.packItems} />
+            } else {
+              return <Redirect to="/welcome" />
+            }
+          }} />
+          <Route path="/items" render={props => {
+            if (this.props.activeUser) {
+              return <ItemMain {...props}
+                packs={this.state.packs}
+                activeUser={this.props.activeUser}
+                packItems={this.state.packItems}
+                items={this.state.items} />
+            } else {
+              return <Redirect to="/welcome" />
+            }
           }} />
         </Router>
       </div>
@@ -87,3 +139,4 @@ class ApplicationViews extends Component {
 }
 
 export default withRouter(ApplicationViews)
+
