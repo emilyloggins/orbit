@@ -35,7 +35,7 @@ class PackItem extends Component {
                     </CardHeader>
                     <CardBody>
                         <CardText>{this.props.description}</CardText>
-                        <Button onClick={() => this.handleItemClick(this.props.item)} size="lg" className="main-btn">View Items</Button>
+                        <Button onClick={() => this.handleItemClick(this.props.item.id)} size="lg" className="main-btn">View Items</Button>
                     </CardBody>
                 </Card>
             </div>

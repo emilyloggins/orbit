@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PackItemManager from '../../modules/PackItemManager'
-import { Button } from 'reactstrap'
 import ItemContainer from './ItemContainer'
 
 class ItemList extends Component {
@@ -8,10 +7,9 @@ class ItemList extends Component {
     PackReturn = () => {
         this.props.history.push('packs')
     }
-    getJoinTable = () => {
-        // PackItemManager.getJoinByPackId(id)
-        //     .then((item) => console.log(item))
-        console.log(this.props.items.name)
+    getJoinTable = (id) => {
+        PackItemManager.getJoinByPackId(id)
+            .then((item) => console.log(item))
     }
     render() {
         return (

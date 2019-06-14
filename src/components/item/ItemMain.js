@@ -4,6 +4,7 @@ import NewItem from './NewItem'
 import { Button } from 'reactstrap'
 import { FaChevronCircleLeft } from 'react-icons/fa'
 import ItemList from './ItemList'
+import './Item.css'
 
 class ItemMain extends Component {
 
@@ -12,8 +13,8 @@ class ItemMain extends Component {
     }
     render() {
         return(
-            <div>
-            <Button onClick={this.PackReturn} color="secondary" size="lg"><FaChevronCircleLeft />Back to Packs</Button>
+            <div className="item-main-container bgImage">
+            <Button onClick={this.PackReturn} className="main-btn" color="secondary" size="lg"><FaChevronCircleLeft />Back to Packs</Button>
             <h1>Blurb about adding items to your packs</h1>
             <NewItem />
             <ItemList 
@@ -21,7 +22,8 @@ class ItemMain extends Component {
                 packs={this.props.packs}
                 packItems={this.props.packItems}
                 activeUser={this.props.activeUser}
-                chosenPack={this.props.chosenPack} />
+                chosenPack={this.props.chosenPack}
+                getJoinTableItems={this.props.getJoinTableItems} />
             </div>
         )
     }

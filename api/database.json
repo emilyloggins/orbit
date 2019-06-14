@@ -26,12 +26,6 @@
       "itemId": 2
     },
     {
-      "id": 4,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "packId": 1,
-      "itemId": 1
-    },
-    {
       "id": 5,
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
       "packId": 1,
@@ -96,6 +90,14 @@
       "name": "Laser",
       "category": "Weapon",
       "quantity": 20
+    }
+  ],
+  "messages": [
+    {
+      "id": 1,
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "body": "Hey guys!",
+      "userName": "emloggins"
     }
   ]
 }

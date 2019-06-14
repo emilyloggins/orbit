@@ -1,0 +1,18 @@
+.bgImage {
+    background: url(../../img/starmap.jpg) no-repeat center center;
+    background-size: 100% 100%;
+  }
+.item-main-container {
+    padding-top: 3em;
+    padding-bottom: 500px;
+    color: #FFFFFF;
+}
+.main-btn {
+    background-color: #86C232;
+    color: #1D343C;
+    border: none;
+}
+.main-btn:hover {
+    background-color: #86C232;
+    color:#ffffff;
+}

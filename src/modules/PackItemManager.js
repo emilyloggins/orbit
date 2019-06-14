@@ -4,8 +4,8 @@ export default {
   getJoin (id) {
     return fetch(`${URL}/${id}`).then(e => e.json())
   },
-  getJoinByPackID (packId) {
-    return fetch(`${URL}?packId=${packId}`)
+  getJoinByPackId (packId) {
+    return fetch(`${URL}?packId=${packId}`).then(e => e.json())
   },
     getAllJoins () {
       return fetch(`${URL}`).then(e => e.json())
