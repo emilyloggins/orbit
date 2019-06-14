@@ -8,8 +8,6 @@ import PackMain from "../components/pack/PackMain"
 import PackManager from "../modules/PackManager"
 import PackItemManager from "../modules/PackItemManager"
 import ItemManager from '../modules/ItemManager';
-import ItemMain from '../components/item/ItemMain'
-
 
 class ApplicationViews extends Component {
 
@@ -74,19 +72,6 @@ class ApplicationViews extends Component {
     .then(() => this.setState(newState));
   }
 
-  componentDidUpdate() {
-    const newState = {};
-    PackManager.getAllPacks()
-      .then(packs => { newState.packs = packs })
-      .then(() => this.setState(newState));
-    PackItemManager.getAllJoins()
-      .then(packItems => { newState.packItems = packItems })
-      .then(() => this.setState(newState));
-    ItemManager.getAllItems()
-    .then(items => { newState.items = items })
-    .then(() => this.setState(newState));
-  }
-
   render() {
     return (
       <div className="App">
@@ -115,19 +100,8 @@ class ApplicationViews extends Component {
                 addPack={this.addPack}
                 packs={this.state.packs}
                 activeUser={this.props.activeUser}
-                deleteJoin={this.deleteJoin}
+                deletePack={this.deletePack}
                 packItems={this.state.packItems} />
-            } else {
-              return <Redirect to="/welcome" />
-            }
-          }} />
-          <Route path="/items" render={props => {
-            if (this.props.activeUser) {
-              return <ItemMain {...props}
-                packs={this.state.packs}
-                activeUser={this.props.activeUser}
-                packItems={this.state.packItems}
-                items={this.state.items} />
             } else {
               return <Redirect to="/welcome" />
             }
