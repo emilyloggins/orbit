@@ -22,7 +22,7 @@ class PackMain extends Component {
                 {...this.props}
                 packs={this.props.packs}
                 packItems={this.props.packItems}
-                deleteJoin={this.props.deleteJoin} />
+                deletePack={this.props.deletePack} />
             </div>
         )
     }

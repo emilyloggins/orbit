@@ -3,28 +3,6 @@
     {
       "firstName": "Emily",
       "lastName": "Loggins",
-      "email": "em@gmail.com",
-      "username": "emloggins",
-      "password": null,
-      "street": "1222 street",
-      "city": "nashville",
-      "zip": "30291",
-      "id": "sqdePbnxmZhhSYR2VMMmrnfW4Ea2"
-    },
-    {
-      "firstName": "Shelley",
-      "lastName": "Arnold",
-      "email": "shelley@gmail.com",
-      "username": "shelley",
-      "password": null,
-      "street": "111 her house street",
-      "city": "Nashville",
-      "zip": "37206",
-      "id": "kZKiQq3nCjWuAY49pm0OYy8MnKy2"
-    },
-    {
-      "firstName": "Emily",
-      "lastName": "Loggins",
       "email": "emily@gmail.com",
       "username": "emloggins",
       "password": null,
@@ -36,9 +14,21 @@
   ],
   "packItems": [
     {
-      "id": 1,
-      "userId": "L0lGdLf",
-      "packId": 1,
+      "id": 2,
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "packId": 2,
+      "itemId": 3
+    },
+    {
+      "id": 3,
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "packId": 2,
+      "itemId": 2
+    },
+    {
+      "id": 4,
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "packId": 2,
       "itemId": 1
     }
   ],
@@ -54,17 +44,12 @@
       "description": "I created this pack to prepare for the possibility that the aliens rely heavily on ice as a weapon"
     },
     {
-      "name": "Emily",
-      "description": "Test",
-      "id": 3
-    },
-    {
       "name": "They have guns",
       "description": "Everything we need to survive aliens that have lots and lots of guns",
       "id": 4
     },
     {
-      "name": "Test",
+      "name": "New pack",
       "description": "test",
       "id": 5
     }
@@ -74,6 +59,16 @@
       "id": 1,
       "name": "Water",
       "quantity": 3
+    },
+    {
+      "id": 2,
+      "name": "Sub Sandwich",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "name": "Tent",
+      "quantity": 2
     }
   ]
 }
