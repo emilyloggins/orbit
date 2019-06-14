@@ -14,7 +14,8 @@ class PackItem extends Component {
         this.props.deletePack(packId)
     }
 
-    handleItemClick = () => {
+    handleItemClick = (id) => {
+        this.props.changeChosenPack(id)
         this.props.history.push("/items")
     }
 
@@ -34,7 +35,7 @@ class PackItem extends Component {
                     </CardHeader>
                     <CardBody>
                         <CardText>{this.props.description}</CardText>
-                        <Button onClick={this.handleItemClick} size="lg" className="main-btn">View Items</Button>
+                        <Button onClick={() => this.handleItemClick(this.props.item)} size="lg" className="main-btn">View Items</Button>
                     </CardBody>
                 </Card>
             </div>

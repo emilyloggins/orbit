@@ -8,6 +8,7 @@ import PackMain from "../components/pack/PackMain"
 import PackManager from "../modules/PackManager"
 import PackItemManager from "../modules/PackItemManager"
 import ItemManager from '../modules/ItemManager';
+import ItemMain from '../components/item/ItemMain'
 
 class ApplicationViews extends Component {
 
@@ -15,6 +16,7 @@ class ApplicationViews extends Component {
     packItems: [],
     packs: [],
     items: [],
+    chosenPack: ''
   }
 
   isAuthenticated = () => localStorage.getItem("user") !== null;
@@ -68,9 +70,15 @@ class ApplicationViews extends Component {
       .then(packItems => { newState.packItems = packItems })
       .then(() => this.setState(newState));
     ItemManager.getAllItems()
-    .then(items => { newState.items = items })
-    .then(() => this.setState(newState));
+      .then(items => { newState.items = items })
+      .then(() => this.setState(newState));
   }
+
+//  end calls
+
+changeChosenPack = (id) => {
+  this.setState({ chosenPack: id })
+}
 
   render() {
     return (
@@ -101,11 +109,20 @@ class ApplicationViews extends Component {
                 packs={this.state.packs}
                 activeUser={this.props.activeUser}
                 deletePack={this.deletePack}
-                packItems={this.state.packItems} />
+                packItems={this.state.packItems}
+                changeChosenPack={this.changeChosenPack} />
             } else {
               return <Redirect to="/welcome" />
             }
           }} />
+          <Route path="/items" render={(props) =>
+            <ItemMain {...props}
+              items={this.state.items}
+              packs={this.state.packs}
+              packItems={this.state.packItems}
+              activeUser={this.props.activeUser}
+              chosenPack={this.state.chosenPack} />}
+          />
         </Router>
       </div>
     );
