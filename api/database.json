@@ -14,40 +14,36 @@
   ],
   "packItems": [
     {
-      "id": 2,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "packId": 1,
-      "itemId": 3
+      "id": 1,
+      "packId": 2,
+      "itemId": 1
     },
     {
-      "id": 3,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "packId": 1,
+      "id": 2,
+      "packId": 2,
       "itemId": 2
     },
     {
-      "id": 5,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "packId": 1,
+      "id": 3,
+      "packId": 2,
+      "itemId": 3
+    },
+    {
+      "id": 4,
+      "packId": 2,
       "itemId": 4
     },
     {
-      "id": 6,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "packId": 1,
+      "id": 5,
+      "packId": 2,
       "itemId": 5
     }
   ],
   "packs": [
     {
-      "id": 1,
-      "name": "Fire",
-      "description": "I created this pack to prepare for the possibility that the aliens rely heavily on fire as a weapon"
-    },
-    {
       "id": 2,
-      "name": "Ice",
-      "description": "I created this pack to prepare for the possibility that the aliens rely heavily on ice as a weapon"
+      "name": "THEY HAVE FIRE",
+      "description": "I created this pack to prepare for the possibility that the aliens rely heavily on fire as a weapon"
     },
     {
       "name": "They have guns",
@@ -98,6 +94,10 @@
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
       "body": "Hey guys!",
       "userName": "emloggins"
+    },
+    {
+      "body": "Yo!",
+      "id": 2
     }
   ]
 }

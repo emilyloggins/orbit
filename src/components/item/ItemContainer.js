@@ -3,10 +3,6 @@ import PackItemManager from '../../modules/PackItemManager'
 
 class ItemContainer extends Component {
 
-    PackReturn = () => {
-        this.props.history.push('packs')
-    }
-
     render() {
         return (
             <h1 onClick={this.props.getJoinTableItems}>{this.props.item.name}</h1>
