@@ -87,6 +87,17 @@ class ApplicationViews extends Component {
       });
   };
 
+  editPack = editedPack => {
+    const newState = {};
+    PackManager.editPack(editedPack)
+      .then(() => PackManager.getAllPacks())
+      .then(packs => (newState.packs = packs))
+      .then(() => {
+        this.props.history.push("/packs");
+        this.setState(newState);
+      });
+  };
+
   // Join table db calls
   deleteJoin = id => {
     const newState = {};
@@ -163,7 +174,9 @@ render() {
               activeUser={this.props.activeUser}
               deletePack={this.deletePack}
               packItems={this.state.packItems}
-              changeChosenPack={this.changeChosenPack} />
+              changeChosenPack={this.changeChosenPack}
+              chosenPack={this.state.chosenPack}
+              editPack={this.editPack} />
           } else {
             return <Redirect to="/welcome" />
           }
