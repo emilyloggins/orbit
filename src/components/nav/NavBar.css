@@ -14,3 +14,6 @@
 color: red;
 margin: 0;
 }
+#alert-nav:hover {
+    color: #d30c0c;
+}

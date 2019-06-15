@@ -7,7 +7,8 @@ import './Connect.css'
 class ConnectMain extends Component {
   render () {
     return (
-      <section className="connect-main-container messagesSection">
+      <div className="connect-main-container bgImage">
+      <section className="messagesSection">
         <h1 className="chatHeader">Connect</h1>
         <div className="messageContainer">
           <ConnectList { ...this.props } activeUser={ this.props.activeUser } messages={ this.props.messages } />
@@ -16,6 +17,7 @@ class ConnectMain extends Component {
           <ConnectInput { ...this.props } activeUser={ this.props.activeUser } addMessage={ this.props.addMessage } />
         </div>
       </section>
+      </div>
     );
   }
 }

@@ -103,7 +103,7 @@ class ApplicationViews extends Component {
     PackItemManager.getJoinByPackId(this.state.chosenPack)
       .then(objects => {
         objects.map(item => {
-          console.log(item.itemId)
+          return item
         })
       })
   }

@@ -7,10 +7,6 @@ class ItemList extends Component {
     PackReturn = () => {
         this.props.history.push('packs')
     }
-    getJoinTable = (id) => {
-        PackItemManager.getJoinByPackId(id)
-            .then((item) => console.log(item))
-    }
     render() {
         return (
             <div>
