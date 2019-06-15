@@ -38,6 +38,7 @@ class PackItem extends Component {
         this.setState({
             modalShow: true
         })
+        this.props.changeChosenPack(this.props.item.id)
     }
 
     render() {
@@ -45,7 +46,7 @@ class PackItem extends Component {
         return (
             <div className="pack-item-div" >
                 <Card>
-                    <PackEditModal header={"Edit Your Pack"} toggleModal={this.state.modalShow} handleClickYes={this.handleClickedDeleteYes} handleClickNo={this.handleClickedNo} />
+                    <PackEditModal header={"Edit Your Pack"} toggleModal={this.state.modalShow} handleClickYes={this.handleClickedDeleteYes} handleClickNo={this.handleClickedNo} chosenPack={this.props.chosenPack} editPack={this.props.editPack} />
                     <CardHeader className="pack-title-header1" tag="h3">
                         <div className="pack-title-header2">
                             <h3 className="pack-title-text">{this.props.name}</h3>

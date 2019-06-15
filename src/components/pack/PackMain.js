@@ -4,6 +4,7 @@ import PackItem from "./PackItem"
 import NewPack from "./NewPack"
 import { withRouter } from 'react-router-dom'
 import './Pack.css'
+import PackEditModal from './PackEditModal';
 
 class PackMain extends Component {
     // set it to true in order to render form
@@ -22,7 +23,9 @@ class PackMain extends Component {
                 {...this.props}
                 packs={this.props.packs}
                 packItems={this.props.packItems}
-                deletePack={this.props.deletePack} />
+                deletePack={this.props.deletePack}
+                chosenPack={this.props.chosenPack}
+                editPack={this.props.editPack} />
             </div>
         )
     }
