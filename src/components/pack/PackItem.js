@@ -5,17 +5,48 @@ import {
 import { withRouter } from 'react-router-dom'
 import { FaTrash } from 'react-icons/fa'
 import { FaEdit } from 'react-icons/fa'
-import PackItemManager from "../../modules/PackItemManager"
 import './Pack.css'
 import PackEditModal from './PackEditModal'
+import PackManager from '../../modules/PackManager'
+
 
 class PackItem extends Component {
 
     state = {
         modalShow: false,
+        name: '',
+        purpose: '',
         handleClickedDeleteYes: this.handleClickedDeleteYes,
         handleClickedNo: this.handleClickedNo
     }
+
+
+    handleFieldChange = evt => {
+        const stateToChange = {};
+        stateToChange[evt.target.id] = evt.target.value;
+        this.setState(stateToChange);
+    };
+
+    componentDidMount() {
+        PackManager.getPack(this.props.chosenPack).then(pack => {
+            this.setState({
+                name: pack.name,
+                purpose: pack.purpose,
+            });
+        });
+    }
+
+    handleSave = () => {
+        const newPack = {
+            id: this.props.chosenPack,
+            name: this.state.name,
+            description: this.state.purpose
+        }
+        this.props.updatePack(newPack)
+        this.setState({ modalShow: false })
+    }
+
+
 
     handleDelete = (packId) => {
         this.props.deletePack(packId)
@@ -28,11 +59,11 @@ class PackItem extends Component {
 
     handleClickedDeleteYes = () => {
         this.props.removeItem(this.props.item.id);
-      }
-    
-      handleClickedNo = () => {
+    }
+
+    handleClickedNo = () => {
         this.setState({ editName: this.state.editName, body: this.state.body, modalShow: false });
-      }
+    }
 
     openModal = () => {
         this.setState({
@@ -46,7 +77,8 @@ class PackItem extends Component {
         return (
             <div className="pack-item-div" >
                 <Card>
-                    <PackEditModal header={"Edit Your Pack"} toggleModal={this.state.modalShow} handleClickYes={this.handleClickedDeleteYes} handleClickNo={this.handleClickedNo} chosenPack={this.props.chosenPack} editPack={this.props.editPack} />
+                    <PackEditModal header={"Edit Your Pack"} toggleModal={this.state.modalShow} handleClickYes={this.handleClickedDeleteYes} handleClickNo={this.handleClickedNo} chosenPack={this.props.chosenPack} updatePack={this.props.updatePack} handleSave={this.handleSave}
+                    handleFieldChange={this.handleFieldChange} />
                     <CardHeader className="pack-title-header1" tag="h3">
                         <div className="pack-title-header2">
                             <h3 className="pack-title-text">{this.props.name}</h3>

@@ -25,7 +25,7 @@ class PackMain extends Component {
                 packItems={this.props.packItems}
                 deletePack={this.props.deletePack}
                 chosenPack={this.props.chosenPack}
-                editPack={this.props.editPack} />
+                updatePack={this.props.updatePack} />
             </div>
         )
     }

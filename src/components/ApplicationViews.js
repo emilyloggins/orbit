@@ -87,7 +87,7 @@ class ApplicationViews extends Component {
       });
   };
 
-  editPack = editedPack => {
+  updatePack = editedPack => {
     const newState = {};
     PackManager.editPack(editedPack)
       .then(() => PackManager.getAllPacks())
@@ -176,7 +176,7 @@ render() {
               packItems={this.state.packItems}
               changeChosenPack={this.changeChosenPack}
               chosenPack={this.state.chosenPack}
-              editPack={this.editPack} />
+              updatePack={this.updatePack} />
           } else {
             return <Redirect to="/welcome" />
           }
