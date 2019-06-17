@@ -1,35 +1,7 @@
 import React, { Component } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import PackManager from '../../modules/PackManager'
 
 export default class PackEditModal extends Component {
-    state = {
-        name: '',
-        purpose: ''
-    }
-
-    handleFieldChange = evt => {
-        const stateToChange = {};
-        stateToChange[evt.target.id] = evt.target.value;
-        this.setState(stateToChange);
-    };
-
-    componentDidMount() {
-        PackManager.getPack(this.props.chosenPack).then(pack => {
-          this.setState({
-            name: pack.name,
-            purpose: pack.purpose,
-          });
-        });
-      }
-
-    handleSave = () => {
-        const newPack = {
-            name: this.state.name,
-            purpose: this.state.purpose
-        }
-        this.props.editPack(newPack)
-    }
 
 
     render() {
@@ -43,11 +15,11 @@ export default class PackEditModal extends Component {
                     <Form>
                         <FormGroup>
                             <Label for="name">Name</Label>
-                            <Input type="text" name="name" id="name" placeholder="" onChange={this.handleFieldChange} />
+                            <Input type="text" name="name" id="name" placeholder="" onChange={this.props.handleFieldChange} />
                         </FormGroup>
                         <FormGroup>
                             <Label for="purpose">Purpose</Label>
-                            <Input type="text" name="purpose" id="purpose" placeholder="" onChange={this.handleFieldChange} />
+                            <Input type="text" name="purpose" id="purpose" placeholder="" onChange={this.props.handleFieldChange} />
                         </FormGroup>
                     </Form>
                 </ModalBody>
