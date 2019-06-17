@@ -13,7 +13,6 @@ class PackList extends Component {
                     {
                         this.props.packs.map(item => {
                             return (
-                                <>
                                     <PackItem
                                         {...this.props}
                                         packItems={this.props.packItems}
@@ -22,8 +21,8 @@ class PackList extends Component {
                                         item={item}
                                         name={item.name}
                                         description={item.description}
-                                        deletePack={this.props.deletePack} />
-                                </>
+                                        deletePack={this.props.deletePack}
+                                        getJoinTableItems={this.props.getJoinTableItems} />
                             )
                         })
                     }
@@ -36,18 +35,3 @@ class PackList extends Component {
 
 export default withRouter(PackList)
 
-// {
-//     this.props.news.map(item => {
-//       if (item.userId === this.props.activeUser.id) {
-//         return (
-//           <>
-//             {/* <FirstNewsItem key={this.findFirst.id} article={this.findFirst} /> */ }
-//             <NewsItem key={ item.id } article={ item } { ...this.props }
-//               deleteNews={ this.props.deleteNews } />
-//           </>
-//         )
-//       } else if (!item) {
-//         return <BlankCard />
-//       }
-//     })
-//   }

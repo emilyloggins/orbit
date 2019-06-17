@@ -1,13 +1,25 @@
-import React, { Component } from 'react'
-import PackItemManager from '../../modules/PackItemManager'
+// import React, { Component } from 'react'
 
-class ItemContainer extends Component {
+// class ItemContainer extends Component {
 
-    render() {
-        return (
-            <h1 onClick={this.props.getJoinTableItems}>{this.props.item.name}</h1>
-        )
-    }
-}
+//     render() {
+//         return (
+//             <div>
+//                 <div className="food-container">
+//                     <h1>Food</h1>
+//                 </div>
+//                 <div className="gear-container">
+//                     <h1>Gear</h1>
+//                 </div>
+//                 <div className="weapon-container">
+//                     <h1>Weapons</h1>
+//                 </div>
+//                 <div className="misc-container">
+//                     <h1>Misc.</h1>
+//                 </div>
+//             </div>
+//         )
+//     }
+// }
 
-export default ItemContainer
+// export default ItemContainer

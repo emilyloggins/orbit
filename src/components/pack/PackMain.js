@@ -25,7 +25,8 @@ class PackMain extends Component {
                 packItems={this.props.packItems}
                 deletePack={this.props.deletePack}
                 chosenPack={this.props.chosenPack}
-                updatePack={this.props.updatePack} />
+                updatePack={this.props.updatePack}
+                getJoinTableItems={this.props.getJoinTableItems} />
             </div>
         )
     }
