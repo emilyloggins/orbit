@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Form, Button, Container, Grid, Segment, Header, Message } from 'semantic-ui-react';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { loginFunction } from '../auth/userManager';
 import './Login.css'
 import { withRouter } from 'react-router-dom'
+import ufo from '../img/ufo1.png'
 
 class Login extends Component {
   state = {
@@ -25,45 +26,32 @@ class Login extends Component {
       });
   }
 
+  register = () => {
+    this.props.history.push("/register")
+  }
   render() {
     return (
 
-      <Container className="auth--container">
-        <Grid>
-          <Grid.Row centered>
-            <Grid.Column largeScreen={6} computer={6} tablet={10} mobile={16}>
-              <Segment>
-                <Header as="h1" textAlign="center">
-                  Log In
-                </Header>
-                <Form className="login--form" onSubmit={this.submit}>
-                  <Form.Field
-                    control="input"
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Enter an email"
-                    onChange={this.handleFieldChange}
-                  />
-                  <Form.Field
-                    control="input"
-                    type="password"
-                    name="password"
-                    id="password"
-                    placeholder="Password"
-                    onChange={this.handleFieldChange}
-                  />
-                  <Form.Field control="input" type="hidden" />
-                  <Button fluid content="Log in" color="green" />
-                </Form>
-                <Message className="auth--message">
-                  Not registered yet? <Link to="/register">Sign Up</Link>
-                </Message>
-              </Segment>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
+      <Form className="landing-div-main bgImage">
+        <div className="welcome-card-div login-div">
+          <div className="heading-blurb-container">
+            <img src={ufo} className="logo-main login-icon" alt="ufo icon"></img>
+          </div>
+          <div className="input-fields">
+            <FormGroup className="login-form-group">
+              <Label for="pmail">Email</Label>
+              <Input type="email" name="email" id="email" placeholder="notalien@orbit.com" onChange={this.handleFieldChange} />
+            </FormGroup>
+            <FormGroup className="login-form-group">
+              <Label for="password">Password</Label>
+              <Input type="password" name="password" id="password" placeholder="password" onChange={this.handleFieldChange} />
+            </FormGroup>
+            <Button size="lg" onClick={this.submit}>Submit</Button>
+            <Link className="green-link" onClick={this.register}>Don't have an account?</Link>
+          </div>
+        </div>
+      </Form>
+
     )
   }
 }

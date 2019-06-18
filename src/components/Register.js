@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { register } from '../auth/userManager'
-import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import "../components/welcome/Landing.css"
+import ufo from '../img/ufo1.png'
 
 class Register extends Component {
   state = {
@@ -34,20 +36,17 @@ class Register extends Component {
     });
   }
 
-  //   register(user)
-  //     .then(newUser => {
-  //       this.props.onRegister(newUser)
-  //       this.props.history.push('/home');
-  //     });
-  // }
-
-  // renderDashboard = () => {
-  //   this.props.history.push("/home/")
-  // }
+  login = () => {
+    this.props.history.push("/login")
+}
 
   render() {
     return (
-      <Form>
+      <Form  className="landing-div-main bgImage">
+      <div className="welcome-card-div">
+      <div className="heading-blurb-container">
+      <img src={ufo} className="logo-main" alt="ufo icon"></img>
+      </div>
         <Row form>
           <Col md={6}>
             <FormGroup>
@@ -102,6 +101,8 @@ class Register extends Component {
           </Col>
         </Row>
         <Button onClick={this.submit}>Register</Button>
+        <Link className="green-link" onClick={this.login}>Already have an account?</Link>
+        </div>
       </Form>
     );
   }
