@@ -37,6 +37,11 @@
       "id": 5,
       "packId": 2,
       "itemId": 5
+    },
+    {
+      "id": 6,
+      "packId": 2,
+      "itemId": 6
     }
   ],
   "packs": [
@@ -48,7 +53,7 @@
     {
       "name": "They have guns",
       "description": "Everything we need to survive aliens that have lots and lots of guns",
-      "id": 4
+      "id": 3
     },
     {
       "name": "Dog",
@@ -85,6 +90,12 @@
       "id": 5,
       "name": "Laser",
       "category": "Weapon",
+      "quantity": 20
+    },
+    {
+      "id": 6,
+      "name": "Honey",
+      "category": "Food",
       "quantity": 20
     }
   ],

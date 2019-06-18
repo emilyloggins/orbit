@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import {
-    Card, Button, CardHeader, CardBody, CardText
-} from 'reactstrap'
+import { Card, Button, CardHeader, CardBody, CardText } from 'reactstrap'
 import { withRouter } from 'react-router-dom'
 import { FaTrash } from 'react-icons/fa'
 import { FaEdit } from 'react-icons/fa'
@@ -46,14 +44,14 @@ class PackItem extends Component {
         this.setState({ modalShow: false })
     }
 
-
-
     handleDelete = (packId) => {
         this.props.deletePack(packId)
     }
 
     handleItemClick = (id) => {
+        console.log("clicked!")
         this.props.changeChosenPack(id)
+        this.props.getJoinTableItems(id)
         this.props.history.push("/items")
     }
 

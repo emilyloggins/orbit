@@ -110,103 +110,115 @@ class ApplicationViews extends Component {
       });
   };
 
-  getJoinTableItems = () => {
-    PackItemManager.getJoinByPackId(this.state.chosenPack)
+  getJoinTableItems = (id) => {
+    this.setState({chosenItems: []})
+    PackItemManager.getJoinByPackId(id)
       .then(objects => {
+        const itemsArray = []
         objects.map(item => {
-          return item
+          ItemManager.getItem(item.id)
+          .then(i => {
+            // console.log("get item", i)
+            itemsArray.push(i)
+          })
+          .then(() => this.setState({ chosenItems: itemsArray }))
         })
       })
+    }
+
+  // item calls
+
+  componentDidMount() {
+    const newState = {};
+    PackManager.getAllPacks()
+      .then(packs => { newState.packs = packs })
+      .then(() => this.setState(newState));
+    PackItemManager.getAllJoins()
+      .then(packItems => { newState.packItems = packItems })
+      .then(() => this.setState(newState));
+    ItemManager.getAllItems()
+      .then(items => { newState.items = items })
+      .then(() => this.setState(newState));
+    Messages.getAllMessages()
+      .then(messages => { newState.messages = messages })
+      .then(() => this.setState(newState));
   }
 
+  //  end calls
 
-// item calls
+  changeChosenPack = (id) => {
+    this.setState({ chosenPack: id })
+  }
 
-componentDidMount() {
-  const newState = {};
-  PackManager.getAllPacks()
-    .then(packs => { newState.packs = packs })
-    .then(() => this.setState(newState));
-  PackItemManager.getAllJoins()
-    .then(packItems => { newState.packItems = packItems })
-    .then(() => this.setState(newState));
-  ItemManager.getAllItems()
-    .then(items => { newState.items = items })
-    .then(() => this.setState(newState));
-  Messages.getAllMessages()
-    .then(messages => { newState.messages = messages })
-    .then(() => this.setState(newState));
-}
+  render() {
+    return (
+    
+      <div className="App" >
+        <Router>
+          <Route path="/welcome" render={(props) => <Landing user={this.props.user} />} />
+          <Route exact path="/home" render={props => {
+            if (this.props.activeUser) {
+              return <Home {...props}
+                activeUser={this.props.activeUser}
+                clearUser={this.props.clearUser} />
+            } else {
+              return <Redirect to="/welcome" />
+            }
+          }} />
+          <Route path="/login" render={(props) =>
+            <Login {...props} {...this.props}
+            />}
+          />
+          <Route path="/register" render={(props) =>
+            <Register {...props}
+              setUser={this.props.setUser} />}
+          />
+          <Route path="/packs" render={props => {
+            if (this.props.activeUser) {
+              return <PackMain {...props}
+                addPack={this.addPack}
+                packs={this.state.packs}
+                activeUser={this.props.activeUser}
+                deletePack={this.deletePack}
+                packItems={this.state.packItems}
+                changeChosenPack={this.changeChosenPack}
+                chosenPack={this.state.chosenPack}
+                updatePack={this.updatePack}
+                getJoinTableItems={this.getJoinTableItems}
+              />
 
-//  end calls
-
-changeChosenPack = (id) => {
-  this.setState({ chosenPack: id })
-}
-
-render() {
-  return (
-    <div className="App">
-      <Router>
-        <Route path="/welcome" render={(props) => <Landing user={this.props.user} />} />
-        <Route exact path="/home" render={props => {
-          if (this.props.activeUser) {
-            return <Home {...props}
-              activeUser={this.props.activeUser}
-              clearUser={this.props.clearUser} />
-          } else {
-            return <Redirect to="/welcome" />
-          }
-        }} />
-        <Route path="/login" render={(props) =>
-          <Login {...props} {...this.props}
-          />}
-        />
-        <Route path="/register" render={(props) =>
-          <Register {...props}
-            setUser={this.props.setUser} />}
-        />
-        <Route path="/packs" render={props => {
-          if (this.props.activeUser) {
-            return <PackMain {...props}
-              addPack={this.addPack}
+            } else {
+              return <Redirect to="/welcome" />
+            }
+          }} />
+          <Route path="/items" render={(props) =>
+            <ItemMain {...props}
+              items={this.state.items}
               packs={this.state.packs}
-              activeUser={this.props.activeUser}
-              deletePack={this.deletePack}
               packItems={this.state.packItems}
-              changeChosenPack={this.changeChosenPack}
-              chosenPack={this.state.chosenPack}
-              updatePack={this.updatePack} />
-          } else {
-            return <Redirect to="/welcome" />
-          }
-        }} />
-        <Route path="/items" render={(props) =>
-          <ItemMain {...props}
-            items={this.state.items}
-            packs={this.state.packs}
-            packItems={this.state.packItems}
-            activeUser={this.props.activeUser}
-            chosenPack={this.state.chosenPack}
-            getJoinTableItems={this.getJoinTableItems} />}
-        />
-        <Route exact path="/connect" render={(props) => {
-          if (this.props.activeUser) {
-            return <ConnectMain
-              {...props}
               activeUser={this.props.activeUser}
-              messages={this.state.messages}
-              deleteMessage={this.deleteMessage}
-              addMessage={this.addMessage}
-            />
-          } else {
-            return <Redirect to="/welcome" />
-          }
-        }} />
-      </Router>
-    </div>
-  );
-}
+              chosenPack={this.state.chosenPack}
+              getJoinTableItems={this.getJoinTableItems}
+              chosenItems={this.state.chosenItems}
+              changeChosenItems={this.changeChosenItems} />}
+          />
+          <Route exact path="/connect" render={(props) => {
+            if (this.props.activeUser) {
+              return <ConnectMain
+                {...props}
+                activeUser={this.props.activeUser}
+                messages={this.state.messages}
+                deleteMessage={this.deleteMessage}
+                addMessage={this.addMessage}
+              />
+            } else {
+              return <Redirect to="/welcome" />
+            }
+          }} />
+        </Router>
+      </div>
+    );
+  }
 }
 
 export default withRouter(ApplicationViews)
