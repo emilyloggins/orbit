@@ -13,11 +13,12 @@ class ItemMain extends Component {
     }
 
     render() {
-        const currentPack = this.props.packs.filter((pack) => {
+
+        let currentPack = this.props.packs.filter((pack) => {
             if (pack.id === this.props.chosenPack) {
-                return pack.name
+              return pack.name
             }
-        })
+          })
 
         return (
             <div className="item-main-container bgImage">
@@ -39,7 +40,8 @@ class ItemMain extends Component {
                     chosenPack={this.props.chosenPack}
                     chosenItems={this.props.chosenItems}
                     changeChosenItems={this.props.changeChosenItems}
-                    getJoinTableItems={this.props.getJoinTableItems} />
+                    getJoinTableItems={this.props.getJoinTableItems}
+                    deleteJoin={this.props.deleteJoin} />
             </div>
         )
     }

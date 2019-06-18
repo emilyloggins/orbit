@@ -7,7 +7,6 @@ import './Pack.css'
 import PackEditModal from './PackEditModal'
 import PackManager from '../../modules/PackManager'
 
-
 class PackItem extends Component {
 
     state = {
@@ -94,6 +93,5 @@ class PackItem extends Component {
         )
     }
 }
-
 
 export default withRouter(PackItem)

@@ -9,6 +9,8 @@ import {
   DropdownItem
 } from 'reactstrap';
 import './Item.css'
+import ufo from '../../img/ufo.png'
+
 
 class NewItem extends Component {
   constructor(props) {
@@ -66,15 +68,17 @@ class NewItem extends Component {
         }
         this.props.addJoin(PackItemObj)
       })
-      this.props.changeChosenPack(this.props.chosenPack)
-      this.props.getJoinTableItems(this.props.chosenPack)
+    this.props.changeChosenPack(this.props.chosenPack)
+    this.props.getJoinTableItems(this.props.chosenPack)
   };
 
   render() {
     return (
       <div className="new-item-container">
-        <h1 className="blurb-header">Add Items to {this.props.currentPack}</h1>
-        <p className="blurb-content">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+        <div className="new-item-header">
+          <img src={ufo} className="logo-main" alt="ufo icon"></img>
+          <h1 className="blurb-header">Add Items</h1>
+        </div>
         <InputGroup className="new-item-input">
           <Input placeholder="ITEM NAME" id="name" onChange={this.handleFieldChange} />
           <Input onChange={this.handleFieldChange} id="quantity" placeholder="QUANTITY"></Input>

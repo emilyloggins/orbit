@@ -17,6 +17,11 @@ class NavBar extends Component {
             isOpen: !this.state.isOpen
         });
     }
+
+    logout = () => {
+        this.props.clearUser()
+    }
+    
     render() {
         return (
             <div>
@@ -35,7 +40,20 @@ class NavBar extends Component {
                                 <NavLink className="nav-text-side" id="alert-nav" href="/components/">GET OUT</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-text-side" href="/home/">User</NavLink>
+                                <UncontrolledDropdown nav inNavbar>
+                                    <DropdownToggle className="nav-text-side" nav caret>
+                                        User
+                                    </DropdownToggle>
+                                    <DropdownMenu right>
+                                        <DropdownItem className="nav-text-side">
+                                            Settings
+                                        </DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem onClick={this.logout} className="nav-text-side">
+                                            Log Out
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledDropdown>
                             </NavItem>
                         </Nav>
                     </Collapse>

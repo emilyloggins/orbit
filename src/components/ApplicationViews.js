@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
-import Home from "../components/Home"
+import Home from "./user/Home"
 import Landing from "../components/welcome/Landing"
 import PackMain from "../components/pack/PackMain"
 import PackManager from "../modules/PackManager"
@@ -136,6 +136,8 @@ class ApplicationViews extends Component {
         });
     };
 
+    
+
   // item calls
   addItem = item => {
     const newState = {};
@@ -146,6 +148,17 @@ class ApplicationViews extends Component {
         this.props.history.push("/items")
         this.setState(newState)
         return items;
+      });
+  };
+
+  deleteItem = id => {
+    const newState = {};
+    ItemManager.deleteItem(id)
+      .then(ItemManager.getAllItems)
+      .then(items => (newState.items = items))
+      .then(() => {
+        this.props.history.push("/items");
+        this.setState(newState);
       });
   };
 
@@ -209,7 +222,7 @@ class ApplicationViews extends Component {
               />
 
             } else {
-              return <Redirect to="/welcome" />
+              return <Redirect to="/" />
             }
           }} />
           <Route path="/items" render={(props) =>
@@ -224,7 +237,9 @@ class ApplicationViews extends Component {
               changeChosenItems={this.changeChosenItems}
               changeChosenPack={this.changeChosenPack}
               addJoin={this.addJoin}
-              addItem={this.addItem} />}
+              addItem={this.addItem}
+              deleteJoin={this.deleteJoin}
+              deleteItem={this.deleteItem} />}
           />
           <Route exact path="/connect" render={(props) => {
             if (this.props.activeUser) {

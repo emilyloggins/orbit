@@ -22,10 +22,8 @@
     flex-direction: row;
 }
 .new-item-container {
-    margin: 1em 35em 1em 35em;
-    /* width: 40%; */
-
-    padding: 5em;
+    margin: 2em 35em 2em 35em;
+    padding-bottom: 3em;
     background-color: #1D343C;
     opacity: 0.9;
     box-shadow: 10px 10px 5px black;
@@ -66,4 +64,31 @@ width: 7em;
 .justify-content-between {
     width: 200;
     font-size: 1em;
+}
+.new-item-header {
+    display: flex;
+    justify-content: space-around;
+    justify-content: flex-start;
+    padding: 1em;
+    width: 50%;
+}
+.logo-main {
+    width: 20%;
+    height: auto;
+    margin-right: 1em;
+    margin-left: 3em;
+}
+.blurb-header {
+    font-size: 3em;
+}
+.main-item-container {
+    margin: 4em;
+}
+.delete-icon {
+    padding-top: .2em;
+    width: 8%;
+    height: auto;
+}
+.item-header-quad {
+    font-size: 3em;
 }
