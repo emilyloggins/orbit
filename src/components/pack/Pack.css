@@ -12,6 +12,10 @@
     width: 45%;
     margin: 5%;
     color: #FFFFFF;
+    background-color: #1D343C;
+    opacity: 0.9;
+    box-shadow: 10px 10px 5px black;
+    padding: 4em;
 }
 .pack-blurb {
     font-size: 1.5em;
@@ -23,6 +27,8 @@
 }
 .pack-list-header {
     color: #ffffff;
+    font-size: 3em;
+    letter-spacing: .2em;
 }
 .pack-title-header1 {
     background-color: #86C232;
@@ -63,4 +69,10 @@
 .pack-title-header2 {
     display: flex;
     justify-content: center;
+}
+.pack-list-div {
+
+}
+.new-pack-header {
+    font-size: 3em;
 }

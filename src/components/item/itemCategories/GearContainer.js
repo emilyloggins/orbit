@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
+import '../Item.css'
+import { ListGroup, ListGroupItem, Badge } from 'reactstrap';
+
 
 class GearContainer extends Component {
 
     render() {
         return (
-            <div>
-                <div className="gear-container">
-                    <p>{this.props.gear.name}</p>
-                </div>
+            <div className="category-item-container">
+                <ListGroup>
+                    <ListGroupItem className="justify-content-between">{this.props.gear.name}<Badge className="quantity-pill" pill>{this.props.gear.quantity}</Badge></ListGroupItem>
+                </ListGroup>
             </div>
         )
     }

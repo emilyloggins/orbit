@@ -3,6 +3,7 @@ import {
   InputGroup,
   InputGroupButtonDropdown,
   Input,
+  Button,
   DropdownToggle,
   DropdownMenu,
   DropdownItem
@@ -24,6 +25,7 @@ class NewItem extends Component {
   state = {
     name: '',
     category: '',
+    quantity: ''
   };
 
   toggleDropDown() {
@@ -48,28 +50,37 @@ class NewItem extends Component {
     this.setState(stateToChange);
   };
 
-  submit = (e) => {
+  submit = () => {
 
-    const obj = {
+    const ItemObj = {
       name: this.state.name,
-      category: e.target.value
+      category: this.state.category,
+      quantity: this.state.quantity
     }
 
-    this.props.addItem(obj)
-    // this.clearFields()
+    this.props.addItem(ItemObj)
+      .then((item) => {
+        const PackItemObj = {
+          packId: this.props.chosenPack,
+          itemId: item.length,
+        }
+        this.props.addJoin(PackItemObj)
+      })
+      this.props.changeChosenPack(this.props.chosenPack)
+      this.props.getJoinTableItems(this.props.chosenPack)
   };
 
   render() {
-    console.log(this.props.currentPack)
     return (
       <div className="new-item-container">
         <h1 className="blurb-header">Add Items to {this.props.currentPack}</h1>
         <p className="blurb-content">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
         <InputGroup className="new-item-input">
-          <Input id="name" onChange={this.handleFieldChange} />
+          <Input placeholder="ITEM NAME" id="name" onChange={this.handleFieldChange} />
+          <Input onChange={this.handleFieldChange} id="quantity" placeholder="QUANTITY"></Input>
           <InputGroupButtonDropdown addonType="append" isOpen={this.state.dropdownOpen} toggle={this.toggleDropDown}>
-            <DropdownToggle caret>
-              Category
+            <DropdownToggle className="category-drop-down" caret>
+              {this.state.category}
             </DropdownToggle>
             <DropdownMenu ref={(input) => this.menu = input}>
               <DropdownItem onClick={() => this.setState({ category: 'Food' })} value="Food">Food</DropdownItem>
@@ -82,6 +93,7 @@ class NewItem extends Component {
             </DropdownMenu>
           </InputGroupButtonDropdown>
         </InputGroup>
+        <Button onClick={this.submit} className="new-item-btn" size="lg">Add</Button>
       </div>
     )
   }
