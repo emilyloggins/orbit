@@ -13,11 +13,12 @@ class ItemMain extends Component {
     }
 
     render() {
-        const currentPack = this.props.packs.filter((pack) => {
+
+        let currentPack = this.props.packs.filter((pack) => {
             if (pack.id === this.props.chosenPack) {
-                return pack.name
+              return pack.name
             }
-        })
+          })
 
         return (
             <div className="item-main-container bgImage">

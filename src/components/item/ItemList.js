@@ -15,9 +15,7 @@ class ItemList extends Component {
                     <h1 className="category-header">Weapons</h1>
                     <h1 className="category-header">Misc</h1>
                 </div> */}
-                <div className="list-container">
                 <ItemContainer {...this.props} />
-                </div>
             </div>
         )
     }
