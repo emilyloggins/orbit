@@ -6,7 +6,7 @@ class GearContainer extends Component {
         return (
             <div>
                 <div className="gear-container">
-                    <p>{this.props.item.name}</p>
+                    <p>{this.props.gear.name}</p>
                 </div>
             </div>
         )

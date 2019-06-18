@@ -50,6 +50,7 @@ class PackItem extends Component {
 
     handleItemClick = (id) => {
         console.log("clicked!")
+        this.props.changeChosenPack(id)
         this.props.getJoinTableItems(id)
         this.props.history.push("/items")
     }

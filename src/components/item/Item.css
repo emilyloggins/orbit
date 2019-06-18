@@ -25,6 +25,11 @@
 .category-header {
     flex-direction: row;
 }
-.list-container {
-    display: flex;
+.new-item-container {
+    padding-top: 3em;
+}
+.new-item-input {
+    display: inline-flex;
+    float: center;
+    width: 40%;
 }

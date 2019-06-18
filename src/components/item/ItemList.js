@@ -9,37 +9,14 @@ class ItemList extends Component {
     render() {
         return (
             <div className="main-item-container">
-                <div className="category-header-container">
+                {/* <div className="category-header-container">
                     <h1 className="category-header">Food</h1>
                     <h1 className="category-header">Gear</h1>
                     <h1 className="category-header">Weapons</h1>
                     <h1 className="category-header">Misc</h1>
-                </div>
+                </div> */}
                 <div className="list-container">
-                {
-                    this.props.chosenItems.map((item) => {
-                        if (item.category === "Food") {
-                            return (
-                                <div className="food-container">
-                                    <FoodContainer
-                                        item={item}
-                                        key={item.id}
-                                        category={item.category} />
-                                </div>
-                            )
-                        }
-                        else if (item.category === "Gear") {
-                            return (
-                                <div className="gear-container">
-                                    <GearContainer
-                                        item={item}
-                                        key={item.id}
-                                        category={item.category} />
-                                </div>
-                            )
-                        }
-                    })
-                }
+                <ItemContainer {...this.props} />
                 </div>
             </div>
         )

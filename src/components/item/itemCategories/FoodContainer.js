@@ -6,7 +6,7 @@ class FoodContainer extends Component {
         return (
             <div>
                 <div className="food-container">
-                    <p>{this.props.item.name}</p>
+                    <p>{this.props.food.name}</p>
                 </div>
             </div>
         )
