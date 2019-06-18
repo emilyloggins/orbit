@@ -49,6 +49,7 @@
 }
 .scrolling-pack-div {
     height: 700px;
+    width: 550px;
     overflow-y: scroll;
 }
 .pack-icon {

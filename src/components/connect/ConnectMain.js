@@ -8,9 +8,9 @@ class ConnectMain extends Component {
   render () {
     return (
       <div className="connect-main-container bgImage">
-      <section className="messagesSection">
+      <section className="message-section">
         <h1 className="chatHeader">Connect</h1>
-        <div className="messageContainer">
+        <div className="message-container">
           <ConnectList { ...this.props } activeUser={ this.props.activeUser } messages={ this.props.messages } />
         </div>
         <div className="messageInput">

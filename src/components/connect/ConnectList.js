@@ -5,21 +5,21 @@ import './Connect.css'
 
 
 class ConnectList extends Component {
-  render () {
+  render() {
     return (
       <section className="messages">
         <div>
-          { this.props.messages.map(item => {
+          {this.props.messages.map(item => {
             return (
               <ConnectItem
-                activeUser={ this.props.activeUser }
-                key={ item.id }
-                message={ item }
-                { ...this.props }
-                deleteMessage={ this.props.deleteMessage }
+                activeUser={this.props.activeUser}
+                key={item.id}
+                message={item}
+                {...this.props}
+                deleteMessage={this.props.deleteMessage}
               />
             );
-          }) }
+          })}
         </div>
       </section>
     );

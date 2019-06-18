@@ -8,9 +8,8 @@ export default class ConnectInput extends Component {
   // Set initial state
   state = {
     body: "",
-    userName: "",
-    userId: "",
-    dateTime: ""
+    userName: this.props.activeUser.username,
+    userId: this.props.activeUser.id,
   };
 
   // Update state whenever an input field is edited
@@ -23,8 +22,8 @@ export default class ConnectInput extends Component {
   constructNewMessage = evt => {
     const newMessage = {
       body: this.state.body,
-      userName: this.props.activeUser.userName,
-      userId: this.props.activeUser.userId,
+      userName: this.state.userName,
+      userId: this.state.userId,
     };
     this.props.addMessage(newMessage);
   };
@@ -32,7 +31,7 @@ export default class ConnectInput extends Component {
   render () {
     return (
       <React.Fragment>
-        <Form className="inputDiv">
+        <Form className="input-main">
           <InputGroup className="chatInput">
             <Input
               type="text"

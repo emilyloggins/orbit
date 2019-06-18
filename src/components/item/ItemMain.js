@@ -40,7 +40,8 @@ class ItemMain extends Component {
                     chosenPack={this.props.chosenPack}
                     chosenItems={this.props.chosenItems}
                     changeChosenItems={this.props.changeChosenItems}
-                    getJoinTableItems={this.props.getJoinTableItems} />
+                    getJoinTableItems={this.props.getJoinTableItems}
+                    deleteJoin={this.props.deleteJoin} />
             </div>
         )
     }

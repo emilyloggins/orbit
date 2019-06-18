@@ -67,16 +67,28 @@ width: 7em;
 }
 .new-item-header {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    justify-content: flex-start;
     padding: 1em;
+    width: 50%;
 }
 .logo-main {
     width: 20%;
     height: auto;
+    margin-right: 1em;
+    margin-left: 3em;
 }
 .blurb-header {
     font-size: 3em;
 }
 .main-item-container {
     margin: 4em;
+}
+.delete-icon {
+    padding-top: .2em;
+    width: 8%;
+    height: auto;
+}
+.item-header-quad {
+    font-size: 3em;
 }

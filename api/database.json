@@ -10,177 +10,75 @@
       "city": "Nashville",
       "zip": "37216",
       "id": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+    },
+    {
+      "firstName": "Shelley",
+      "lastName": "Arnold",
+      "email": "shelley@gmail.com",
+      "username": "shelley01",
+      "password": null,
+      "street": "1119 Her House Drive",
+      "city": "Nashville",
+      "zip": "37206",
+      "id": "gQTcYcbpCSYQOqWeCK0d3hTELag1"
     }
   ],
   "packItems": [
     {
-      "id": 1,
-      "packId": 2,
-      "itemId": 1
+      "packId": 1,
+      "itemId": 2,
+      "id": 4
     },
     {
-      "id": 2,
-      "packId": 2,
-      "itemId": 2
+      "packId": 1,
+      "itemId": 2,
+      "id": 5
     },
     {
-      "id": 3,
-      "packId": 2,
-      "itemId": 3
+      "packId": 1,
+      "itemId": 3,
+      "id": 6
     },
     {
-      "id": 4,
-      "packId": 2,
-      "itemId": 4
-    },
-    {
-      "id": 5,
-      "packId": 2,
-      "itemId": 5
-    },
-    {
-      "id": 6,
-      "packId": 2,
-      "itemId": 6
-    },
-    {
-      "packId": "",
+      "packId": 1,
+      "itemId": 3,
       "id": 7
-    },
-    {
-      "packId": 2,
-      "id": 8
-    },
-    {
-      "packId": 2,
-      "id": 9
-    },
-    {
-      "packId": 8,
-      "itemId": 9,
-      "id": 10
-    },
-    {
-      "packId": 8,
-      "itemId": 10,
-      "id": 11
-    },
-    {
-      "packId": 2,
-      "itemId": 11,
-      "id": 12
-    },
-    {
-      "packId": 2,
-      "itemId": 12,
-      "id": 13
-    },
-    {
-      "packId": 2,
-      "itemId": 13,
-      "id": 14
     }
   ],
   "packs": [
     {
-      "id": 2,
-      "name": "Edited Pack",
-      "description": "THis is the new pack!!"
+      "name": "Test",
+      "description": "Test",
+      "id": 1
     },
     {
-      "name": "They have guns",
-      "description": "Everything we need to survive aliens that have lots and lots of guns",
+      "name": "Test 2",
+      "description": "Test",
+      "id": 2
+    },
+    {
+      "name": "Test 3",
+      "description": "Test",
       "id": 3
     },
     {
-      "name": "Dog",
-      "description": "This is for mabel when we are invaded - includes dog things",
-      "id": 7
-    },
-    {
-      "name": "New Pack",
+      "name": "Test 4",
       "description": "Test",
-      "id": 8
+      "id": 4
     }
   ],
   "items": [
     {
-      "id": 1,
-      "name": "Water",
-      "category": "Food",
-      "quantity": 3
-    },
-    {
-      "id": 2,
-      "name": "Sub Sandwich",
-      "category": "Food",
-      "quantity": 1
-    },
-    {
-      "id": 3,
-      "name": "Tent",
-      "category": "Gear",
-      "quantity": 2
-    },
-    {
-      "id": 4,
-      "name": "Bug Spray",
-      "category": "Misc",
-      "quantity": 1
-    },
-    {
-      "id": 5,
-      "name": "Laser",
-      "category": "Weapon",
-      "quantity": 20
-    },
-    {
-      "id": 6,
-      "name": "Honey",
-      "category": "Food",
-      "quantity": 20
-    },
-    {
-      "name": "new",
-      "category": "Food",
-      "quantity": "new",
-      "id": 7
-    },
-    {
-      "name": "NEW",
-      "category": "Misc",
-      "quantity": "60",
-      "id": 8
-    },
-    {
-      "name": "Yellow String",
+      "name": "Gear",
       "category": "Weapon",
       "quantity": "4",
-      "id": 9
+      "id": 2
     },
     {
-      "name": "Hfjds",
-      "category": "Gear",
-      "quantity": "fdsf",
-      "id": 10
-    },
-    {
-      "name": "new",
-      "category": "Gear",
-      "quantity": "ds",
-      "id": 11
-    },
-    {
-      "name": "hjk",
-      "category": "Gear",
-      "quantity": "dad",
-      "id": 12
-    },
-    {
-      "name": "jk",
-      "category": "Misc",
-      "quantity": "fds",
-      "id": 13
+      "name": "Food",
+      "category": "Food",
+      "quantity": "6",
+      "id": 3
     }
   ],
   "messages": [
@@ -191,7 +89,9 @@
       "userName": "emloggins"
     },
     {
-      "body": "Yo!",
+      "body": "Hey you lovely little bean!!",
+      "userName": "shelley01",
+      "userId": "gQTcYcbpCSYQOqWeCK0d3hTELag1",
       "id": 2
     }
   ]

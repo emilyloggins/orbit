@@ -1,8 +1,6 @@
 import React, { Component } from "react";
-import { FaTrashAlt } from "react-icons/fa";
-import { FaEdit } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
 import './Connect.css'
-
 
 class ConnectItem extends Component {
   state = {
@@ -11,7 +9,7 @@ class ConnectItem extends Component {
 
   handleClickDelete = event => {
     // eslint-disable-next-line no-restricted-globals
-    let word = confirm("Are you sure you want to delete this message?");
+    let word = confirm("Are you sure you want to delete?");
     this.setState({
       saveDisabled: true
     });
@@ -20,39 +18,24 @@ class ConnectItem extends Component {
     }
   };
 
-  alertMessage = () => {
-    alert("You wanna add this dude?");
-  };
-
-  render () {
-    if (this.props.message.userName === this.props.activeUser.userName) {
+  render() {
+    if (this.props.message.userName === this.props.activeUser.username) {
       return (
         <div>
-          <div className="cardBodyUser float-left clearfix">
+          <div className="active-user-card clearfix float-right">
             <div className="card-body clearfix">
-              <p onClick={ this.alertMessage }>
-                <span className="userNameChat">{ this.props.message.userName }</span>: { this.props.message.body }
+              <p onClick={this.alertMessage}>
+                <span className="connect-active-username">{this.props.message.userName}</span><div className="active-message-body"> {this.props.message.body}</div>
               </p>
-              <small className="float-right text-muted">{ this.props.message.dateTime }</small>
+              <small className="float-right text-muted">{this.props.message.dateTime}</small>
             </div>
             <div className="clearfix">
               <button
                 className="btn btn-outline-danger btn-sm mx-3 float-right"
-                disabled={ this.state.saveDisabled }
-                onClick={ this.handleClickDelete }
+                disabled={this.state.saveDisabled}
+                onClick={this.handleClickDelete}
               >
-                <FaTrashAlt />
-              </button>
-              <button
-                type="button"
-                className="btn btn-outline-primary btn-sm float-right"
-                onClick={ () => {
-                  this.props.history.push(
-                    `/messages/${this.props.message.id}/edit`
-                  );
-                } }
-              >
-                <FaEdit />
+                <FaTrash />
               </button>
             </div>
           </div>
@@ -61,16 +44,18 @@ class ConnectItem extends Component {
     } else {
       return (
         <div>
-          <div className="cardBodyOther clearfix float-right">
+          <div className="other-user-card float-left clearfix">
             <div className="card-body">
-              <p onClick={ this.alertMessage }>
-                <span className="userNameChat">{ this.props.message.userName }</span>: { this.props.message.body }
+              <p onClick={this.alertMessage}>
+                <span className="connect-other-username">{this.props.message.userName}</span><div className="other-message-body">{this.props.message.body}</div>
               </p>
-              <small className="float-right text-muted">{ this.props.message.dateTime }</small>
+              <small className="float-right text-muted">{this.props.message.dateTime}</small>
             </div>
             <div className="clearfix" />
           </div>
         </div>
+
+
       );
     }
   }

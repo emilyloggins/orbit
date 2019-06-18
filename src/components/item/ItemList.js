@@ -9,12 +9,6 @@ class ItemList extends Component {
     render() {
         return (
             <div className="main-item-container">
-                {/* <div className="category-header-container">
-                    <h1 className="category-header">Food</h1>
-                    <h1 className="category-header">Gear</h1>
-                    <h1 className="category-header">Weapons</h1>
-                    <h1 className="category-header">Misc</h1>
-                </div> */}
                 <ItemContainer {...this.props} />
             </div>
         )
