@@ -42,6 +42,43 @@
       "id": 6,
       "packId": 2,
       "itemId": 6
+    },
+    {
+      "packId": "",
+      "id": 7
+    },
+    {
+      "packId": 2,
+      "id": 8
+    },
+    {
+      "packId": 2,
+      "id": 9
+    },
+    {
+      "packId": 8,
+      "itemId": 9,
+      "id": 10
+    },
+    {
+      "packId": 8,
+      "itemId": 10,
+      "id": 11
+    },
+    {
+      "packId": 2,
+      "itemId": 11,
+      "id": 12
+    },
+    {
+      "packId": 2,
+      "itemId": 12,
+      "id": 13
+    },
+    {
+      "packId": 2,
+      "itemId": 13,
+      "id": 14
     }
   ],
   "packs": [
@@ -59,6 +96,11 @@
       "name": "Dog",
       "description": "This is for mabel when we are invaded - includes dog things",
       "id": 7
+    },
+    {
+      "name": "New Pack",
+      "description": "Test",
+      "id": 8
     }
   ],
   "items": [
@@ -97,6 +139,48 @@
       "name": "Honey",
       "category": "Food",
       "quantity": 20
+    },
+    {
+      "name": "new",
+      "category": "Food",
+      "quantity": "new",
+      "id": 7
+    },
+    {
+      "name": "NEW",
+      "category": "Misc",
+      "quantity": "60",
+      "id": 8
+    },
+    {
+      "name": "Yellow String",
+      "category": "Weapon",
+      "quantity": "4",
+      "id": 9
+    },
+    {
+      "name": "Hfjds",
+      "category": "Gear",
+      "quantity": "fdsf",
+      "id": 10
+    },
+    {
+      "name": "new",
+      "category": "Gear",
+      "quantity": "ds",
+      "id": 11
+    },
+    {
+      "name": "hjk",
+      "category": "Gear",
+      "quantity": "dad",
+      "id": 12
+    },
+    {
+      "name": "jk",
+      "category": "Misc",
+      "quantity": "fds",
+      "id": 13
     }
   ],
   "messages": [

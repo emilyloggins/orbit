@@ -18,7 +18,6 @@ class ItemMain extends Component {
                 return pack.name
             }
         })
-        console.log(currentPack)
 
         return (
             <div className="item-main-container bgImage">
@@ -26,7 +25,11 @@ class ItemMain extends Component {
                 <NewItem
                     chosenPack={this.props.chosenPack}
                     packs={this.props.packs}
-                    currentPackName={currentPack} />
+                    currentPackName={currentPack}
+                    addJoin={this.props.addJoin}
+                    addItem={this.props.addItem}
+                    changeChosenPack={this.props.changeChosenPack}
+                    getJoinTableItems={this.props.getJoinTableItems} />
                 <ItemList
                     {...this.props}
                     items={this.props.items}

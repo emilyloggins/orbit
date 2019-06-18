@@ -23,14 +23,13 @@ class NewPack extends Component {
             description: this.state.description
         }
         this.props.addPack(obj)
-        // this.clearFields()
     };
 
     render() {
         return (
             <div className="new-pack-div">
                 <p className="pack-blurb">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <h1>New Pack</h1>
+                <h1 className="new-pack-header">New Pack</h1>
                 <InputGroup className="new-pack-inputgroup">
                     <Input onChange={this.handleFieldChange} id="name" placeholder="Name"></Input>
                     <Input onChange={this.handleFieldChange} id="description" placeholder="Purpose"></Input>

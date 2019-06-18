@@ -14,10 +14,6 @@
     color: #1D343C;
     border: none;
 }
-.main-btn:hover {
-    background-color: #86C232;
-    color:#ffffff;
-}
 .category-header-container {
     display: flex;
     justify-content: space-around;
@@ -26,10 +22,48 @@
     flex-direction: row;
 }
 .new-item-container {
-    padding-top: 3em;
+    margin: 1em 35em 1em 35em;
+    /* width: 40%; */
+
+    padding: 5em;
+    background-color: #1D343C;
+    opacity: 0.9;
+    box-shadow: 10px 10px 5px black;
 }
 .new-item-input {
     display: inline-flex;
     float: center;
-    width: 40%;
+    width: 70%;
+}
+.category-div-main {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 10em 0 10em;
+}
+.category-item-container {
+    font-size: 2em;
+    color: #1D343C;
+    display: flex;
+    flex-direction: column;
+}
+.category-drop-down {
+width: 7em;
+}
+.new-item-btn {
+    margin-left: 1em;
+    margin-left: 1em;
+    background-color: #86C232;
+    color: #1D343C;
+    border: none;
+}
+.quantity-pill {
+    float: right;
+    margin-left: .5em;
+}
+.item-header-quad {
+    size: 6em;
+}
+.justify-content-between {
+    width: 200;
+    font-size: 1em;
 }

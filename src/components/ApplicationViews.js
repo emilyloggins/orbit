@@ -46,7 +46,6 @@ class ApplicationViews extends Component {
       .then(chatMessages => {
         this.props.history.push("/messages");
         this.setState(newState);
-        //return chatMessagess so it can be used in the form
         return chatMessages;
       });
   };
@@ -71,7 +70,6 @@ class ApplicationViews extends Component {
       .then((packs) => {
         this.props.history.push("/packs")
         this.setState(newState)
-        //return tasks so it can be used in the form
         return packs;
       });
   };
@@ -126,7 +124,30 @@ class ApplicationViews extends Component {
       })
     }
 
+    addJoin = join => {
+      const newState = {};
+      return PackItemManager.addJoin(join)
+        .then(() => PackItemManager.getAllJoins())
+        .then(packItems => newState.packItems = packItems)
+        .then((packItems) => {
+          this.props.history.push("/items")
+          this.setState(newState)
+          return packItems;
+        });
+    };
+
   // item calls
+  addItem = item => {
+    const newState = {};
+    return ItemManager.addItem(item)
+      .then(() => ItemManager.getAllItems())
+      .then(items => newState.items = items)
+      .then((items) => {
+        this.props.history.push("/items")
+        this.setState(newState)
+        return items;
+      });
+  };
 
   componentDidMount() {
     const newState = {};
@@ -200,7 +221,10 @@ class ApplicationViews extends Component {
               chosenPack={this.state.chosenPack}
               getJoinTableItems={this.getJoinTableItems}
               chosenItems={this.state.chosenItems}
-              changeChosenItems={this.changeChosenItems} />}
+              changeChosenItems={this.changeChosenItems}
+              changeChosenPack={this.changeChosenPack}
+              addJoin={this.addJoin}
+              addItem={this.addItem} />}
           />
           <Route exact path="/connect" render={(props) => {
             if (this.props.activeUser) {
