@@ -5,6 +5,7 @@ import ApplicationViews from './components/ApplicationViews'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { getUserFromLocalStorage } from "./auth/userManager"
 import { withRouter } from 'react-router'
+import { loadReCaptcha } from 'react-recaptcha-google'
 
 class App extends Component {
 
@@ -25,6 +26,10 @@ class App extends Component {
     this.setState({
       activeUser: null
     })
+  }
+
+  componentDidMount() {
+    loadReCaptcha();
   }
 
   render () {

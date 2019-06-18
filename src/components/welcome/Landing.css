@@ -14,12 +14,40 @@
   .orbit-header-main {
     font-size: 5em;
     letter-spacing: .5em;
+    color: #86C232;
+    /* border: 1px solid white; */
   }
   .description-main {
     font-size: 1.5em;
   }
-  .heading-bulrb-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; 
+  .heading-blurb-container {
+    opacity: 2.0;
  }
+ .landing-btn {
+   margin: 1em;
+ }
+ .welcome-card-div {
+   display: inline-flex;
+   justify-content: center;
+   flex-direction: column;
+   margin-top: 8%;
+   background-color: #1D343C;
+   opacity: 0.9;
+   box-shadow: 10px 10px 5px black;
+ }
+ .logo-main {
+   width: 90px;
+ }
+ .login-icon {
+  padding-bottom: 2em;
+ }
+ .input-fields {
+   margin: 4em;
+ }
+ .green-link {
+   color: #86C232;
+   font-size: 1.3em;
+ }
+
+
+ 
