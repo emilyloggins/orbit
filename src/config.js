@@ -1,5 +1,5 @@
 
-export const FBApiKey = "AIzaSyAayk3a7MSH0l04Gj6x6JRdkfbhEaZHS1g"
+export const FBApiKey = "AIzaSyAxEo7VbiVmIrlwLqvdrsMBXrUULJVQyb0"
 export const FBAuthDomain = "fecapstone-de3a1.firebaseapp.com"
 export const FBDatabaseURL = "https://fecapstone-de3a1.firebaseio.com"
 export const FBProjectID = "fecapstone-de3a1"

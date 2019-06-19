@@ -67,9 +67,10 @@ class NewItem extends Component {
           itemId: item.length,
         }
         this.props.addJoin(PackItemObj)
+        this.props.updateChosenItemsArray(item.length)
       })
-    this.props.changeChosenPack(this.props.chosenPack)
-    this.props.getJoinTableItems(this.props.chosenPack)
+    // this.props.changeChosenPack(this.props.chosenPack)
+    // this.props.getJoinTableItems(this.props.chosenPack)
   };
 
   render() {

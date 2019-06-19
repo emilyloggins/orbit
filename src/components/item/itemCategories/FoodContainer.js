@@ -5,12 +5,10 @@ import { FaTrash } from 'react-icons/fa'
 
 class FoodContainer extends Component {
 
-    handleDelete = (itemId) => {
-        // console.log("delete!")
-        this.props.deleteItem(itemId)
-        // this.props.deleteJoin(packItemId)
-        this.props.changeChosenPack(this.props.chosenPack)
-        this.props.getJoinTableItems(this.props.chosenPack)
+    handleDelete = () => {
+        if (this.props.packItem.itemId === this.props.food.id) {
+            console.log(this.props.packItem.id)
+        }
     }
     
     render() {

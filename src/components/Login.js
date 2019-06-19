@@ -5,6 +5,7 @@ import { loginFunction } from '../auth/userManager';
 import './Login.css'
 import { withRouter } from 'react-router-dom'
 import ufo from '../img/ufo1.png'
+import '../components/welcome/Landing.css'
 
 class Login extends Component {
   state = {
@@ -35,7 +36,7 @@ class Login extends Component {
       <Form className="landing-div-main bgImage">
         <div className="welcome-card-div login-div">
           <div className="heading-blurb-container">
-            <img src={ufo} className="logo-main login-icon" alt="ufo icon"></img>
+            <img src={ufo} className="ufo-icon" alt="ufo icon"></img>
           </div>
           <div className="input-fields">
             <FormGroup className="login-form-group">
@@ -47,7 +48,7 @@ class Login extends Component {
               <Input type="password" name="password" id="password" placeholder="password" onChange={this.handleFieldChange} />
             </FormGroup>
             <Button size="lg" onClick={this.submit}>Submit</Button>
-            <Link className="green-link" onClick={this.register}>Don't have an account?</Link>
+            <Link className="green-link" to="/">Don't have an account?</Link>
           </div>
         </div>
       </Form>

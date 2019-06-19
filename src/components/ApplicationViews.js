@@ -19,8 +19,7 @@ class ApplicationViews extends Component {
     packs: [],
     items: [],
     messages: [],
-    chosenPack: '',
-    chosenItems: []
+    chosenPack: ''
   }
 
   isAuthenticated = () => localStorage.getItem("user") !== null;
@@ -108,35 +107,35 @@ class ApplicationViews extends Component {
       });
   };
 
-  getJoinTableItems = (id) => {
-    this.setState({chosenItems: []})
-    PackItemManager.getJoinByPackId(id)
-      .then(objects => {
-        const itemsArray = []
-        objects.map(item => {
-          ItemManager.getItem(item.id)
-          .then(i => {
-            // console.log("get item", i)
-            itemsArray.push(i)
-          })
-          .then(() => this.setState({ chosenItems: itemsArray }))
-        })
-      })
-    }
+  // getJoinTableItems = (id) => {
+  //   this.setState({chosenItems: []})
+  //   PackItemManager.getJoinByPackId(id)
+  //     .then(objects => {
+  //       const itemsArray = []
+  //       objects.map(item => {
+  //         ItemManager.getItem(item.id)
+  //         .then(i => {
+  //           // console.log("get item", i)
+  //           itemsArray.push(i)
+  //         })
+  //         .then(() => this.setState({ chosenItems: itemsArray }))
+  //       })
+  //     })
+  //   }
 
-    addJoin = join => {
-      const newState = {};
-      return PackItemManager.addJoin(join)
-        .then(() => PackItemManager.getAllJoins())
-        .then(packItems => newState.packItems = packItems)
-        .then((packItems) => {
-          this.props.history.push("/items")
-          this.setState(newState)
-          return packItems;
-        });
-    };
+  addJoin = join => {
+    const newState = {};
+    return PackItemManager.addJoin(join)
+      .then(() => PackItemManager.getAllJoins())
+      .then(packItems => newState.packItems = packItems)
+      .then((packItems) => {
+        this.props.history.push("/items")
+        this.setState(newState)
+        return packItems;
+      });
+  };
 
-    
+
 
   // item calls
   addItem = item => {
@@ -186,17 +185,17 @@ class ApplicationViews extends Component {
 
   render() {
     return (
-    
+
       <div className="App" >
         <Router>
-          <Route path="/welcome" render={(props) => <Landing user={this.props.user} />} />
-          <Route exact path="/home" render={props => {
+          <Route exact path="/" render={(props) => <Landing user={this.props.user} />} />
+          <Route path="/home" render={props => {
             if (this.props.activeUser) {
               return <Home {...props}
                 activeUser={this.props.activeUser}
                 clearUser={this.props.clearUser} />
             } else {
-              return <Redirect to="/welcome" />
+              return <Redirect to="/" />
             }
           }} />
           <Route path="/login" render={(props) =>
@@ -241,7 +240,7 @@ class ApplicationViews extends Component {
               deleteJoin={this.deleteJoin}
               deleteItem={this.deleteItem} />}
           />
-          <Route exact path="/connect" render={(props) => {
+          <Route path="/connect" render={(props) => {
             if (this.props.activeUser) {
               return <ConnectMain
                 {...props}
@@ -251,7 +250,7 @@ class ApplicationViews extends Component {
                 addMessage={this.addMessage}
               />
             } else {
-              return <Redirect to="/welcome" />
+              return <Redirect to="/" />
             }
           }} />
         </Router>

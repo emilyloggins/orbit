@@ -26,59 +26,153 @@
   "packItems": [
     {
       "packId": 1,
-      "itemId": 2,
-      "id": 4
+      "itemId": 1,
+      "id": 1
     },
     {
       "packId": 1,
       "itemId": 2,
+      "id": 2
+    },
+    {
+      "packId": 1,
+      "itemId": 3,
+      "id": 3
+    },
+    {
+      "packId": 1,
+      "itemId": 4,
+      "id": 4
+    },
+    {
+      "packId": 1,
+      "itemId": 5,
       "id": 5
     },
     {
       "packId": 1,
-      "itemId": 3,
-      "id": 6
+      "itemId": 7,
+      "id": 7
     },
     {
       "packId": 1,
-      "itemId": 3,
-      "id": 7
+      "itemId": 8,
+      "id": 8
+    },
+    {
+      "packId": 1,
+      "itemId": 9,
+      "id": 9
+    },
+    {
+      "packId": 1,
+      "itemId": 10,
+      "id": 10
+    },
+    {
+      "packId": 1,
+      "itemId": 11,
+      "id": 11
+    },
+    {
+      "packId": 1,
+      "itemId": 11,
+      "id": 12
+    },
+    {
+      "packId": 1,
+      "itemId": 11,
+      "id": 13
     }
   ],
   "packs": [
     {
-      "name": "Test",
-      "description": "Test",
+      "name": "Personal",
+      "description": "All the things I will need to keep myself alive. Does not include Mabel's things, or any climate specific weaponry.",
       "id": 1
     },
     {
-      "name": "Test 2",
-      "description": "Test",
+      "name": "Fire Pack",
+      "description": "This is the pack to bring if they aliens arrive, and it turns out they rely heavily on fire as a weapon. ",
       "id": 2
     },
     {
-      "name": "Test 3",
-      "description": "Test",
+      "name": "Mabel's Pack",
+      "description": "All of Mabel's essentials. Pug supplies, etc.",
       "id": 3
     },
     {
-      "name": "Test 4",
-      "description": "Test",
-      "id": 4
+      "id": 4,
+      "name": "Drew's Pack",
+      "description": "This is assuming Drew has not already been taken and/or probed."
     }
   ],
   "items": [
     {
-      "name": "Gear",
+      "name": "Little Debbies",
+      "category": "Food",
+      "quantity": "3",
+      "id": 1
+    },
+    {
+      "name": "Bees",
       "category": "Weapon",
-      "quantity": "4",
+      "quantity": "8492",
       "id": 2
     },
     {
-      "name": "Food",
-      "category": "Food",
-      "quantity": "6",
+      "name": "Floss",
+      "category": "Misc",
+      "quantity": "1",
       "id": 3
+    },
+    {
+      "name": "Spam",
+      "category": "Food",
+      "quantity": "10",
+      "id": 4
+    },
+    {
+      "name": "Beef Jerky",
+      "category": "Food",
+      "quantity": "5",
+      "id": 5
+    },
+    {
+      "name": "Hazmat Suit",
+      "category": "Gear",
+      "quantity": "1",
+      "id": 7
+    },
+    {
+      "name": "Throwing Stars",
+      "category": "Weapon",
+      "quantity": "10",
+      "id": 8
+    },
+    {
+      "name": "Scrapbook",
+      "category": "Misc",
+      "quantity": "1",
+      "id": 9
+    },
+    {
+      "name": "Tarp",
+      "category": "Gear",
+      "quantity": "1",
+      "id": 10
+    },
+    {
+      "name": "Hydrogen Cyanide",
+      "category": "Weapon",
+      "quantity": "1",
+      "id": 11
+    },
+    {
+      "name": "New",
+      "category": "Food",
+      "quantity": "New",
+      "id": 12
     }
   ],
   "messages": [
@@ -93,6 +187,18 @@
       "userName": "shelley01",
       "userId": "gQTcYcbpCSYQOqWeCK0d3hTELag1",
       "id": 2
+    },
+    {
+      "body": "Are you being invaded?? I am XP",
+      "userName": "emloggins",
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "id": 3
+    },
+    {
+      "body": "Lol ;)",
+      "userName": "emloggins",
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "id": 4
     }
   ]
 }

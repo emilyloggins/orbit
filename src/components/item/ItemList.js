@@ -15,15 +15,4 @@ class ItemList extends Component {
     }
 }
 
-
-
-// let currentItems = this.props.chosenItems.map((item) => {
-//     return (
-//         <ItemContainer
-//             item={item}
-//             key={item.id}
-//             category={item.category} />
-//     )
-// })
-
 export default ItemList

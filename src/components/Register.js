@@ -6,6 +6,8 @@ import { withRouter } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../components/welcome/Landing.css"
 import ufo from '../img/ufo1.png'
+import '../components/welcome/Landing.css'
+
 
 class Register extends Component {
   state = {
@@ -45,7 +47,7 @@ class Register extends Component {
       <Form  className="landing-div-main bgImage">
       <div className="welcome-card-div">
       <div className="heading-blurb-container">
-      <img src={ufo} className="logo-main" alt="ufo icon"></img>
+      <img src={ufo} className="ufo-icon" alt="ufo icon"></img>
       </div>
         <Row form>
           <Col md={6}>
