@@ -28,7 +28,7 @@ export default class ConnectInput extends Component {
     this.props.addMessage(newMessage);
   };
 
-  render () {
+  render() {
     return (
       <React.Fragment>
         <Form className="input-main">
@@ -38,14 +38,14 @@ export default class ConnectInput extends Component {
               ref="body"
               id="body"
               required
-              placeholder="Enter your message and push submit"
-              onChange={ this.handleFieldChange }
+              placeholder="If the Government shouldn't hear it, don't type it."
+              onChange={this.handleFieldChange}
             />
           </InputGroup>
           <Button
-            className="btn btn-outline-primary submitMess"
+            className="submit-btn"
             size="sm"
-            onClick={ this.constructNewMessage }
+            onClick={this.constructNewMessage}
           >
             Submit
           </Button>

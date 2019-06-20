@@ -9,21 +9,11 @@ class ItemList extends Component {
     render() {
         return (
             <div className="main-item-container">
-                <ItemContainer {...this.props} />
+                <ItemContainer chosenItems={this.props.chosenItem}
+                    {...this.props} />
             </div>
         )
     }
 }
-
-
-
-// let currentItems = this.props.chosenItems.map((item) => {
-//     return (
-//         <ItemContainer
-//             item={item}
-//             key={item.id}
-//             category={item.category} />
-//     )
-// })
 
 export default ItemList

@@ -20,15 +20,15 @@
 .pack-blurb {
     font-size: 1.5em;
     padding-bottom: 3em;
+    text-align: left;
 }
 .new-pack-inputgroup {
     display: flex;
-    padding: 1em;
+    padding: 1em 0 1em 0;
 }
 .pack-list-header {
     color: #ffffff;
-    font-size: 3em;
-    letter-spacing: .2em;
+    font-size: 3.5em;
 }
 .pack-title-header1 {
     background-color: #86C232;
@@ -37,6 +37,10 @@
 }
 .pack-item-div {
     margin: 5%;
+}
+.main-btn-div {
+    display: flex;
+    justify-content: flex-end;
 }
 .main-btn {
     background-color: #86C232;
@@ -75,5 +79,5 @@
 
 }
 .new-pack-header {
-    font-size: 3em;
+    font-size: 3.5em;
 }

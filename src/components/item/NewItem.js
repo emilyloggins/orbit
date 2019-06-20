@@ -10,7 +10,9 @@ import {
 } from 'reactstrap';
 import './Item.css'
 import ufo from '../../img/ufo.png'
-
+import PackItemManager from '../../modules/PackItemManager'
+import ItemManager from '../../modules/ItemManager'
+import { FaUserAstronaut } from 'react-icons/fa'
 
 class NewItem extends Component {
   constructor(props) {
@@ -53,6 +55,7 @@ class NewItem extends Component {
   };
 
   submit = () => {
+    // this.props.updateState([])
 
     const ItemObj = {
       name: this.state.name,
@@ -62,21 +65,37 @@ class NewItem extends Component {
 
     this.props.addItem(ItemObj)
       .then((item) => {
+        const lastItem = item[item.length - 1]
+        console.log(lastItem.id)
         const PackItemObj = {
           packId: this.props.chosenPack,
-          itemId: item.length,
+          itemId: lastItem.id,
         }
         this.props.addJoin(PackItemObj)
+        .then(() => {
+          PackItemManager.getJoinByPackId(this.props.chosenPack)
+            .then(objects => {
+              // console.log("objects", objects)
+              const itemsArray = []
+              objects.map(item => {
+                // console.log("item id", item.id)
+                ItemManager.getItem(item.itemId)
+                  .then(i => {
+                    // console.log("single item", i)
+                    itemsArray.push(i)
+                  })
+                  .then(() => this.props.updateState(itemsArray))
+              })
+            })
+        })
       })
-    this.props.changeChosenPack(this.props.chosenPack)
-    this.props.getJoinTableItems(this.props.chosenPack)
   };
+
 
   render() {
     return (
       <div className="new-item-container">
         <div className="new-item-header">
-          <img src={ufo} className="logo-main" alt="ufo icon"></img>
           <h1 className="blurb-header">Add Items</h1>
         </div>
         <InputGroup className="new-item-input">
@@ -104,3 +123,4 @@ class NewItem extends Component {
 }
 
 export default NewItem
+

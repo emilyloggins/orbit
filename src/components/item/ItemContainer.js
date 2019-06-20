@@ -3,6 +3,11 @@ import FoodContainer from './itemCategories/FoodContainer';
 import GearContainer from './itemCategories/GearContainer';
 import WeaponContainer from './itemCategories/WeaponContainer';
 import MiscContainer from './itemCategories/MiscContainer';
+import { FaUtensils } from 'react-icons/fa'
+import { FaCampground } from 'react-icons/fa'
+import { FaSkullCrossbones } from 'react-icons/fa'
+import { FaToiletPaper } from 'react-icons/fa'
+
 import './Item.css'
 
 
@@ -12,12 +17,12 @@ class ItemContainer extends Component {
         return (
             <div className="category-div-main">
                 <div className="food-container">
-                    <h1 className="item-header-quad">FOOD</h1>
+                    <h1 className="item-header-quad"><FaUtensils /></h1>
                     {
                         this.props.chosenItems.map((item) => {
                             if (item.category === "Food") {
                                 return (
-                                    <FoodContainer food={item}
+                                    <FoodContainer key={item.id} food={item}
                                     {...this.props} />
                                 )
                             }
@@ -25,12 +30,12 @@ class ItemContainer extends Component {
                     }
                 </div>
                 <div className="gear-container">
-                    <h1 className="item-header-quad">GEAR</h1>
+                    <h1 className="item-header-quad"><FaCampground /></h1>
                     {
                         this.props.chosenItems.map((item) => {
                             if (item.category === "Gear") {
                                 return (
-                                    <GearContainer gear={item}
+                                    <GearContainer key={item.id} gear={item}
                                     {...this.props} />
                                 )
                             }
@@ -38,12 +43,12 @@ class ItemContainer extends Component {
                     }
                 </div>
                 <div className="weapon-container">
-                    <h1 className="item-header-quad">WEAPONS</h1>
+                    <h1 className="item-header-quad"><FaSkullCrossbones /></h1>
                     {
                         this.props.chosenItems.map((item) => {
                             if (item.category === "Weapon") {
                                 return (
-                                    <WeaponContainer weapon={item}
+                                    <WeaponContainer key={item.id} weapon={item}
                                     {...this.props} />
                                 )
                             }
@@ -51,12 +56,12 @@ class ItemContainer extends Component {
                     }
                 </div>
                 <div className="misc-container">
-                    <h1 className="item-header-quad">MISC.</h1>
+                    <h1 className="item-header-quad"><FaToiletPaper /></h1>
                     {
                         this.props.chosenItems.map((item) => {
                             if (item.category === "Misc") {
                                 return (
-                                    <MiscContainer misc={item}
+                                    <MiscContainer key={item.id} misc={item}
                                     {...this.props} />
                                 )
                             }

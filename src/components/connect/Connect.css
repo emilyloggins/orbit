@@ -29,14 +29,6 @@
     width: 0px;
     height: 0px;
   }
-  .editInput {
-    width: 80%
-  }
-  
-  .chatHeader {
-    /* margin: 20px 20px 16px 50px; */
-  }
- 
   .other-user-card {
     width: 55%;
     height: auto;
@@ -52,25 +44,25 @@
     height: auto;
     border-radius: 30px;
     box-shadow: 2px 2px 2px black;
-    padding: 10px;
+    /* padding: 0 10px 0 10px; */
     margin: 10px;
     background-color: #FFFFFF;
     color: #1D343C;
   }
-  
   .message-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 7em 0 7em;
   }
-  
-  .chatMessage {
-    font-size: 1.1rem;
+  .submit-btn {
+    background-color: #86C232;
+    color: #1D343C;
+    border: none;  
   }
-  
-  .btn {
-    /* background-color: white; */
+  .submit-btn:hover {
+    background-color: #474b4f;
+    color:#ffffff;
   }
   .submitMess {
     background-color: white;
@@ -80,36 +72,37 @@
     margin-top: 2px;
     margin-left: 5px;
   }
-  
   .input-main {
-    width: 90%;
+    width:1000px;
     display: flex;
-    justify-content: center;
     margin-top: 15px;
+    margin-left: 170px;
   }
-  .chatInput {
-    width: 90%;
-    margin-left: 30px;
-  }
-
   .other-message-body {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   .active-message-body {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   .connect-other-username {
-    font-size: 2em;
+    font-size: 1em;
     float: left;
     color: #1D343C;
     font-weight: bold;
-    text-shadow: #86C232 2px 2px;
+    /* text-shadow: #86C232 2px 2px; */
   }
   .connect-active-username {
-    font-size: 2em;
+    font-size: 1em;
     float: right;
     color: #1D343C;
     font-weight: bold;
-    text-shadow: #86C232 2px 2px;
+    /* text-shadow: #86C232 2px 2px; */
   }
+  .delete-icon {
+    width: 13px;
+  }
+  .delete-icon:hover {
+    color: #86C232;
+  }
+
   
