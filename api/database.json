@@ -56,33 +56,18 @@
     },
     {
       "packId": 1,
-      "itemId": 8,
-      "id": 8
-    },
-    {
-      "packId": 1,
-      "itemId": 9,
-      "id": 9
-    },
-    {
-      "packId": 1,
       "itemId": 10,
       "id": 10
     },
     {
       "packId": 1,
       "itemId": 11,
-      "id": 11
+      "id": 19
     },
     {
       "packId": 1,
-      "itemId": 11,
-      "id": 12
-    },
-    {
-      "packId": 1,
-      "itemId": 11,
-      "id": 13
+      "itemId": 16,
+      "id": 24
     }
   ],
   "packs": [
@@ -145,34 +130,49 @@
       "id": 7
     },
     {
-      "name": "Throwing Stars",
-      "category": "Weapon",
-      "quantity": "10",
-      "id": 8
-    },
-    {
-      "name": "Scrapbook",
-      "category": "Misc",
-      "quantity": "1",
-      "id": 9
-    },
-    {
       "name": "Tarp",
       "category": "Gear",
       "quantity": "1",
       "id": 10
     },
     {
-      "name": "Hydrogen Cyanide",
-      "category": "Weapon",
+      "name": "Food",
+      "category": "Food",
       "quantity": "1",
       "id": 11
     },
     {
-      "name": "New",
+      "name": "Food",
       "category": "Food",
-      "quantity": "New",
+      "quantity": "1",
       "id": 12
+    },
+    {
+      "name": "Food",
+      "category": "Food",
+      "quantity": "1",
+      "id": 13
+    },
+    {
+      "name": "food",
+      "category": "Food",
+      "id": 14
+    },
+    {
+      "name": "food",
+      "category": "Food",
+      "id": 15
+    },
+    {
+      "name": "New",
+      "category": "Gear",
+      "quantity": "test",
+      "id": 16
+    },
+    {
+      "name": "Test",
+      "category": "Food",
+      "id": 18
     }
   ],
   "messages": [

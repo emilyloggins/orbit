@@ -7,11 +7,16 @@ import { FaTrash } from 'react-icons/fa'
 class MiscContainer extends Component {
 
     handleDelete = (itemId) => {
-        // console.log("delete!")
+
+        this.props.packItems.find((packItems)=> {
+            if (packItems.itemId === itemId) {
+                this.props.deleteJoin(packItems.id)
+            }
+        })
         this.props.deleteItem(itemId)
-        // this.props.deleteJoin(packItemId)
-        this.props.changeChosenPack(this.props.chosenPack)
-        this.props.updateChosenItemsArray(itemId)
+        .then(() => {
+            this.props.updateState(this.props.chosenItems)
+        })
     } 
 
     render() {

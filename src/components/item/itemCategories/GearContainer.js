@@ -6,9 +6,17 @@ import { FaTrash } from 'react-icons/fa'
 class GearContainer extends Component {
 
     handleDelete = (itemId) => {
-        // console.log("delete!")
+
+        this.props.packItems.find((packItems)=> {
+            if (packItems.itemId === itemId) {
+                this.props.deleteJoin(packItems.id)
+            }
+        })
         this.props.deleteItem(itemId)
-    }
+        .then(() => {
+            this.props.updateState(this.props.chosenItems)
+        })
+    } 
 
     render() {
         return (

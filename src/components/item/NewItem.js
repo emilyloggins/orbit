@@ -10,6 +10,8 @@ import {
 } from 'reactstrap';
 import './Item.css'
 import ufo from '../../img/ufo.png'
+import PackItemManager from '../../modules/PackItemManager'
+import ItemManager from '../../modules/ItemManager'
 
 
 class NewItem extends Component {
@@ -53,6 +55,7 @@ class NewItem extends Component {
   };
 
   submit = () => {
+    // this.props.updateState([])
 
     const ItemObj = {
       name: this.state.name,
@@ -62,16 +65,32 @@ class NewItem extends Component {
 
     this.props.addItem(ItemObj)
       .then((item) => {
+        const lastItem = item[item.length - 1]
+        console.log(lastItem.id)
         const PackItemObj = {
           packId: this.props.chosenPack,
-          itemId: item.length,
+          itemId: lastItem.id,
         }
         this.props.addJoin(PackItemObj)
-        this.props.updateChosenItemsArray(item.length)
+        .then(() => {
+          PackItemManager.getJoinByPackId(this.props.chosenPack)
+            .then(objects => {
+              // console.log("objects", objects)
+              const itemsArray = []
+              objects.map(item => {
+                // console.log("item id", item.id)
+                ItemManager.getItem(item.itemId)
+                  .then(i => {
+                    // console.log("single item", i)
+                    itemsArray.push(i)
+                  })
+                  .then(() => this.props.updateState(itemsArray))
+              })
+            })
+        })
       })
-    // this.props.changeChosenPack(this.props.chosenPack)
-    // this.props.getJoinTableItems(this.props.chosenPack)
   };
+
 
   render() {
     return (
@@ -105,3 +124,4 @@ class NewItem extends Component {
 }
 
 export default NewItem
+

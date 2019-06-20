@@ -9,7 +9,8 @@ class ItemList extends Component {
     render() {
         return (
             <div className="main-item-container">
-                <ItemContainer {...this.props} />
+                <ItemContainer chosenItems={this.props.chosenItem}
+                    {...this.props} />
             </div>
         )
     }

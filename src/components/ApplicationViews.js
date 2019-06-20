@@ -101,9 +101,10 @@ class ApplicationViews extends Component {
     PackItemManager.deleteJoin(id)
       .then(PackItemManager.getAllJoins)
       .then(packItems => (newState.packItems = packItems))
-      .then(() => {
+      .then((packItems) => {
         this.props.history.push("/packs");
         this.setState(newState);
+        return packItems;
       });
   };
 
@@ -155,9 +156,10 @@ class ApplicationViews extends Component {
     ItemManager.deleteItem(id)
       .then(ItemManager.getAllItems)
       .then(items => (newState.items = items))
-      .then(() => {
+      .then((items) => {
         this.props.history.push("/items");
-        this.setState(newState);
+        this.setState(newState)
+        return items;
       });
   };
 

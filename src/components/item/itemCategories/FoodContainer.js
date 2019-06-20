@@ -2,15 +2,21 @@ import React, { Component } from 'react'
 import '../Item.css'
 import { ListGroup, ListGroupItem, Badge } from 'reactstrap';
 import { FaTrash } from 'react-icons/fa'
+import PackItemManager from '../../../modules/PackItemManager'
+import ItemManager from '../../../modules/ItemManager'
+
 
 class FoodContainer extends Component {
 
-    handleDelete = () => {
-        if (this.props.packItem.itemId === this.props.food.id) {
-            console.log(this.props.packItem.id)
-        }
+    handleDelete = (itemId) => {
+
+        this.props.packItems.find((packItems) => {
+            if (packItems.itemId === itemId) {
+                this.props.deleteJoin(packItems.id)
+            }
+        })
     }
-    
+
     render() {
 
         const currentPackId = this.props.packItems.map((item) => {
@@ -18,7 +24,6 @@ class FoodContainer extends Component {
                 return item.id
             }
         })
-        // console.log("current pack Id", currentPackId)
 
         return (
             <div className="category-item-container">

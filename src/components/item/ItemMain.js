@@ -10,18 +10,40 @@ import './Item.css'
 
 class ItemMain extends Component {
 
+
     state = {
         chosenItems: [],
     }
 
     componentDidMount() {
-        this.setState({ chosenItems: [] })
         PackItemManager.getJoinByPackId(this.props.chosenPack)
+            .then(objects => {
+                // console.log("pack items", objects)
+                const itemsArray = []
+                objects.map(item => {
+                    // console.log("item", item.itemId)
+                    ItemManager.getItem(item.itemId)
+                        .then(i => {
+                            itemsArray.push(i)
+                        })
+                        .then(() => this.setState({ chosenItems: itemsArray }))
+                })
+            })
+    }
+
+    updateState = (chosenItems) => {
+        this.setState({ chosenItems: chosenItems })
+    }
+
+    getJoinTableItems = (id) => {
+        this.setState({ chosenItems: [] })
+        PackItemManager.getJoinByPackId(id)
             .then(objects => {
                 const itemsArray = []
                 objects.map(item => {
                     ItemManager.getItem(item.id)
                         .then(i => {
+                            // console.log("get item", i)
                             itemsArray.push(i)
                         })
                         .then(() => this.setState({ chosenItems: itemsArray }))
@@ -33,10 +55,12 @@ class ItemMain extends Component {
         const itemsArray = this.state.chosenItems;
         ItemManager.getItem(id)
             .then(i => {
+                console.log(i)
                 itemsArray.push(i)
             })
             .then(() => this.setState({ chosenItems: itemsArray }))
     }
+
 
     PackReturn = () => {
         this.props.history.push('packs')
@@ -62,7 +86,8 @@ class ItemMain extends Component {
                     addItem={this.props.addItem}
                     changeChosenPack={this.props.changeChosenPack}
                     getJoinTableItems={this.props.getJoinTableItems}
-                    updateChosenItemsArray={this.updateChosenItemsArray} />
+                    updateChosenItemsArray={this.updateChosenItemsArray}
+                    updateState={this.updateState} />
                 <ItemList
                     {...this.props}
                     items={this.props.items}
@@ -74,7 +99,8 @@ class ItemMain extends Component {
                     changeChosenItems={this.props.changeChosenItems}
                     getJoinTableItems={this.props.getJoinTableItems}
                     deleteJoin={this.props.deleteJoin}
-                    updateChosenItemsArray={this.updateChosenItemsArray} />
+                    updateChosenItemsArray={this.updateChosenItemsArray}
+                    updateState={this.updateState} />
             </div>
         )
     }

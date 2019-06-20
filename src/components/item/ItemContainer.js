@@ -17,7 +17,7 @@ class ItemContainer extends Component {
                         this.props.chosenItems.map((item) => {
                             if (item.category === "Food") {
                                 return (
-                                    <FoodContainer food={item}
+                                    <FoodContainer key={item.id} food={item}
                                     {...this.props} />
                                 )
                             }
@@ -30,7 +30,7 @@ class ItemContainer extends Component {
                         this.props.chosenItems.map((item) => {
                             if (item.category === "Gear") {
                                 return (
-                                    <GearContainer gear={item}
+                                    <GearContainer key={item.id} gear={item}
                                     {...this.props} />
                                 )
                             }
@@ -43,7 +43,7 @@ class ItemContainer extends Component {
                         this.props.chosenItems.map((item) => {
                             if (item.category === "Weapon") {
                                 return (
-                                    <WeaponContainer weapon={item}
+                                    <WeaponContainer key={item.id} weapon={item}
                                     {...this.props} />
                                 )
                             }
@@ -56,7 +56,7 @@ class ItemContainer extends Component {
                         this.props.chosenItems.map((item) => {
                             if (item.category === "Misc") {
                                 return (
-                                    <MiscContainer misc={item}
+                                    <MiscContainer key={item.id} misc={item}
                                     {...this.props} />
                                 )
                             }
