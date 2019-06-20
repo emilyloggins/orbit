@@ -37,6 +37,9 @@ class NavBar extends Component {
                                 <NavLink className="nav-text-side" href="/connect/">Connect</NavLink>
                             </NavItem>
                             <NavItem>
+                                <NavLink className="nav-text-side" href="/sightings/">Sightings</NavLink>
+                            </NavItem>
+                            <NavItem>
                                 <NavLink className="nav-text-side" id="alert-nav" href="/components/">GET OUT</NavLink>
                             </NavItem>
                             <NavItem>
