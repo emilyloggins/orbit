@@ -109,20 +109,20 @@ class ApplicationViews extends Component {
   };
 
   // getJoinTableItems = (id) => {
-  //   this.setState({chosenItems: []})
+  //   this.setState({ chosenItems: [] })
   //   PackItemManager.getJoinByPackId(id)
   //     .then(objects => {
   //       const itemsArray = []
   //       objects.map(item => {
   //         ItemManager.getItem(item.id)
-  //         .then(i => {
-  //           // console.log("get item", i)
-  //           itemsArray.push(i)
-  //         })
-  //         .then(() => this.setState({ chosenItems: itemsArray }))
+  //           .then(i => {
+  //             // console.log("get item", i)
+  //             itemsArray.push(i)
+  //           })
+  //           .then(() => this.setState({ chosenItems: itemsArray }))
   //       })
   //     })
-  //   }
+  // }
 
   addJoin = join => {
     const newState = {};

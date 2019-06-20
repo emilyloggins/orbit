@@ -9,7 +9,6 @@ class ConnectMain extends Component {
     return (
       <div className="connect-main-container bgImage">
       <section className="message-section">
-        <h1 className="chatHeader">Connect</h1>
         <div className="message-container">
           <ConnectList { ...this.props } activeUser={ this.props.activeUser } messages={ this.props.messages } />
         </div>

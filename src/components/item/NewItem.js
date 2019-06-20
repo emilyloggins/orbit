@@ -12,7 +12,7 @@ import './Item.css'
 import ufo from '../../img/ufo.png'
 import PackItemManager from '../../modules/PackItemManager'
 import ItemManager from '../../modules/ItemManager'
-
+import { FaUserAstronaut } from 'react-icons/fa'
 
 class NewItem extends Component {
   constructor(props) {
@@ -96,7 +96,6 @@ class NewItem extends Component {
     return (
       <div className="new-item-container">
         <div className="new-item-header">
-          <img src={ufo} className="logo-main" alt="ufo icon"></img>
           <h1 className="blurb-header">Add Items</h1>
         </div>
         <InputGroup className="new-item-input">

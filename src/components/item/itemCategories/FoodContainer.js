@@ -2,18 +2,16 @@ import React, { Component } from 'react'
 import '../Item.css'
 import { ListGroup, ListGroupItem, Badge } from 'reactstrap';
 import { FaTrash } from 'react-icons/fa'
-import PackItemManager from '../../../modules/PackItemManager'
-import ItemManager from '../../../modules/ItemManager'
 
 
 class FoodContainer extends Component {
 
     handleDelete = (itemId) => {
-
         this.props.packItems.find((packItems) => {
             if (packItems.itemId === itemId) {
                 this.props.deleteJoin(packItems.id)
             }
+            this.props.getJoinTableItems(this.props.chosenPack)
         })
     }
 

@@ -49,6 +49,7 @@ class Register extends Component {
       <div className="heading-blurb-container">
       <img src={ufo} className="ufo-icon" alt="ufo icon"></img>
       </div>
+      <div className="register-form">
         <Row form>
           <Col md={6}>
             <FormGroup>
@@ -105,6 +106,7 @@ class Register extends Component {
         <Button onClick={this.submit}>Register</Button>
         <Link className="green-link" onClick={this.login}>Already have an account?</Link>
         </div>
+      </div>
       </Form>
     );
   }

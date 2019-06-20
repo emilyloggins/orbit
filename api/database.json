@@ -41,11 +41,6 @@
     },
     {
       "packId": 1,
-      "itemId": 4,
-      "id": 4
-    },
-    {
-      "packId": 1,
       "itemId": 5,
       "id": 5
     },
@@ -61,13 +56,43 @@
     },
     {
       "packId": 1,
-      "itemId": 11,
-      "id": 19
+      "itemId": 16,
+      "id": 24
     },
     {
       "packId": 1,
-      "itemId": 16,
-      "id": 24
+      "itemId": 23,
+      "id": 25
+    },
+    {
+      "packId": 1,
+      "itemId": 24,
+      "id": 26
+    },
+    {
+      "packId": 1,
+      "itemId": 25,
+      "id": 27
+    },
+    {
+      "packId": 1,
+      "itemId": 26,
+      "id": 28
+    },
+    {
+      "packId": 1,
+      "itemId": 27,
+      "id": 29
+    },
+    {
+      "packId": 1,
+      "itemId": 28,
+      "id": 30
+    },
+    {
+      "packId": 1,
+      "itemId": 29,
+      "id": 31
     }
   ],
   "packs": [
@@ -173,6 +198,72 @@
       "name": "Test",
       "category": "Food",
       "id": 18
+    },
+    {
+      "name": "Test",
+      "category": "Food",
+      "quantity": "1",
+      "id": 19
+    },
+    {
+      "name": "Test",
+      "category": "Food",
+      "quantity": "2",
+      "id": 20
+    },
+    {
+      "name": "Test",
+      "category": "Food",
+      "quantity": "1",
+      "id": 21
+    },
+    {
+      "name": "Test",
+      "category": "Food",
+      "quantity": "1",
+      "id": 22
+    },
+    {
+      "name": "Test",
+      "category": "Gear",
+      "quantity": "Test",
+      "id": 23
+    },
+    {
+      "name": "Test",
+      "category": "Food",
+      "quantity": "Test",
+      "id": 24
+    },
+    {
+      "name": "Test",
+      "category": "Weapon",
+      "quantity": "Test",
+      "id": 25
+    },
+    {
+      "name": "Test",
+      "category": "Misc",
+      "quantity": "Test",
+      "id": 26
+    },
+    {
+      "name": "Test",
+      "category": "Misc",
+      "quantity": "Test",
+      "id": 27
+    },
+    {
+      "name": "Test",
+      "category": "Misc",
+      "quantity": "Test",
+      "id": 28
+    },
+    {
+      "name": "Test",
+      "category": "Misc",
+      "quantity": "Test",
+      "id": 29
     }
   ],
   "messages": [

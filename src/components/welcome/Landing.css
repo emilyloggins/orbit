@@ -6,9 +6,9 @@
   .welcome-card-div {
     /* background-color: #1D343C; */
     color: #FFFFFF;
-    width: 40%;
+    width: 700px;
     height: auto;
-    padding: 3%;
+    padding: 50px;
     float: center;
   }
   .orbit-header-main {
@@ -42,10 +42,15 @@
  .green-link {
    color: #86C232;
    font-size: 1.3em;
+   padding-top: 2em;
  }
  .ufo-icon {
    width: 100px;
  }
+ .login-form-group {
+   padding: 1.3em;
+ }
+
 
 
  

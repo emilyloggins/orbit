@@ -27,16 +27,15 @@ class ConnectItem extends Component {
               <p onClick={this.alertMessage}>
                 <span className="connect-active-username">{this.props.message.userName}</span><div className="active-message-body"> {this.props.message.body}</div>
               </p>
-              <small className="float-right text-muted">{this.props.message.dateTime}</small>
-            </div>
             <div className="clearfix">
               <button
-                className="btn btn-outline-danger btn-sm mx-3 float-right"
+                className="btn btn-sm float-right"
                 disabled={this.state.saveDisabled}
                 onClick={this.handleClickDelete}
               >
-                <FaTrash />
+                <FaTrash className="delete-icon"/>
               </button>
+            </div>
             </div>
           </div>
         </div>
@@ -49,7 +48,6 @@ class ConnectItem extends Component {
               <p onClick={this.alertMessage}>
                 <span className="connect-other-username">{this.props.message.userName}</span><div className="other-message-body">{this.props.message.body}</div>
               </p>
-              <small className="float-right text-muted">{this.props.message.dateTime}</small>
             </div>
             <div className="clearfix" />
           </div>
