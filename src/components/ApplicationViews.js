@@ -21,8 +21,7 @@ class ApplicationViews extends Component {
     packs: [],
     items: [],
     messages: [],
-    chosenPack: '',
-    packedBags: []
+    chosenPack: ''
   }
 
   isAuthenticated = () => localStorage.getItem("user") !== null;
@@ -187,10 +186,6 @@ class ApplicationViews extends Component {
   changeChosenPack = (id) => {
     this.setState({ chosenPack: id })
   }
-
-  // checkPack = () => {
-  //   if ()
-  // }
  
   render() {
     return (
@@ -247,7 +242,8 @@ class ApplicationViews extends Component {
               addJoin={this.addJoin}
               addItem={this.addItem}
               deleteJoin={this.deleteJoin}
-              deleteItem={this.deleteItem} />}
+              deleteItem={this.deleteItem}
+              updatePack={this.updatePack} />}
           />
           <Route path="/connect" render={(props) => {
             if (this.props.activeUser) {

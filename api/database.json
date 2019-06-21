@@ -98,19 +98,22 @@
   ],
   "packs": [
     {
-      "name": "Personal",
-      "description": "All the things I will need to keep myself alive. Does not include Mabel's things, or any climate specific weaponry.",
-      "id": 1
+      "id": 1,
+      "name": "Personal Pack",
+      "description": "Description",
+      "packed": true
     },
     {
       "name": "Mabel's Pack",
       "description": "All of Mabel's essentials. Pug supplies, etc.",
+      "packed": false,
       "id": 3
     },
     {
       "id": 4,
       "name": "Drew's Pack",
-      "description": "This is assuming Drew has not already been taken and/or probed."
+      "description": "This is assuming Drew has not already been taken and/or probed.",
+      "packed": false
     }
   ],
   "items": [
