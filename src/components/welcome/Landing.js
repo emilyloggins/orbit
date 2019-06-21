@@ -29,7 +29,7 @@ class Landing extends Component {
                     <div className="heading-blurb-container">
                     <img src={ufo} className="ufo-icon" alt="ufo icon"></img>
                     <h1 className="orbit-header-main">ORBIT</h1>
-                    <p className="description-main">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p className="description-main">It's a fact. The government of this country is covering up the existence of extraterrestrial life. You can keep brushing it under the rug, or you can take your future in your own hands, and prepare. Orbit is the go-to place to prepare for an invasion, share evidence with likeminded people, and find a way out of your city when they inevitably come. And oh, they most certainly will come. </p>
                     </div>
                     <div className="welcome-btn-container">
                     <Button id="register-btn" className="landing-btn" color="secondary" size="lg" onClick={this.Register}>Register</Button>{' '}

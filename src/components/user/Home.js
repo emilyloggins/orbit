@@ -19,6 +19,7 @@ export default class Home extends Component {
         <div className="main-home-container">
           <WelcomeMessage {...this.props } />
           <Carousel />
+          <h1>Here's some things you missed while you were gone.</h1>
         </div>
       </div>
     )

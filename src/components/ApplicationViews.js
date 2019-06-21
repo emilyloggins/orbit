@@ -21,7 +21,8 @@ class ApplicationViews extends Component {
     packs: [],
     items: [],
     messages: [],
-    chosenPack: ''
+    chosenPack: '',
+    packedBags: []
   }
 
   isAuthenticated = () => localStorage.getItem("user") !== null;
@@ -187,6 +188,10 @@ class ApplicationViews extends Component {
     this.setState({ chosenPack: id })
   }
 
+  // checkPack = () => {
+  //   if ()
+  // }
+ 
   render() {
     return (
 

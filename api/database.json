@@ -21,6 +21,17 @@
       "city": "Nashville",
       "zip": "37206",
       "id": "gQTcYcbpCSYQOqWeCK0d3hTELag1"
+    },
+    {
+      "firstName": "Heather",
+      "lastName": "Cleland",
+      "email": "heather@gmail.com",
+      "username": "heather54",
+      "password": null,
+      "street": "2342 street",
+      "city": "Nashville",
+      "zip": "43242",
+      "id": "IhyXhFwVRXN4dkK1eg1bcSyQ7Eu1"
     }
   ],
   "packItems": [
@@ -56,43 +67,33 @@
     },
     {
       "packId": 1,
+      "itemId": 11,
+      "id": 11
+    },
+    {
+      "packId": 1,
+      "itemId": 12,
+      "id": 12
+    },
+    {
+      "packId": 1,
+      "itemId": 13,
+      "id": 13
+    },
+    {
+      "packId": 1,
+      "itemId": 14,
+      "id": 14
+    },
+    {
+      "packId": 1,
+      "itemId": 15,
+      "id": 15
+    },
+    {
+      "packId": 1,
       "itemId": 16,
-      "id": 24
-    },
-    {
-      "packId": 1,
-      "itemId": 23,
-      "id": 25
-    },
-    {
-      "packId": 1,
-      "itemId": 24,
-      "id": 26
-    },
-    {
-      "packId": 1,
-      "itemId": 25,
-      "id": 27
-    },
-    {
-      "packId": 1,
-      "itemId": 26,
-      "id": 28
-    },
-    {
-      "packId": 1,
-      "itemId": 27,
-      "id": 29
-    },
-    {
-      "packId": 1,
-      "itemId": 28,
-      "id": 30
-    },
-    {
-      "packId": 1,
-      "itemId": 29,
-      "id": 31
+      "id": 16
     }
   ],
   "packs": [
@@ -100,11 +101,6 @@
       "name": "Personal",
       "description": "All the things I will need to keep myself alive. Does not include Mabel's things, or any climate specific weaponry.",
       "id": 1
-    },
-    {
-      "name": "Fire Pack",
-      "description": "This is the pack to bring if they aliens arrive, and it turns out they rely heavily on fire as a weapon. ",
-      "id": 2
     },
     {
       "name": "Mabel's Pack",
@@ -161,135 +157,96 @@
       "id": 10
     },
     {
-      "name": "Food",
+      "name": "Spam",
       "category": "Food",
-      "quantity": "1",
+      "quantity": "8",
       "id": 11
     },
     {
-      "name": "Food",
-      "category": "Food",
+      "name": "Family photos",
+      "category": "Misc",
       "quantity": "1",
       "id": 12
     },
     {
-      "name": "Food",
-      "category": "Food",
-      "quantity": "1",
+      "name": "Bear Trap",
+      "category": "Gear",
+      "quantity": "3",
       "id": 13
     },
     {
-      "name": "food",
-      "category": "Food",
+      "name": "Hydrogen Cyanide",
+      "category": "Weapon",
+      "quantity": "1",
       "id": 14
     },
     {
-      "name": "food",
-      "category": "Food",
+      "name": "Acid",
+      "category": "Weapon",
+      "quantity": "1",
       "id": 15
     },
     {
-      "name": "New",
+      "name": "Eclipse googles",
       "category": "Gear",
-      "quantity": "test",
+      "quantity": "1",
       "id": 16
-    },
-    {
-      "name": "Test",
-      "category": "Food",
-      "id": 18
-    },
-    {
-      "name": "Test",
-      "category": "Food",
-      "quantity": "1",
-      "id": 19
-    },
-    {
-      "name": "Test",
-      "category": "Food",
-      "quantity": "2",
-      "id": 20
-    },
-    {
-      "name": "Test",
-      "category": "Food",
-      "quantity": "1",
-      "id": 21
-    },
-    {
-      "name": "Test",
-      "category": "Food",
-      "quantity": "1",
-      "id": 22
-    },
-    {
-      "name": "Test",
-      "category": "Gear",
-      "quantity": "Test",
-      "id": 23
-    },
-    {
-      "name": "Test",
-      "category": "Food",
-      "quantity": "Test",
-      "id": 24
-    },
-    {
-      "name": "Test",
-      "category": "Weapon",
-      "quantity": "Test",
-      "id": 25
-    },
-    {
-      "name": "Test",
-      "category": "Misc",
-      "quantity": "Test",
-      "id": 26
-    },
-    {
-      "name": "Test",
-      "category": "Misc",
-      "quantity": "Test",
-      "id": 27
-    },
-    {
-      "name": "Test",
-      "category": "Misc",
-      "quantity": "Test",
-      "id": 28
-    },
-    {
-      "name": "Test",
-      "category": "Misc",
-      "quantity": "Test",
-      "id": 29
     }
   ],
   "messages": [
     {
       "id": 1,
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "body": "Hey guys!",
+      "body": "You guys... I. was. just. PROBED!",
       "userName": "emloggins"
     },
     {
-      "body": "Hey you lovely little bean!!",
+      "body": "What?!?!?!",
       "userName": "shelley01",
       "userId": "gQTcYcbpCSYQOqWeCK0d3hTELag1",
       "id": 2
     },
     {
-      "body": "Are you being invaded?? I am XP",
+      "body": "LOL jk jk XP",
       "userName": "emloggins",
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
       "id": 3
     },
     {
-      "body": "Lol ;)",
+      "body": "LOL!",
+      "userName": "heather54",
+      "userId": "IhyXhFwVRXN4dkK1eg1bcSyQ7Eu1",
+      "id": 5
+    },
+    {
+      "body": "Perhaps the earliest UFO sighting occurred in 1450 B.C.",
+      "userName": "heather54",
+      "userId": "IhyXhFwVRXN4dkK1eg1bcSyQ7Eu1",
+      "id": 6
+    },
+    {
+      "body": "So true.",
+      "userName": "shelley01",
+      "userId": "gQTcYcbpCSYQOqWeCK0d3hTELag1",
+      "id": 7
+    },
+    {
+      "body": "My aunt was abducted once! The very next day she went to get x-rayed and had 11 extra kidneys",
       "userName": "emloggins",
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "id": 4
+      "id": 8
+    },
+    {
+      "body": "Wait no way... the same thing happened to me!",
+      "userName": "heather54",
+      "userId": "IhyXhFwVRXN4dkK1eg1bcSyQ7Eu1",
+      "id": 9
+    },
+    {
+      "body": "Aliens are so real, and I'm sure they look exactly how the media potrays them.",
+      "userName": "shelley01",
+      "userId": "gQTcYcbpCSYQOqWeCK0d3hTELag1",
+      "id": 10
     }
   ]
 }

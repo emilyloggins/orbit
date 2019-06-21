@@ -6,7 +6,8 @@ import {
   Button,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  Label,
 } from 'reactstrap';
 import './Item.css'
 import ufo from '../../img/ufo.png'
@@ -72,22 +73,22 @@ class NewItem extends Component {
           itemId: lastItem.id,
         }
         this.props.addJoin(PackItemObj)
-        .then(() => {
-          PackItemManager.getJoinByPackId(this.props.chosenPack)
-            .then(objects => {
-              // console.log("objects", objects)
-              const itemsArray = []
-              objects.map(item => {
-                // console.log("item id", item.id)
-                ItemManager.getItem(item.itemId)
-                  .then(i => {
-                    // console.log("single item", i)
-                    itemsArray.push(i)
-                  })
-                  .then(() => this.props.updateState(itemsArray))
+          .then(() => {
+            PackItemManager.getJoinByPackId(this.props.chosenPack)
+              .then(objects => {
+                // console.log("objects", objects)
+                const itemsArray = []
+                objects.map(item => {
+                  // console.log("item id", item.id)
+                  ItemManager.getItem(item.itemId)
+                    .then(i => {
+                      // console.log("single item", i)
+                      itemsArray.push(i)
+                    })
+                    .then(() => this.props.updateState(itemsArray))
+                })
               })
-            })
-        })
+          })
       })
   };
 
@@ -95,6 +96,10 @@ class NewItem extends Component {
   render() {
     return (
       <div className="new-item-container">
+        <Label  id="packed-check-label" check>
+          <Input id="packed-check" type="checkbox" />{' '}
+          PACKED
+          </Label>
         <div className="new-item-header">
           <h1 className="blurb-header">Add Items</h1>
         </div>
