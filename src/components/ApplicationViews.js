@@ -11,6 +11,8 @@ import ItemManager from '../modules/ItemManager';
 import ItemMain from '../components/item/ItemMain'
 import ConnectMain from "./connect/ConnectMain"
 import Messages from '../modules/ConnectManager'
+import SightingsMain from '../components/sightings/SightingsMain'
+import GetOutMain from '../components/GetOut/GetOutMain'
 
 class ApplicationViews extends Component {
 
@@ -19,7 +21,8 @@ class ApplicationViews extends Component {
     packs: [],
     items: [],
     messages: [],
-    chosenPack: ''
+    chosenPack: '',
+    packedBags: []
   }
 
   isAuthenticated = () => localStorage.getItem("user") !== null;
@@ -185,6 +188,10 @@ class ApplicationViews extends Component {
     this.setState({ chosenPack: id })
   }
 
+  // checkPack = () => {
+  //   if ()
+  // }
+ 
   render() {
     return (
 
@@ -250,6 +257,26 @@ class ApplicationViews extends Component {
                 messages={this.state.messages}
                 deleteMessage={this.deleteMessage}
                 addMessage={this.addMessage}
+              />
+            } else {
+              return <Redirect to="/" />
+            }
+          }} />
+          <Route path="/sightings" render={(props) => {
+            if (this.props.activeUser) {
+              return <SightingsMain
+                {...props}
+                activeUser={this.props.activeUser}
+              />
+            } else {
+              return <Redirect to="/" />
+            }
+          }} />
+          <Route path="/getout" render={(props) => {
+            if (this.props.activeUser) {
+              return <GetOutMain
+                {...props}
+                activeUser={this.props.activeUser}
               />
             } else {
               return <Redirect to="/" />

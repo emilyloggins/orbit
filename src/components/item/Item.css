@@ -99,3 +99,8 @@ width: 7em;
     opacity: 0.9;
     box-shadow: 10px 10px 5px black;
 }
+#packed-check-label {
+    font-size: 1.5em;
+    float: right;
+    padding: .5em;
+}

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router-dom'
 import "./GetOut.css"
-import SpinnerMessage from './SpinnerMessage';
+import GetOutPack from './GetOutPack';
+// import SpinnerMessage from './SpinnerMessage';
 
 class GetOutMain extends Component {
 
@@ -13,14 +14,17 @@ class GetOutMain extends Component {
     render() {
         return (
             <div className="bgImage">
-                <div class="example1">
-                    <h3>AVOID NATIONAL LANDMARKS AT ALL COSTS.</h3>
-                </div>
-                <SpinnerMessage addMessage={this.props.addMessage}
+                {/* <div className="getout-main-container"> */}
+                    <div class="example1">
+                        <h3>AVOID NATIONAL LANDMARKS AT ALL COSTS.</h3>
+                    </div>
+                    <GetOutPack />
+                    {/* <SpinnerMessage addMessage={this.props.addMessage}
                 activeUser={this.props.activeUser}
                 safe={this.props.safe}
                 markSafe={this.props.markSafe}
-                markUnsafe={this.props.markUnsafe} />
+                markUnsafe={this.props.markUnsafe} /> */}
+                {/* </div> */}
             </div>
         )
     }

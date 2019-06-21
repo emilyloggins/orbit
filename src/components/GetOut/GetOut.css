@@ -2,19 +2,21 @@
     background: url(../../img/starmap.jpg) no-repeat center center;
     background-size: 100% 100%;
   }
+
   /* scrolling text */
   .example1 {
       height: 50px;	
       overflow: hidden;
       position: relative;
+      background: white;
     }
     .example1 h3 {
     margin-top: 1em;
-    font-size: 3em;
+    font-size: 3.5em;
     color: red;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 300%;
     margin: 0;
     line-height: 50px;
     text-align: center;
@@ -23,9 +25,9 @@
     -webkit-transform:translateX(100%);	
     transform:translateX(100%);
     /* Apply animation to this element */	
-    -moz-animation: example1 10s linear infinite;
-    -webkit-animation: example1 10s linear infinite;
-    animation: example1 10s linear infinite;
+    -moz-animation: example1 15s linear infinite;
+    -webkit-animation: example1 15s linear infinite;
+    animation: example1 15s linear infinite;
    }
    /* Move it (define the animation) */
    @-moz-keyframes example1 {
