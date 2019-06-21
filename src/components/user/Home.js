@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Grid, Message, Container, Header, Button } from 'semantic-ui-react';
 import { userInfo } from 'os';
+import Carousel from './Carousel';
+import WelcomeMessage from './WelcomeMessage'
+import './Home.css'
 
 export default class Home extends Component {
 
@@ -12,23 +15,12 @@ export default class Home extends Component {
   render() {
 
     return (
-      <Container className="home--container">
-        <Grid>
-          <Button
-            onClick={this.logout}
-            content="Log Out"
-            color="purple" />
-          <Grid.Row centered>
-            <Grid.Column largeScreen={8} computer={10} tablet={12} mobile={16}>
-              <Header textAlign="center">Welcome {this.props.activeUser.firstName}!</Header>
-              <Message
-                icon="lock"
-                header="Protected Content"
-                content="This component should only be visible if a user is logged in" />
-            </Grid.Column>
-          </Grid.Row>
-        </Grid >
-      </Container>
+      <div className="bgImage">
+        <div className="main-home-container">
+          <WelcomeMessage {...this.props } />
+          <Carousel />
+        </div>
+      </div>
     )
   }
 }

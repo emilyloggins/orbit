@@ -40,7 +40,7 @@ class NavBar extends Component {
                                 <NavLink className="nav-text-side" href="/sightings/">Sightings</NavLink>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-text-side" id="alert-nav" href="/components/">GET OUT</NavLink>
+                                <NavLink className="nav-text-side" id="alert-nav" href="/getout/">GET OUT</NavLink>
                             </NavItem>
                             <NavItem>
                                 <UncontrolledDropdown nav inNavbar>
