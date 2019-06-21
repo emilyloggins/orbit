@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom'
 import "./GetOut.css"
 import GetOutPack from './GetOutPack';
 // import SpinnerMessage from './SpinnerMessage';
+import Transit from './Transit'
 
 class GetOutMain extends Component {
 
@@ -18,7 +19,8 @@ class GetOutMain extends Component {
                     <div class="example1">
                         <h3>AVOID NATIONAL LANDMARKS AT ALL COSTS.</h3>
                     </div>
-                    <GetOutPack />
+                    <GetOutPack {...this.props} />
+                    <Transit />
                     {/* <SpinnerMessage addMessage={this.props.addMessage}
                 activeUser={this.props.activeUser}
                 safe={this.props.safe}

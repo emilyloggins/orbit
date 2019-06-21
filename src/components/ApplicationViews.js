@@ -272,6 +272,7 @@ class ApplicationViews extends Component {
             if (this.props.activeUser) {
               return <GetOutMain
                 {...props}
+                packs={this.state.packs}
                 activeUser={this.props.activeUser}
               />
             } else {

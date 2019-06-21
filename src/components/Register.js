@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../components/welcome/Landing.css"
-import ufo from '../img/ufo1.png'
+import orbit from '../img/logo/OrbitLogo1-Icon.svg'
 import '../components/welcome/Landing.css'
 
 
@@ -47,7 +47,7 @@ class Register extends Component {
       <Form  className="landing-div-main bgImage">
       <div className="welcome-card-div">
       <div className="heading-blurb-container">
-      <img src={ufo} className="ufo-icon" alt="ufo icon"></img>
+      <img src={orbit} className="orbit-icon" alt="ufo icon"></img>
       </div>
       <div className="register-form">
         <Row form>

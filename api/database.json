@@ -82,11 +82,6 @@
     },
     {
       "packId": 1,
-      "itemId": 14,
-      "id": 14
-    },
-    {
-      "packId": 1,
       "itemId": 15,
       "id": 15
     },
@@ -100,8 +95,8 @@
     {
       "id": 1,
       "name": "Personal Pack",
-      "description": "Description",
-      "packed": true
+      "description": "Includes all personal items for invasion. Does not include Mabel's things, or any climate specific gear.",
+      "packed": false
     },
     {
       "name": "Mabel's Pack",
@@ -113,7 +108,7 @@
       "id": 4,
       "name": "Drew's Pack",
       "description": "This is assuming Drew has not already been taken and/or probed.",
-      "packed": false
+      "packed": true
     }
   ],
   "items": [
@@ -178,19 +173,13 @@
       "id": 13
     },
     {
-      "name": "Hydrogen Cyanide",
-      "category": "Weapon",
-      "quantity": "1",
-      "id": 14
-    },
-    {
       "name": "Acid",
       "category": "Weapon",
       "quantity": "1",
       "id": 15
     },
     {
-      "name": "Eclipse googles",
+      "name": "Eclipse Googles",
       "category": "Gear",
       "quantity": "1",
       "id": 16
