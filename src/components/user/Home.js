@@ -17,9 +17,12 @@ export default class Home extends Component {
     return (
       <div className="bgImage">
         <div className="main-home-container">
-          <WelcomeMessage {...this.props } />
-          <Carousel />
-          <h1>Here's some things you missed while you were gone.</h1>
+          <div className="welcome-container">
+            <WelcomeMessage {...this.props} />
+          </div>
+          <div className="carousel-container">
+            <Carousel />
+          </div>
         </div>
       </div>
     )

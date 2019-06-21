@@ -2,6 +2,31 @@
     background: url(../../img/starmap.jpg) no-repeat center center;
     background-size: 100% 100%;
   }
+  .pack-card {
+    margin: 5em 20em 0 20em;
+  }
+  .packed-card-title {
+    font-size: 3em;
+    padding: .5em;
+  }
+  .fade-btn {
+    margin-top: 3em;
+    border: none;
+    /* width: 400px; */
+    font-size: 3em;
+    background-color: red;
+  }
+  .fade-btn:hover {
+    background-color: #1D343C;
+    color: red;
+    border-color: red;
+  }
+  .transit-blurb {
+    background-color: white;
+    padding: 1em;
+    margin: 5em 15em 0 15em;
+    font-size: 2em;
+  }
 
   /* scrolling text */
   .example1 {

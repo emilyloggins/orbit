@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { withRouter } from 'react-router'
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import "./NavBar.css"
+import orbitIcon from '../../img/logo/OrbitLogo2.png'
 
 class NavBar extends Component {
     constructor(props) {
@@ -26,7 +27,7 @@ class NavBar extends Component {
         return (
             <div>
                 <Navbar className="nav-bar-main" light expand="md">
-                    <NavbarBrand className="nav-text" href="/">ORBIT</NavbarBrand>
+                    <NavbarBrand className="nav-text" href="/"><img src={orbitIcon} className="nav-logo"></img></NavbarBrand>
                     <NavbarToggler onClick={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>
@@ -36,9 +37,9 @@ class NavBar extends Component {
                             <NavItem>
                                 <NavLink className="nav-text-side" href="/connect/">Connect</NavLink>
                             </NavItem>
-                            <NavItem>
+                            {/* <NavItem>
                                 <NavLink className="nav-text-side" href="/sightings/">Sightings</NavLink>
-                            </NavItem>
+                            </NavItem> */}
                             <NavItem>
                                 <NavLink className="nav-text-side" id="alert-nav" href="/getout/">GET OUT</NavLink>
                             </NavItem>

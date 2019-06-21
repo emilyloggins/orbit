@@ -20,6 +20,7 @@
   .description-main {
     font-size: 1.5em;
     text-align: left;
+    padding: 1.5px;
   }
   .heading-blurb-container {
     opacity: 2.0;
@@ -44,12 +45,19 @@
    font-size: 1.3em;
    padding-top: 2em;
  }
- .ufo-icon {
-   width: 100px;
+ .orbit-icon {
+   width: 140px;
  }
  .login-form-group {
-   padding: 1.3em;
+   padding: 1.0em;
  }
+ .welcome-btn-container {
+   padding-top: 1em;
+ }
+ .login-buttons {
+   padding-top: 1em;
+ }
+
 
 
 
