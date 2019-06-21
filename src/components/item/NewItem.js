@@ -92,12 +92,27 @@ class NewItem extends Component {
       })
   };
 
+  handleCheck = (evt) => {
+    if (evt.target.checked === true) {
+      const newPack = {
+        id: this.props.chosenPack,
+        packed: true
+      }
+      this.props.updatePack(newPack)
+    } else {
+      const newPack = {
+        id: this.props.chosenPack,
+        packed: false
+      }
+      this.props.updatePack(newPack)
+    }
+  }
 
   render() {
     return (
       <div className="new-item-container">
-        <Label  id="packed-check-label" check>
-          <Input id="packed-check" type="checkbox" />{' '}
+        <Label id="packed-check-label" check>
+          <Input onClick={this.handleCheck} id="packed-check" type="checkbox" />{' '}
           PACKED
           </Label>
         <div className="new-item-header">

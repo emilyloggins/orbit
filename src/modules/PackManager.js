@@ -26,7 +26,7 @@ export default {
     },
     editPack (editedPack) {
       return fetch(`${URL}/${editedPack.id}`, {
-        method: "PUT",
+        method: "PATCH",
         headers: {
           "Content-Type": "application/json"
         },

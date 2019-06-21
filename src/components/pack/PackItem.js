@@ -6,6 +6,7 @@ import { FaEdit } from 'react-icons/fa'
 import './Pack.css'
 import PackEditModal from './PackEditModal'
 import PackManager from '../../modules/PackManager'
+import PackItemHeader from './PackItemHeader'
 
 class PackItem extends Component {
 
@@ -77,7 +78,8 @@ class PackItem extends Component {
                     handleFieldChange={this.handleFieldChange} />
                     <CardHeader className="pack-title-header1" tag="h3">
                         <div className="pack-title-header2">
-                            <h3 className="pack-title-text">{this.props.name}</h3>
+                            {/* <h3 className="pack-title-text">{this.props.name}</h3> */}
+                            <PackItemHeader {...this.props} />
                         </div>
                         <div className="pack-icons-div">
                             <FaTrash className="pack-icon" onClick={() => this.handleDelete(this.props.item.id)} />

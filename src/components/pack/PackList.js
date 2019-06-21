@@ -20,6 +20,7 @@ class PackList extends Component {
                                         key={item.id}
                                         item={item}
                                         name={item.name}
+                                        packed={item.packed}
                                         description={item.description}
                                         deletePack={this.props.deletePack}
                                         getJoinTableItems={this.props.getJoinTableItems} />

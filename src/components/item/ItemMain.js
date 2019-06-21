@@ -89,7 +89,8 @@ class ItemMain extends Component {
                         changeChosenPack={this.props.changeChosenPack}
                         getJoinTableItems={this.props.getJoinTableItems}
                         updateChosenItemsArray={this.updateChosenItemsArray}
-                        updateState={this.updateState} />
+                        updateState={this.updateState}
+                        updatePack={this.props.updatePack} />
                     <ItemList
                         {...this.props}
                         items={this.props.items}

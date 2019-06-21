@@ -65,7 +65,7 @@
     cursor: pointer;
 }
 .pack-title-text {
-    margin: 0;
+    margin-left: 0;
 }
 .pack-icons-div {
     display: flex;
@@ -80,4 +80,7 @@
 }
 .new-pack-header {
     font-size: 3.5em;
+}
+.checkmark {
+    width: 1.5em;
 }
