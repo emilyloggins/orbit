@@ -32,6 +32,17 @@
       "city": "Nashville",
       "zip": "43242",
       "id": "IhyXhFwVRXN4dkK1eg1bcSyQ7Eu1"
+    },
+    {
+      "firstName": "Addam",
+      "lastName": "Joor",
+      "email": "addam@gmail.com",
+      "username": "addam01",
+      "password": null,
+      "street": "111 street",
+      "city": "Nashville",
+      "zip": "37212",
+      "id": "F2UiEjzrW4gw4V0eKXHmnJzFnTT2"
     }
   ],
   "packItems": [
@@ -89,6 +100,11 @@
       "packId": 1,
       "itemId": 16,
       "id": 16
+    },
+    {
+      "packId": 1,
+      "itemId": 17,
+      "id": 17
     }
   ],
   "packs": [
@@ -96,7 +112,7 @@
       "id": 1,
       "name": "Personal Pack",
       "description": "Includes all personal items for invasion. Does not include Mabel's things, or any climate specific gear.",
-      "packed": false
+      "packed": true
     },
     {
       "name": "Mabel's Pack",
@@ -183,6 +199,12 @@
       "category": "Gear",
       "quantity": "1",
       "id": 16
+    },
+    {
+      "name": "Crossbow",
+      "category": "Weapon",
+      "quantity": "3",
+      "id": 17
     }
   ],
   "messages": [
@@ -239,6 +261,12 @@
       "userName": "shelley01",
       "userId": "gQTcYcbpCSYQOqWeCK0d3hTELag1",
       "id": 10
+    },
+    {
+      "body": "ALERT. SIGHTING AT NSS.",
+      "userName": "emloggins",
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "id": 11
     }
   ]
 }

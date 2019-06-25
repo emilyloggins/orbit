@@ -1,7 +1,10 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+#keys
+**/src/Keys.js
+
 # FB config
-./config
+./src/config.js
 
 # db
 *.json

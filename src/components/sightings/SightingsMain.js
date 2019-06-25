@@ -4,7 +4,7 @@ import SightingLog from './SightingLog'
 import Chart from './Chart'
 import './Sighting.css'
 
-class SightingsMain extends Component {
+class SightingsMain extends React.Component {
     constructor() {
         super();
         this.state = {
