@@ -31,6 +31,7 @@ class Register extends Component {
       password: this.state.password,
       street: this.state.street,
       city: this.state.city,
+      state: this.state.state,
       zip: this.state.zip
     }).then(newUser => {
       this.props.setUser(newUser);
