@@ -3,6 +3,7 @@ import { Button, Fade } from 'reactstrap';
 import './GetOut.css'
 import { FaExclamationTriangle } from 'react-icons/fa'
 
+
 class Transit extends Component {
     constructor(props) {
         super(props);
