@@ -10,10 +10,8 @@ import {
   Label,
 } from 'reactstrap';
 import './Item.css'
-import ufo from '../../img/ufo.png'
 import PackItemManager from '../../modules/PackItemManager'
 import ItemManager from '../../modules/ItemManager'
-import { FaUserAstronaut } from 'react-icons/fa'
 
 class NewItem extends Component {
   constructor(props) {
@@ -71,6 +69,7 @@ class NewItem extends Component {
         const PackItemObj = {
           packId: this.props.chosenPack,
           itemId: lastItem.id,
+          userId: this.props.activeUser.id
         }
         this.props.addJoin(PackItemObj)
           .then(() => {

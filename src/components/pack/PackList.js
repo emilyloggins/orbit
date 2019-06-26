@@ -12,19 +12,25 @@ class PackList extends Component {
                 <div className="scrolling-pack-div">
                     {
                         this.props.packs.map(item => {
-                            return (
-                                    <PackItem
-                                        {...this.props}
-                                        packItems={this.props.packItems}
-                                        packs={this.props.packs}
-                                        key={item.id}
-                                        item={item}
-                                        name={item.name}
-                                        packed={item.packed}
-                                        description={item.description}
-                                        deletePack={this.props.deletePack}
-                                        getJoinTableItems={this.props.getJoinTableItems} />
-                            )
+                            this.props.packItems.filter(join => {
+                                // console.log("ITEM", item, "JOIN", join)
+                                if (item.id === join.packId && join.userId === this.props.activeUser.id) {
+                                    console.log("THIS ONE", item)
+                                    return (
+                                        <PackItem
+                                            {...this.props}
+                                            packItems={this.props.packItems}
+                                            packs={this.props.packs}
+                                            key={item.id}
+                                            item={item}
+                                            name={item.name}
+                                            packed={item.packed}
+                                            description={item.description}
+                                            deletePack={this.props.deletePack}
+                                            getJoinTableItems={this.props.getJoinTableItems} />
+                                    )
+                                }
+                            })
                         })
                     }
                 </div>
@@ -36,3 +42,24 @@ class PackList extends Component {
 
 export default withRouter(PackList)
 
+
+// console.log("join", item)
+// if (this.props.packItems.map(join)) {
+//     return (
+//         <PackItem
+//             {...this.props}
+//             packItems={this.props.packItems}
+//             packs={this.props.packs}
+//             key={item.id}
+//             item={item}
+//             name={item.name}
+//             packed={item.packed}
+//             description={item.description}
+//             deletePack={this.props.deletePack}
+//             getJoinTableItems={this.props.getJoinTableItems} />
+//     )
+// } else {
+//     return (
+//         <h2>You have no packs.</h2>
+//     )
+// }
