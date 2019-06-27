@@ -14,11 +14,12 @@ class App extends Component {
   }
 
   setUser = (user) => {
-    //puts the active user in local storage, necessary for editing user profile
-    localStorage.setItem("user", JSON.stringify(user));
-    this.setState({
-      activeUser: user
-    })
+    if (user !== undefined) {
+      localStorage.setItem("user", JSON.stringify(user));
+      this.setState({
+        activeUser: user
+      })
+    }
   }
 
   clearUser = () => {

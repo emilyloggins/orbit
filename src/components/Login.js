@@ -31,6 +31,7 @@ class Login extends Component {
   register = () => {
     this.props.history.push("/register")
   }
+  
   render() {
     return (
 
