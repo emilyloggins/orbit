@@ -75,8 +75,11 @@ export const loginFunction = (email, password) => {
       return userFromJSONServer
     })
     .catch(() => {
-      alert(`No LoG iN`)
-    });
+      alert(`Hmmm, information does not match.`)
+    })
+    .then(() => {
+      localStorage.clear("user")
+    })
 }
 
 export const saveUserToJsonServer = (user) => {
