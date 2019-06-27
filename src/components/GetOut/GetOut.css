@@ -32,11 +32,14 @@
   }
   .station-name {
     font-size: .8em;
-    margin: 0;
+    padding-top: .5em;
   }
   .station-name:hover {
     cursor: pointer;
     color: red;
+  }
+  .text-muted {
+    font-size: .6em;
   }
   .station-id {
     font-size: .5em;

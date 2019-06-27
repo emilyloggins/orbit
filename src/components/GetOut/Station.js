@@ -24,7 +24,6 @@ export default class Station extends Component {
             <div>
                 <TransitModal header={this.props.station.name} toggleModal={this.state.modalShow} handleClickNo={this.handleClickedNo} station={this.props.station} />
                 <p className="station-name" onClick={this.openModal}>{this.props.station.name}</p>
-                <small className="text-muted station-id">ID: {this.props.station.id}</small>
             </div>
         )
     }
