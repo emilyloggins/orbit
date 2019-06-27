@@ -18,10 +18,8 @@ class ItemMain extends Component {
     componentDidMount() {
         PackItemManager.getJoinByPackId(this.props.chosenPack)
             .then(objects => {
-                // console.log("pack items", objects)
                 const itemsArray = []
                 objects.map(item => {
-                    // console.log("item", item.itemId)
                     ItemManager.getItem(item.itemId)
                         .then(i => {
                             itemsArray.push(i)
@@ -38,13 +36,10 @@ class ItemMain extends Component {
     getJoinTableItems = (id) => {
         PackItemManager.getJoinByPackId(id)
             .then(objects => {
-                console.log("pack item objects", objects)
                 const itemsArray = []
                 objects.map(item => {
-                    console.log("item", item)
                     ItemManager.getItem(item.itemId)
                         .then(i => {
-                            console.log("get item", i)
                             itemsArray.push(i)
                         })
                         .then(() => this.setState({ chosenItems: itemsArray }))
@@ -56,7 +51,6 @@ class ItemMain extends Component {
         const itemsArray = this.state.chosenItems;
         ItemManager.getItem(id)
             .then(i => {
-                console.log(i)
                 itemsArray.push(i)
             })
             .then(() => this.setState({ chosenItems: itemsArray }))

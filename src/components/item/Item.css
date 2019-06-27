@@ -87,6 +87,9 @@ width: 7em;
     width: 8%;
     height: auto;
 }
+.delete-icon:hover {
+    cursor: pointer;
+}
 .item-header-quad {
     font-size: 3em;
 }
@@ -103,4 +106,7 @@ width: 7em;
     font-size: 1.5em;
     float: right;
     padding: .5em;
+}
+#packed-check:hover {
+    cursor: pointer;
 }

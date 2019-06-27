@@ -1,8 +1,8 @@
 const URL = "http://localhost:8088/packs"
 
 export default {
-  getPack (id) {
-    return fetch(`${URL}/${id}`).then(e => e.json())
+  getPack (userId) {
+    return fetch(`${URL}/?userId=${userId}`).then(e => e.json())
   },
     getAllPacks () {
       return fetch(`${URL}`).then(e => e.json())

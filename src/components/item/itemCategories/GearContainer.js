@@ -2,21 +2,14 @@ import React, { Component } from 'react'
 import '../Item.css'
 import { ListGroup, ListGroupItem, Badge } from 'reactstrap';
 import { FaTrash } from 'react-icons/fa'
+import ItemManager from '../../../modules/ItemManager'
 
 class GearContainer extends Component {
 
     handleDelete = (itemId) => {
-
-        this.props.packItems.find((packItems)=> {
-            if (packItems.itemId === itemId) {
-                this.props.deleteJoin(packItems.id)
-            }
-        })
-        this.props.deleteItem(itemId)
-        .then(() => {
-            this.props.updateState(this.props.chosenItems)
-        })
-    } 
+        ItemManager.deleteItem(itemId)
+        .then(this.props.getJoinTableItems(this.props.chosenPack))
+    }
 
     render() {
         return (

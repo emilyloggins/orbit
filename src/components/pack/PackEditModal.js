@@ -5,7 +5,6 @@ export default class PackEditModal extends Component {
 
 
     render() {
-
         return (
             <Modal isOpen={this.props.toggleModal} toggle={this.props.handleClickNo}>
                 <ModalHeader>
@@ -15,11 +14,11 @@ export default class PackEditModal extends Component {
                     <Form>
                         <FormGroup>
                             <Label for="name">Name</Label>
-                            <Input type="text" name="name" id="name" placeholder="" onChange={this.props.handleFieldChange} />
+                            <Input type="text" name="name" id="name" placeholder={this.props.name} onChange={this.props.handleFieldChange} />
                         </FormGroup>
                         <FormGroup>
                             <Label for="purpose">Purpose</Label>
-                            <Input type="text" name="purpose" id="purpose" placeholder="" onChange={this.props.handleFieldChange} />
+                            <Input type="text" name="purpose" id="purpose" placeholder={this.props.description} onChange={this.props.handleFieldChange} />
                         </FormGroup>
                     </Form>
                 </ModalBody>

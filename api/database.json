@@ -44,80 +44,80 @@
       "city": "Nashville",
       "zip": "37212",
       "id": "F2UiEjzrW4gw4V0eKXHmnJzFnTT2"
+    },
+    {
+      "firstName": "Becky",
+      "lastName": "Loggins",
+      "email": "becky@gmail.com",
+      "username": "becky01",
+      "password": null,
+      "street": "4032 Muddy River Lane",
+      "city": "Buford",
+      "state": "GA",
+      "zip": "30519",
+      "id": "DsGoR27fO0cvh9dFDJILx60ANOt2"
     }
   ],
   "packItems": [
     {
       "packId": 1,
       "itemId": 1,
-      "id": 1,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 1
     },
     {
       "packId": 1,
       "itemId": 2,
-      "id": 2,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 2
     },
     {
       "packId": 1,
       "itemId": 3,
-      "id": 3,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 3
     },
     {
       "packId": 1,
       "itemId": 5,
-      "id": 5,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 5
     },
     {
       "packId": 1,
       "itemId": 7,
-      "id": 7,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 7
     },
     {
       "packId": 1,
       "itemId": 10,
-      "id": 10,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 10
     },
     {
       "packId": 1,
       "itemId": 11,
-      "id": 11,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 11
     },
     {
       "packId": 1,
       "itemId": 12,
-      "id": 12,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 12
     },
     {
       "packId": 1,
       "itemId": 13,
-      "id": 13,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 13
     },
     {
       "packId": 1,
       "itemId": 15,
-      "id": 15,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 15
     },
     {
       "packId": 1,
       "itemId": 16,
-      "id": 16,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 16
     },
     {
       "packId": 1,
       "itemId": 17,
-      "id": 17,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+      "id": 17
     }
   ],
   "packs": [
@@ -125,19 +125,22 @@
       "id": 1,
       "name": "Personal Pack",
       "description": "Includes all personal items for invasion. Does not include Mabel's things, or any climate specific gear.",
-      "packed": true
+      "packed": true,
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
     },
     {
       "name": "Mabel's Pack",
       "description": "All of Mabel's essentials. Pug supplies, etc.",
       "packed": false,
-      "id": 3
+      "id": 3,
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
     },
     {
       "id": 4,
       "name": "Drew's Pack",
       "description": "This is assuming Drew has not already been taken and/or probed.",
-      "packed": true
+      "packed": true,
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
     }
   ],
   "items": [
@@ -218,6 +221,28 @@
       "category": "Weapon",
       "quantity": "3",
       "id": 17
+    },
+    {
+      "name": "fds",
+      "category": "Food",
+      "quantity": "fds",
+      "id": 18
+    },
+    {
+      "name": "fd",
+      "id": 19
+    },
+    {
+      "name": "fds",
+      "category": "Food",
+      "quantity": "fdsf",
+      "id": 20
+    },
+    {
+      "name": "fsdf",
+      "category": "Food",
+      "quantity": "fds",
+      "id": 21
     }
   ],
   "messages": [

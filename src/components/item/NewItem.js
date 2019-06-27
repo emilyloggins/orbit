@@ -28,7 +28,7 @@ class NewItem extends Component {
   state = {
     name: '',
     category: '',
-    quantity: ''
+    quantity: '',
   };
 
   toggleDropDown() {
@@ -53,6 +53,11 @@ class NewItem extends Component {
     this.setState(stateToChange);
   };
 
+  cancelCourse() {
+    document.querySelector("#name").value = "";
+    document.querySelector("#quantity").value = "";
+  }
+
   submit = () => {
     // this.props.updateState([])
 
@@ -69,7 +74,6 @@ class NewItem extends Component {
         const PackItemObj = {
           packId: this.props.chosenPack,
           itemId: lastItem.id,
-          userId: this.props.activeUser.id
         }
         this.props.addJoin(PackItemObj)
           .then(() => {
@@ -84,7 +88,10 @@ class NewItem extends Component {
                       // console.log("single item", i)
                       itemsArray.push(i)
                     })
-                    .then(() => this.props.updateState(itemsArray))
+                    .then(() => {
+                      this.props.updateState(itemsArray)
+                      this.cancelCourse()
+                    })
                 })
               })
           })
@@ -105,6 +112,11 @@ class NewItem extends Component {
       }
       this.props.updatePack(newPack)
     }
+  }
+  handleCheckBox(e) {
+    this.setState({
+      checked: e.target.checked
+    })
   }
 
   render() {

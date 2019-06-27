@@ -37,27 +37,11 @@ class NavBar extends Component {
                             <NavItem>
                                 <NavLink className="nav-text-side" href="/connect/">Connect</NavLink>
                             </NavItem>
-                            {/* <NavItem>
-                                <NavLink className="nav-text-side" href="/sightings/">Sightings</NavLink>
-                            </NavItem> */}
                             <NavItem>
                                 <NavLink className="nav-text-side" id="alert-nav" href="/getout/">GET OUT</NavLink>
                             </NavItem>
                             <NavItem>
-                                <UncontrolledDropdown nav inNavbar>
-                                    <DropdownToggle className="nav-text-side" nav caret>
-                                        User
-                                    </DropdownToggle>
-                                    <DropdownMenu right>
-                                        <DropdownItem className="nav-text-side">
-                                            Settings
-                                        </DropdownItem>
-                                        <DropdownItem divider />
-                                        <DropdownItem onClick={this.logout} className="nav-text-side">
-                                            Log Out
-                                        </DropdownItem>
-                                    </DropdownMenu>
-                                </UncontrolledDropdown>
+                                <NavLink className="nav-text-side" onClick={this.logout}>Log Out</NavLink>
                             </NavItem>
                         </Nav>
                     </Collapse>
