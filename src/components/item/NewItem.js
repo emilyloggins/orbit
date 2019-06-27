@@ -10,10 +10,8 @@ import {
   Label,
 } from 'reactstrap';
 import './Item.css'
-import ufo from '../../img/ufo.png'
 import PackItemManager from '../../modules/PackItemManager'
 import ItemManager from '../../modules/ItemManager'
-import { FaUserAstronaut } from 'react-icons/fa'
 
 class NewItem extends Component {
   constructor(props) {
@@ -30,7 +28,7 @@ class NewItem extends Component {
   state = {
     name: '',
     category: '',
-    quantity: ''
+    quantity: '',
   };
 
   toggleDropDown() {
@@ -54,6 +52,11 @@ class NewItem extends Component {
     stateToChange[evt.target.id] = evt.target.value;
     this.setState(stateToChange);
   };
+
+  cancelCourse() {
+    document.querySelector("#name").value = "";
+    document.querySelector("#quantity").value = "";
+  }
 
   submit = () => {
     // this.props.updateState([])
@@ -85,7 +88,10 @@ class NewItem extends Component {
                       // console.log("single item", i)
                       itemsArray.push(i)
                     })
-                    .then(() => this.props.updateState(itemsArray))
+                    .then(() => {
+                      this.props.updateState(itemsArray)
+                      this.cancelCourse()
+                    })
                 })
               })
           })
@@ -106,6 +112,11 @@ class NewItem extends Component {
       }
       this.props.updatePack(newPack)
     }
+  }
+  handleCheckBox(e) {
+    this.setState({
+      checked: e.target.checked
+    })
   }
 
   render() {

@@ -16,7 +16,6 @@ class GetOutPack extends Component {
                 <Card className="pack-card">
                     <CardBody>
                         <CardTitle className="packed-card-title">THESE ARE YOUR PACKED BAGS:</CardTitle>
-                        <CardText>
                             {
                                 this.props.packs.map((pack) => {
                                     if (pack.packed === true) {
@@ -26,7 +25,6 @@ class GetOutPack extends Component {
                                     }
                                 })
                             }
-                        </CardText>
                         <Button onClick={this.redirect}>GO TO PACKS</Button>
                     </CardBody>
                 </Card>

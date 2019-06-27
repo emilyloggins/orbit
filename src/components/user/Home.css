@@ -3,7 +3,7 @@
     background-size: 100% 100%;
   }
 .alien-carousel {
-    width: 800px;
+    margin: 0 8em 8em 8em;
 }
 .main-home-container {
     display: flex;
@@ -21,7 +21,7 @@
     font-size: 50px;
 }
 .carousel-container {
-    margin-left: 250px;
+    /* margin-left: 250px; */
 }
 .welcome-container {
     background-color: #1D343C;

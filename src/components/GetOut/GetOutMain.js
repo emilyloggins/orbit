@@ -10,35 +10,36 @@ import TransitManager from "../../modules/TransitManager"
 class GetOutMain extends Component {
 
     state = {
-        routes: [],
+        stations: [],
         safe: ''
     }
 
-    findRoutes = () => {
+    componentDidMount() {
+        const newState = {}
         let city = this.props.activeUser.city
         let state = this.props.activeUser.state
-        // console.log(state)
         GeocodeManager.getGeocode(city, state)
         .then((location) => {
             const lat = location.results[0].geometry.location.lat
             const long = location.results[0].geometry.location.lng
             console.log("lat", lat, long)
             TransitManager.getStations(lat, long, city)
-            .then((stations) => console.log("stations", stations))
+            .then(stations => { newState.stations = stations.Res.Stations.Stn })
+            .then(() => this.setState(newState));
         })
     }
 
 
     render() {
-        this.findRoutes()
+        console.log("stations in state", this.state.stations)
         return (
             <div className="bgImage">
                 {/* <div className="getout-main-container"> */}
-                <div class="example1">
+                <div className="example1">
                     <h3>AVOID NATIONAL LANDMARKS AT ALL COSTS.</h3>
                 </div>
                 <GetOutPack {...this.props} />
-                <Transit />
+                <Transit stations={this.state.stations} />
                 {/* <SpinnerMessage addMessage={this.props.addMessage}
                 activeUser={this.props.activeUser}
                 safe={this.props.safe}

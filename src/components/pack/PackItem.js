@@ -12,8 +12,8 @@ class PackItem extends Component {
 
     state = {
         modalShow: false,
-        name: '',
-        purpose: '',
+        name: this.props.name,
+        purpose: this.props.description,
         handleClickedDeleteYes: this.handleClickedDeleteYes,
         handleClickedNo: this.handleClickedNo
     }
@@ -45,12 +45,17 @@ class PackItem extends Component {
     }
 
     handleDelete = (packId) => {
-        this.props.deletePack(packId)
+        PackManager.deletePack(packId)
+            .then(() => {
+                PackManager.getPack(this.props.activeUser.id)
+                    .then(packs => {
+                        this.props.updateState(packs)
+                    })
+            })
     }
 
     handleItemClick = (id) => {
         this.props.changeChosenPack(id)
-        // this.props.getJoinTableItems(id)
         this.props.history.push("/items")
     }
 
@@ -75,10 +80,9 @@ class PackItem extends Component {
             <div className="pack-item-div" >
                 <Card>
                     <PackEditModal header={"Edit Your Pack"} toggleModal={this.state.modalShow} handleClickYes={this.handleClickedDeleteYes} handleClickNo={this.handleClickedNo} chosenPack={this.props.chosenPack} updatePack={this.props.updatePack} handleSave={this.handleSave}
-                    handleFieldChange={this.handleFieldChange} />
+                        handleFieldChange={this.handleFieldChange} name={this.props.name} description={this.props.description} />
                     <CardHeader className="pack-title-header1" tag="h3">
                         <div className="pack-title-header2">
-                            {/* <h3 className="pack-title-text">{this.props.name}</h3> */}
                             <PackItemHeader {...this.props} />
                         </div>
                         <div className="pack-icons-div">
