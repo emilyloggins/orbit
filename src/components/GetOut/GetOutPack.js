@@ -18,7 +18,7 @@ class GetOutPack extends Component {
                         <CardTitle className="packed-card-title">THESE ARE YOUR PACKED BAGS:</CardTitle>
                             {
                                 this.props.packs.map((pack) => {
-                                    if (pack.packed === true) {
+                                    if (pack.packed === true && pack.userId === this.props.activeUser.id) {
                                         return (
                                             <PackedBags pack={pack} key={pack.id} />
                                         )

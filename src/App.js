@@ -14,12 +14,10 @@ class App extends Component {
   }
 
   setUser = (user) => {
-    if (user !== undefined) {
-      localStorage.setItem("user", JSON.stringify(user));
-      this.setState({
-        activeUser: user
-      })
-    }
+    localStorage.setItem("user", JSON.stringify(user));
+    this.setState({
+      activeUser: user
+    })
   }
 
   clearUser = () => {
@@ -33,11 +31,11 @@ class App extends Component {
     loadReCaptcha();
   }
 
-  render () {
+  render() {
     return (
       <React.Fragment>
-        <Navbar activeUser={this.state.activeUser} clearUser={this.clearUser}/>
-        <ApplicationViews setUser={ this.setUser } clearUser={this.clearUser} activeUser={ this.state.activeUser } />
+        <Navbar activeUser={this.state.activeUser} clearUser={this.clearUser} />
+        <ApplicationViews setUser={this.setUser} clearUser={this.clearUser} activeUser={this.state.activeUser} />
       </React.Fragment>
     )
   }

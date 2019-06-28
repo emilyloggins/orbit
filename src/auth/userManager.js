@@ -77,9 +77,6 @@ export const loginFunction = (email, password) => {
     .catch(() => {
       alert(`Hmmm, information does not match.`)
     })
-    .then(() => {
-      localStorage.clear("user")
-    })
 }
 
 export const saveUserToJsonServer = (user) => {
