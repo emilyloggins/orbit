@@ -23,9 +23,9 @@ class Register extends Component {
   }
 
   submit = (e) => {
-    if (e.target.value === '') {
-      alert("Oops! Please fill out all fields.")
-    } else {
+    // if (e.target.value === '') {
+    //   alert("Oops! Please fill out all fields.")
+    // } else {
       register({
         firstName: this.state.firstName,
         lastName: this.state.lastName,
@@ -40,7 +40,7 @@ class Register extends Component {
         this.props.setUser(newUser);
         this.props.history.push('/home');
       })
-    }
+    // }
   }
 
   login = () => {

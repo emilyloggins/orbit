@@ -12,8 +12,8 @@ class PackItem extends Component {
 
     state = {
         modalShow: false,
-        name: this.props.name,
-        purpose: this.props.description,
+        name: '',
+        purpose: '',
         handleClickedDeleteYes: this.handleClickedDeleteYes,
         handleClickedNo: this.handleClickedNo
     }
@@ -40,8 +40,14 @@ class PackItem extends Component {
             name: this.state.name,
             description: this.state.purpose
         }
-        this.props.updatePack(newPack)
-        this.setState({ modalShow: false })
+        PackManager.editPack(newPack)
+            .then(() => {
+                PackManager.getPack(this.props.activeUser.id)
+                    .then(packs => {
+                        this.props.updateState(packs)
+                        this.setState({ modalShow: false })
+                    })
+            })
     }
 
     handleDelete = (packId) => {

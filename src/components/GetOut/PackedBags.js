@@ -6,14 +6,6 @@ class PackedBags extends Component {
         this.props.history.push('/packs')
     }
 
-    returnPackedBags = () => {
-        if (this.props.pack.packed === true) {
-            return (
-                this.props.pack.name
-            )
-        }
-    }
-
     render() {
         return (
             <React.Fragment >

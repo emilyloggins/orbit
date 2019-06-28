@@ -56,6 +56,18 @@
       "state": "GA",
       "zip": "30519",
       "id": "DsGoR27fO0cvh9dFDJILx60ANOt2"
+    },
+    {
+      "firstName": "skwibbem",
+      "lastName": "teetee",
+      "email": "teetee@me.com",
+      "username": "teetee",
+      "password": null,
+      "street": "209 greenwood drive",
+      "city": "wexford",
+      "state": "pa",
+      "zip": "15090",
+      "id": "YLmhjnUsaCefEzAMgpIdQxzFzu82"
     }
   ],
   "packItems": [
@@ -111,13 +123,28 @@
     },
     {
       "packId": 1,
-      "itemId": 16,
-      "id": 16
+      "itemId": 17,
+      "id": 17
+    },
+    {
+      "packId": 5,
+      "itemId": 22,
+      "id": 18
+    },
+    {
+      "packId": 5,
+      "itemId": 23,
+      "id": 19
+    },
+    {
+      "packId": 5,
+      "itemId": 24,
+      "id": 20
     },
     {
       "packId": 1,
-      "itemId": 17,
-      "id": 17
+      "itemId": 25,
+      "id": 21
     }
   ],
   "packs": [
@@ -141,6 +168,20 @@
       "description": "This is assuming Drew has not already been taken and/or probed.",
       "packed": true,
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
+    },
+    {
+      "name": "Survival Pack",
+      "description": "Gear for safety",
+      "userId": "YLmhjnUsaCefEzAMgpIdQxzFzu82",
+      "packed": true,
+      "id": 5
+    },
+    {
+      "name": "New",
+      "description": "to survive",
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "packed": false,
+      "id": 6
     }
   ],
   "items": [
@@ -211,12 +252,6 @@
       "id": 15
     },
     {
-      "name": "Eclipse Googles",
-      "category": "Gear",
-      "quantity": "1",
-      "id": 16
-    },
-    {
       "name": "Crossbow",
       "category": "Weapon",
       "quantity": "3",
@@ -243,6 +278,29 @@
       "category": "Food",
       "quantity": "fds",
       "id": 21
+    },
+    {
+      "name": "Matches",
+      "quantity": "100",
+      "id": 22
+    },
+    {
+      "name": "matches",
+      "category": "Gear",
+      "quantity": "100",
+      "id": 23
+    },
+    {
+      "name": "sword",
+      "category": "Weapon",
+      "quantity": "2",
+      "id": 24
+    },
+    {
+      "name": "Item",
+      "category": "Weapon",
+      "quantity": "5",
+      "id": 25
     }
   ],
   "messages": [
@@ -305,6 +363,12 @@
       "userName": "emloggins",
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
       "id": 11
+    },
+    {
+      "body": "Hey guys, it's Drew. I am human. Not alien. Promise.",
+      "userName": "teetee",
+      "userId": "YLmhjnUsaCefEzAMgpIdQxzFzu82",
+      "id": 12
     }
   ]
 }
