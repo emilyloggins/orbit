@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Redirect, withRouter } from 'react-router-dom';
 import Login from './Login';
 import Register from './Register';
-import Home from "./user/Home"
-import Landing from "../components/welcome/Landing"
-import PackMain from "../components/pack/PackMain"
-import PackManager from "../modules/PackManager"
-import PackItemManager from "../modules/PackItemManager"
+import Home from './user/Home'
+import Landing from '../components/welcome/Landing'
+import PackMain from '../components/pack/PackMain'
+import PackManager from '../modules/PackManager'
+import PackItemManager from '../modules/PackItemManager'
 import ItemManager from '../modules/ItemManager';
 import ItemMain from '../components/item/ItemMain'
-import ConnectMain from "./connect/ConnectMain"
+import ConnectMain from './connect/ConnectMain'
 import Messages from '../modules/ConnectManager'
 import SightingsMain from '../components/sightings/SightingsMain'
 import GetOutMain from '../components/GetOut/GetOutMain'
@@ -24,10 +24,7 @@ class ApplicationViews extends Component {
     chosenPack: ''
   }
 
-  isAuthenticated = () => localStorage.getItem("user") !== null;
-
   // message calls
-
   deleteMessage = id => {
     const newState = {};
     Messages.deleteMessage(id)
@@ -38,7 +35,6 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
-
   addMessage = message => {
     const newState = {};
     return Messages.postMessage(message)
@@ -50,7 +46,6 @@ class ApplicationViews extends Component {
         return chatMessages;
       });
   };
-
   updateMessage = editedMessageObject => {
     const newState = {};
     Messages.editMessage(editedMessageObject)
@@ -61,8 +56,8 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
-  // pack calls
 
+  // pack calls
   addPack = pack => {
     const newState = {};
     return PackManager.addPack(pack)
@@ -74,7 +69,6 @@ class ApplicationViews extends Component {
         return packs;
       });
   };
-
   deletePack = id => {
     const newState = {};
     PackManager.deletePack(id)
@@ -85,7 +79,6 @@ class ApplicationViews extends Component {
         this.setState(newState);
       });
   };
-
   updatePack = editedPack => {
     const newState = {};
     PackManager.editPack(editedPack)
@@ -97,7 +90,7 @@ class ApplicationViews extends Component {
       });
   };
 
-  // Join table db calls
+  // Join table calls
   deleteJoin = id => {
     const newState = {};
     PackItemManager.deleteJoin(id)
@@ -109,7 +102,6 @@ class ApplicationViews extends Component {
         return packItems;
       });
   };
-
   addJoin = join => {
     const newState = {};
     return PackItemManager.addJoin(join)
@@ -136,7 +128,6 @@ class ApplicationViews extends Component {
         return items;
       });
   };
-
   deleteItem = id => {
     const newState = {};
     ItemManager.deleteItem(id)
@@ -165,15 +156,13 @@ class ApplicationViews extends Component {
       .then(() => this.setState(newState));
   }
 
-  //  end calls
-
+// Sets chosen pack ID in state
   changeChosenPack = (id) => {
     this.setState({ chosenPack: id })
   }
- 
+
   render() {
     return (
-
       <div className="App" >
         <Router>
           <Route exact path="/" render={(props) => <Landing user={this.props.user} />} />

@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { loginFunction } from '../auth/userManager';
 import './Login.css'
 import { withRouter } from 'react-router-dom'
-import ufo from '../img/ufo1.png'
 import '../components/welcome/Landing.css'
 import orbit from '../img/logo/OrbitLogo1-Icon.svg'
 
