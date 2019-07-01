@@ -1,3 +1,5 @@
+![alt text](file:///Users/emilyloggins/Downloads/OrbitLogos%20(1)/OrbitLogo1.png "Orbit Logo")
+
 # To Get Started
 1. Create your own Firebase Project
   *Google Console
