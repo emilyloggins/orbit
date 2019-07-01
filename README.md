@@ -1,4 +1,4 @@
-!(orbit/src/img/logo/OrbitLogo1.png?raw=true "Orbit Logo")
+!(https://github.com/emilyloggins/orbit-capstone/blob/master/src/img/logo/OrbitLogo1.png "Orbit Logo")
 
 # To Get Started
 1. Create your own Firebase Project
