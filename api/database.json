@@ -68,6 +68,18 @@
       "state": "pa",
       "zip": "15090",
       "id": "YLmhjnUsaCefEzAMgpIdQxzFzu82"
+    },
+    {
+      "firstName": "Jeff",
+      "lastName": "Loggins",
+      "email": "jeff@gmail.com",
+      "username": "jeff0916",
+      "password": null,
+      "street": "219 Wilderness Point",
+      "city": "Hartwell",
+      "state": "GA",
+      "zip": "30519",
+      "id": "AV1XtboyqeTIyCNlkXH1mDocvRz2"
     }
   ],
   "packItems": [
@@ -166,7 +178,7 @@
       "id": 4,
       "name": "Drew's Pack",
       "description": "This is assuming Drew has not already been taken and/or probed.",
-      "packed": true,
+      "packed": false,
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
     },
     {
@@ -175,13 +187,6 @@
       "userId": "YLmhjnUsaCefEzAMgpIdQxzFzu82",
       "packed": true,
       "id": 5
-    },
-    {
-      "name": "New",
-      "description": "to survive",
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "packed": false,
-      "id": 6
     }
   ],
   "items": [

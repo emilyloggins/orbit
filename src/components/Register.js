@@ -4,7 +4,7 @@ import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import "../components/welcome/Landing.css"
+import '../components/welcome/Landing.css'
 import orbit from '../img/logo/OrbitLogo1-Icon.svg'
 import '../components/welcome/Landing.css'
 
@@ -23,9 +23,6 @@ class Register extends Component {
   }
 
   submit = (e) => {
-    // if (e.target.value === '') {
-    //   alert("Oops! Please fill out all fields.")
-    // } else {
       register({
         firstName: this.state.firstName,
         lastName: this.state.lastName,
@@ -40,7 +37,6 @@ class Register extends Component {
         this.props.setUser(newUser);
         this.props.history.push('/home');
       })
-    // }
   }
 
   login = () => {
