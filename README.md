@@ -1,5 +1,6 @@
 ![Orbit Logo](https://github.com/emilyloggins/orbit-capstone/blob/master/src/img/logo/OrbitLogo1.png?raw=true "Orbit Logo")
-
+# Believe in aliens? This is for you.
+Orbit is the one stop shop for alien enthusiasts to survive an invasion. Prepare your virtual survival pack to keep track of your arsenal, connect and share evidence with like-minded people, and find transportation out of your city upon an attack.
 # To Get Started
 1. Create your own Firebase Project
   ⋅⋅*Google Console
