@@ -7,7 +7,8 @@
   *Click the </> icon under "Get started by adding Firebase to your app"
   *Name you app to get access to you Firebase SDK
   *Navigate to the config.TEMPLATE.js and input your information
-2. Open your terminal, navigate to the directory you would like to save this project, and run the command ```git clone git@github.com:emilyloggins/orbit-capstone.git```
+2. Open your terminal, navigate to the directory you would like to save this project, and run the command
+```git clone git@github.com:emilyloggins/orbit-capstone.git```
 3. Run npm install to git all the node dependencies
 4. Navigate to the API folder to start the JSON server on port 8088
 
