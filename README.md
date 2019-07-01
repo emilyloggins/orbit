@@ -10,7 +10,8 @@
 2. Open your terminal, navigate to the directory you would like to save this project, and run the command ```git clone git@github.com:emilyloggins/orbit-capstone.git```
 3. Run npm install to git all the node dependencies
 4. Navigate to the API folder to start the JSON server on port 8088
-  *json-server -p 8088 -w database.json
+
+  ``json-server -p 8088 -w database.json``
 
 ## Available Scripts
 In the project directory, you can run:
