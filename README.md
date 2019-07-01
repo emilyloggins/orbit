@@ -1,6 +1,9 @@
 ![Orbit Logo](https://github.com/emilyloggins/orbit-capstone/blob/master/src/img/logo/OrbitLogo1.png?raw=true "Orbit Logo")
 # Believe in aliens? This is for you.
 Orbit is the one stop shop for alien enthusiasts to survive an invasion. Prepare your virtual survival pack to keep track of your arsenal, connect and share evidence with like-minded people, and find transportation out of your city upon an attack.
+
+![gif](https://media.giphy.com/media/eKPFMehGvHFNkCYPmU/giphy.gif)
+
 # To Get Started
 1. Create your own Firebase Project
 * Google Console
@@ -30,8 +33,6 @@ Orbit is the one stop shop for alien enthusiasts to survive an invasion. Prepare
 
 ```npm start```
 * If project doesn't immediately run, open http://localhost:3000 to view it in the browser.
-
-![gif](https://media.giphy.com/media/eKPFMehGvHFNkCYPmU/giphy.gif)
 
 # Entity Relationship Diagram
 ![Orbit ERD](https://github.com/emilyloggins/orbit-capstone/blob/master/src/img/ERD.png)
