@@ -30,3 +30,6 @@ Orbit is the one stop shop for alien enthusiasts to survive an invasion. Prepare
 
 ```npm start```
 * If project doesn't immediately run, open http://localhost:3000 to view it in the browser.
+
+# Entity Relationship Diagram
+![Orbit ERD](https://github.com/emilyloggins/orbit-capstone/blob/master/src/img/ERD.png)
