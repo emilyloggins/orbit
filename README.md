@@ -1,12 +1,12 @@
-!(https://github.com/emilyloggins/orbit-capstone/blob/master/src/img/logo/OrbitLogo1.png "Orbit Logo")
+![Orbit Logo](https://github.com/emilyloggins/orbit-capstone/blob/master/src/img/logo/OrbitLogo1.png?raw=true "Orbit Logo")
 
 # To Get Started
 1. Create your own Firebase Project
-  *Google Console
-  *Start New Project
-  *Click the </> icon under "Get started by adding Firebase to your app"
-  *Name you app to get access to you Firebase SDK
-  *Navigate to the config.TEMPLATE.js and input your information
+  ⋅⋅*Google Console
+  ⋅⋅*Start New Project
+  ⋅⋅*Click the </> icon under "Get started by adding Firebase to your app"
+  ⋅⋅*Name you app to get access to you Firebase SDK
+  ⋅⋅*Navigate to the config.TEMPLATE.js and input your information
 2. Open your terminal, navigate to the directory you would like to save this project, and run the command
 
 ```git clone git@github.com:emilyloggins/orbit-capstone.git```
