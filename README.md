@@ -16,6 +16,7 @@ Orbit is the one stop shop for alien enthusiasts to survive an invasion. Prepare
 4. Navigate to the API folder to start the JSON server on port 8088
 
   ``json-server -p 8088 -w database.json``
+  
 5. In the orbit directory, run 
 
 ```npm start```
