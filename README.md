@@ -3,11 +3,11 @@
 Orbit is the one stop shop for alien enthusiasts to survive an invasion. Prepare your virtual survival pack to keep track of your arsenal, connect and share evidence with like-minded people, and find transportation out of your city upon an attack.
 # To Get Started
 1. Create your own Firebase Project
-⋅⋅* Google Console
-⋅⋅* Start New Project
-⋅⋅* Click the </> icon under "Get started by adding Firebase to your app"
-⋅⋅* Name you app to get access to you Firebase SDK
-⋅⋅* Navigate to the config.TEMPLATE.js and input your information
+* Google Console
+* Start New Project
+* Click the </> icon under "Get started by adding Firebase to your app"
+* Name you app to get access to you Firebase SDK
+* Navigate to the config.TEMPLATE.js and input your information
 2. Open your terminal, navigate to the directory you would like to save this project, and run the command
 
 ```git clone git@github.com:emilyloggins/orbit-capstone.git```
