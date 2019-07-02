@@ -80,6 +80,42 @@
       "state": "GA",
       "zip": "30519",
       "id": "AV1XtboyqeTIyCNlkXH1mDocvRz2"
+    },
+    {
+      "firstName": "Jimmy",
+      "lastName": "Metts",
+      "email": "jimmy@gmail.com",
+      "username": "jimmy",
+      "password": null,
+      "street": "1708 Acklen Avenue",
+      "city": "Nashville",
+      "state": "TN",
+      "zip": "37212",
+      "id": "JuX4A8ars8Pa73Ab8XEodFRtNWR2"
+    },
+    {
+      "firstName": "Abby",
+      "lastName": "Loggins",
+      "email": "abby@me.com",
+      "username": "abby98",
+      "password": null,
+      "street": "4032 Muddy River Lane",
+      "city": "Buford",
+      "state": "GA",
+      "zip": "30519",
+      "id": "5mWGKcS3K3Xd43jISBFyApw0VDC3"
+    },
+    {
+      "firstName": "Mabel",
+      "lastName": "Mohler",
+      "email": "mabel@me.com",
+      "username": "mabel",
+      "password": null,
+      "street": "1708 Acklen Avenue",
+      "city": "Nashville",
+      "state": "TN",
+      "zip": "37212",
+      "id": "rDRjMEn8OGPYXKu2A5tbea0TypU2"
     }
   ],
   "packItems": [
@@ -157,6 +193,56 @@
       "packId": 1,
       "itemId": 25,
       "id": 21
+    },
+    {
+      "packId": 1,
+      "itemId": 26,
+      "id": 22
+    },
+    {
+      "packId": 1,
+      "itemId": 27,
+      "id": 23
+    },
+    {
+      "packId": 1,
+      "itemId": 28,
+      "id": 24
+    },
+    {
+      "packId": 1,
+      "itemId": 29,
+      "id": 25
+    },
+    {
+      "packId": 1,
+      "itemId": 30,
+      "id": 26
+    },
+    {
+      "packId": 1,
+      "itemId": 31,
+      "id": 27
+    },
+    {
+      "packId": 1,
+      "itemId": 32,
+      "id": 28
+    },
+    {
+      "packId": 1,
+      "itemId": 33,
+      "id": 29
+    },
+    {
+      "packId": 1,
+      "itemId": 34,
+      "id": 30
+    },
+    {
+      "packId": 1,
+      "itemId": 35,
+      "id": 31
     }
   ],
   "packs": [
@@ -164,20 +250,20 @@
       "id": 1,
       "name": "Personal Pack",
       "description": "Includes all personal items for invasion. Does not include Mabel's things, or any climate specific gear.",
-      "packed": true,
+      "packed": false,
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
     },
     {
       "name": "Mabel's Pack",
       "description": "All of Mabel's essentials. Pug supplies, etc.",
-      "packed": false,
+      "packed": true,
       "id": 3,
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
     },
     {
       "id": 4,
-      "name": "Drew's Pack",
-      "description": "This is assuming Drew has not already been taken and/or probed.",
+      "name": "FOOD ONLY PACK",
+      "description": "a million poptarts",
       "packed": false,
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
     },
@@ -302,78 +388,102 @@
       "id": 24
     },
     {
-      "name": "Item",
-      "category": "Weapon",
-      "quantity": "5",
+      "name": "Canned Beans",
+      "category": "Food",
+      "quantity": "60",
       "id": 25
+    },
+    {
+      "name": "Slim Jim's",
+      "category": "Food",
+      "quantity": "6",
+      "id": 26
+    },
+    {
+      "name": "Honey",
+      "category": "Food",
+      "quantity": "1",
+      "id": 27
+    },
+    {
+      "name": "Peanut Butter",
+      "category": "Food",
+      "quantity": "1",
+      "id": 28
+    },
+    {
+      "name": "Powdered Milk",
+      "category": "Food",
+      "quantity": "4",
+      "id": 29
+    },
+    {
+      "name": "Throwing stars",
+      "category": "Weapon",
+      "quantity": "4",
+      "id": 30
+    },
+    {
+      "name": "Cricket Bat",
+      "category": "Weapon",
+      "quantity": "1",
+      "id": 31
+    },
+    {
+      "name": "Chainsaw",
+      "category": "Weapon",
+      "quantity": "20",
+      "id": 32
+    },
+    {
+      "name": "Deodorant",
+      "category": "Misc",
+      "quantity": "1",
+      "id": 33
+    },
+    {
+      "name": "Sunscreen",
+      "category": "Misc",
+      "quantity": "1",
+      "id": 34
+    },
+    {
+      "name": "Firewood",
+      "category": "Gear",
+      "quantity": "9",
+      "id": 35
     }
   ],
   "messages": [
     {
-      "id": 1,
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
       "body": "You guys... I. was. just. PROBED!",
-      "userName": "emloggins"
-    },
-    {
-      "body": "What?!?!?!",
-      "userName": "shelley01",
-      "userId": "gQTcYcbpCSYQOqWeCK0d3hTELag1",
-      "id": 2
-    },
-    {
-      "body": "LOL jk jk XP",
-      "userName": "emloggins",
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "id": 3
-    },
-    {
-      "body": "LOL!",
-      "userName": "heather54",
-      "userId": "IhyXhFwVRXN4dkK1eg1bcSyQ7Eu1",
-      "id": 5
-    },
-    {
-      "body": "Perhaps the earliest UFO sighting occurred in 1450 B.C.",
       "userName": "heather54",
       "userId": "IhyXhFwVRXN4dkK1eg1bcSyQ7Eu1",
       "id": 6
     },
     {
-      "body": "So true.",
+      "body": "What?!?!?!",
       "userName": "shelley01",
       "userId": "gQTcYcbpCSYQOqWeCK0d3hTELag1",
       "id": 7
     },
     {
-      "body": "My aunt was abducted once! The very next day she went to get x-rayed and had 11 extra kidneys",
-      "userName": "emloggins",
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "id": 8
-    },
-    {
-      "body": "Wait no way... the same thing happened to me!",
+      "body": "LOL jk jk XD",
       "userName": "heather54",
       "userId": "IhyXhFwVRXN4dkK1eg1bcSyQ7Eu1",
       "id": 9
+    },
+    {
+      "body": "Omg not funny",
+      "userName": "emloggins",
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "id": 8
     },
     {
       "body": "Aliens are so real, and I'm sure they look exactly how the media potrays them.",
       "userName": "shelley01",
       "userId": "gQTcYcbpCSYQOqWeCK0d3hTELag1",
       "id": 10
-    },
-    {
-      "body": "ALERT. SIGHTING AT NSS.",
-      "userName": "emloggins",
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "id": 11
-    },
-    {
-      "body": "Hey guys, it's Drew. I am human. Not alien. Promise.",
-      "userName": "teetee",
-      "userId": "YLmhjnUsaCefEzAMgpIdQxzFzu82",
-      "id": 12
     }
   ]
 }

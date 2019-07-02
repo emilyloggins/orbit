@@ -13,14 +13,14 @@ class App extends Component {
   }
 
   setUser = (user) => {
-    localStorage.setItem("user", JSON.stringify(user));
+    sessionStorage.setItem("user", JSON.stringify(user));
     this.setState({
       activeUser: user
     })
   }
 
   clearUser = () => {
-    localStorage.clear("user")
+    sessionStorage.clear("user")
     this.setState({
       activeUser: null
     })

@@ -48,7 +48,7 @@ import 'firebase/auth'
 const url = 'http://localhost:8088/users';
 
 const setUserInLocalStorage = (user) => {
-  localStorage.setItem('user', JSON.stringify(user));
+  sessionStorage.setItem('user', JSON.stringify(user));
 }
 
 //username email and password
@@ -100,7 +100,7 @@ export const getUser = (userId) => {
 }
 
 export const getUserFromLocalStorage = () => {
-  const user = localStorage.getItem('user');
+  const user = sessionStorage.getItem('user');
 
   if (!user) return null;
 
@@ -108,7 +108,7 @@ export const getUserFromLocalStorage = () => {
 }
 
 export const logout = () => {
-  localStorage.removeItem('user');
+  sessionStorage.removeItem('user');
 }
 
 export const registerWithFirebase = (email, password) => {

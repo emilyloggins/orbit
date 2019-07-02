@@ -1,8 +1,8 @@
 .bgImage {
-    background: url(../../img/unsplash-stars.jpeg) no-repeat center center;
+    /* background: url(../../img/unsplash-stars.jpeg) no-repeat center center; */
     background-size: 100% 100%;
     opacity: 1.0;
-  }
+}
 .pack-main-container {
     display: flex;
     padding-top: 3em;
@@ -12,7 +12,7 @@
     width: 45%;
     margin: 5%;
     color: #FFFFFF;
-    background-color: #1D343C;
+    background-color: #474b4f;
     opacity: 0.9;
     box-shadow: 10px 10px 5px black;
     padding: 4em;
@@ -32,7 +32,7 @@
 }
 .pack-title-header1 {
     background-color: #86C232;
-    color: #1D343C;
+    color: #474b4f;
     /* display: flex; */
 }
 .pack-item-div {
@@ -44,7 +44,7 @@
 }
 .main-btn {
     background-color: #86C232;
-    color: #1D343C;
+    color: #474b4f;
     border: none;
 }
 .main-btn:hover {
