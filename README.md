@@ -2,10 +2,10 @@
 # Afraid of an extraterrestrial invasion? This is for you.
 Orbit is the one stop shop for alien enthusiasts to survive an invasion. Prepare your virtual survival pack to keep track of your arsenal, connect and share evidence with like-minded people, and find transportation out of your city upon an attack.
 
-# Watch a video demonstration!
+## Watch a video demonstration of Orbit in action!
 https://vimeo.com/353681996
 
-# To Get Started
+## To Get Started
 ![gif](https://media.giphy.com/media/eKPFMehGvHFNkCYPmU/giphy.gif)
 
 1. Create your own Firebase Project
