@@ -43,11 +43,11 @@ Watch a demo of Orbit in action! Click here: https://vimeo.com/353681996
 # What I learned:
 ### DO: 
 - Create every module with the purpose of doing one thing really well. Keep component logic clean and to the point.
-- Don't be scared to dive deep into the docs!
 - Have consistent syntax standards. Commit to the semicolon.
+- Comment your code.
 - SOLID principles are really solid.
 ### DON'T:
 - Pass props frantically because you're scared. Man up.
-- Forget to comment code!
+- Be scared to dive deep into the docs!
 - Hesitate to implement more streamlined logic, even if it means gutting something you spent 3 hours on. 
 
