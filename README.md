@@ -5,6 +5,17 @@ Orbit is the one stop shop for alien enthusiasts to survive an invasion. Prepare
 ## Video Demonstration
 Watch a demo of Orbit in action! Click here: https://vimeo.com/353681996
 
+# What I learned:
+### DO: 
+- Create every module with the purpose of doing one thing really well. Keep component logic clean and to the point.
+- Have consistent syntax standards. Commit to the semicolon.
+- Comment your code.
+- SOLID principles are really solid.
+### DON'T:
+- Pass props frantically because you're scared. Man up.
+- Be scared to dive deep into the docs!
+- Hesitate to implement more streamlined logic, even if it means gutting something you spent 3 hours on. 
+
 ## Try Orbit for yourself!
 ![gif](https://media.giphy.com/media/eKPFMehGvHFNkCYPmU/giphy.gif)
 
@@ -40,14 +51,5 @@ Watch a demo of Orbit in action! Click here: https://vimeo.com/353681996
 ## Entity Relationship Diagram
 ![Orbit ERD](https://github.com/emilyloggins/orbit-capstone/blob/master/src/img/ERD.png)
 
-# What I learned:
-### DO: 
-- Create every module with the purpose of doing one thing really well. Keep component logic clean and to the point.
-- Have consistent syntax standards. Commit to the semicolon.
-- Comment your code.
-- SOLID principles are really solid.
-### DON'T:
-- Pass props frantically because you're scared. Man up.
-- Be scared to dive deep into the docs!
-- Hesitate to implement more streamlined logic, even if it means gutting something you spent 3 hours on. 
+
 
