@@ -5,7 +5,7 @@ Orbit is the one stop shop for alien enthusiasts to survive an invasion. Prepare
 ## Video Demonstration
 Watch a demo of Orbit in action! Click here: https://vimeo.com/353681996
 
-## To Get Started
+## Run Orbit for yourself
 ![gif](https://media.giphy.com/media/eKPFMehGvHFNkCYPmU/giphy.gif)
 
 1. Create your own Firebase Project
