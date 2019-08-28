@@ -7,7 +7,6 @@ import 'semantic-ui-css/semantic.min.css';
 import * as firebase from 'firebase/app'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FBApiKey,
   authDomain: process.env.REACT_APP_FBAuthDomain,
