@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
-import { Grid, Message, Container, Header, Button } from 'semantic-ui-react';
-import { userInfo } from 'os';
-import Carousel from './Carousel';
 import './Home.css'
 import orbit from '../../img/logo/OrbitLogo1-Icon.svg'
 
 export default class Home extends Component {
-
   render() {
-
     return (
       <div className="welcome-blurb">
         <img src={orbit} className="orbit-home-icon" alt="ufo icon"></img>

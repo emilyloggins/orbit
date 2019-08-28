@@ -43,10 +43,6 @@ class NewItem extends Component {
     });
   }
 
-  // clearFields() {
-  //     this.preventDefault();
-  //     this.target.reset();
-  // };
   handleFieldChange = evt => {
     const stateToChange = {};
     stateToChange[evt.target.id] = evt.target.value;
@@ -59,8 +55,6 @@ class NewItem extends Component {
   }
 
   submit = () => {
-    // this.props.updateState([])
-
     const ItemObj = {
       name: this.state.name,
       category: this.state.category,
@@ -79,13 +73,10 @@ class NewItem extends Component {
           .then(() => {
             PackItemManager.getJoinByPackId(this.props.chosenPack)
               .then(objects => {
-                // console.log("objects", objects)
                 const itemsArray = []
                 objects.map(item => {
-                  // console.log("item id", item.id)
                   ItemManager.getItem(item.itemId)
                     .then(i => {
-                      // console.log("single item", i)
                       itemsArray.push(i)
                     })
                     .then(() => {

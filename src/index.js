@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from "react-router-dom"
 import './index.css';
 import App from './App';
 import 'semantic-ui-css/semantic.min.css';
-import * as firebase from 'firebase'
+import * as firebase from 'firebase/app'
 import { FBApiKey, FBAuthDomain, FBDatabaseURL, FBProjectID, FBStorageBucket, FBMessageSenderID, FBAppID } from './config'
 import 'bootstrap/dist/css/bootstrap.min.css';
 

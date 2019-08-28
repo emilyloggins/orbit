@@ -47,31 +47,8 @@ class PackList extends Component {
                     }
                 </div>
             </div>
-
         )
     }
 }
 
 export default withRouter(PackList)
-
-
-// console.log("join", item)
-// if (this.props.packItems.map(join)) {
-//     return (
-//         <PackItem
-//             {...this.props}
-//             packItems={this.props.packItems}
-//             packs={this.props.packs}
-//             key={item.id}
-//             item={item}
-//             name={item.name}
-//             packed={item.packed}
-//             description={item.description}
-//             deletePack={this.props.deletePack}
-//             getJoinTableItems={this.props.getJoinTableItems} />
-//     )
-// } else {
-//     return (
-//         <h2>You have no packs.</h2>
-//     )
-// }

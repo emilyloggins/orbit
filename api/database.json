@@ -116,6 +116,18 @@
       "state": "TN",
       "zip": "37212",
       "id": "rDRjMEn8OGPYXKu2A5tbea0TypU2"
+    },
+    {
+      "firstName": "Archibald",
+      "lastName": "Archibald",
+      "email": "arch@gmail.com",
+      "username": "test",
+      "password": null,
+      "street": "d",
+      "city": "nashville",
+      "state": "TN",
+      "zip": "37212",
+      "id": "cDaRq49vC6bIUN9PdJMgcJZ7oYQ2"
     }
   ],
   "packItems": [
@@ -211,21 +223,6 @@
     },
     {
       "packId": 1,
-      "itemId": 29,
-      "id": 25
-    },
-    {
-      "packId": 1,
-      "itemId": 30,
-      "id": 26
-    },
-    {
-      "packId": 1,
-      "itemId": 31,
-      "id": 27
-    },
-    {
-      "packId": 1,
       "itemId": 32,
       "id": 28
     },
@@ -236,13 +233,28 @@
     },
     {
       "packId": 1,
-      "itemId": 34,
-      "id": 30
+      "itemId": 35,
+      "id": 31
     },
     {
       "packId": 1,
-      "itemId": 35,
-      "id": 31
+      "itemId": 36,
+      "id": 32
+    },
+    {
+      "packId": 1,
+      "itemId": 37,
+      "id": 33
+    },
+    {
+      "packId": 1,
+      "itemId": 38,
+      "id": 34
+    },
+    {
+      "packId": 1,
+      "itemId": 39,
+      "id": 35
     }
   ],
   "packs": [
@@ -250,7 +262,7 @@
       "id": 1,
       "name": "Personal Pack",
       "description": "Includes all personal items for invasion. Does not include Mabel's things, or any climate specific gear.",
-      "packed": false,
+      "packed": true,
       "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2"
     },
     {
@@ -273,6 +285,20 @@
       "userId": "YLmhjnUsaCefEzAMgpIdQxzFzu82",
       "packed": true,
       "id": 5
+    },
+    {
+      "name": "Acid Rain Pack",
+      "description": "Contains what you need if the aliens fight with acid rain.",
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "packed": false,
+      "id": 6
+    },
+    {
+      "name": "Pee pee pack",
+      "description": "to store all your pee ",
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "packed": false,
+      "id": 7
     }
   ],
   "items": [
@@ -412,24 +438,6 @@
       "id": 28
     },
     {
-      "name": "Powdered Milk",
-      "category": "Food",
-      "quantity": "4",
-      "id": 29
-    },
-    {
-      "name": "Throwing stars",
-      "category": "Weapon",
-      "quantity": "4",
-      "id": 30
-    },
-    {
-      "name": "Cricket Bat",
-      "category": "Weapon",
-      "quantity": "1",
-      "id": 31
-    },
-    {
       "name": "Chainsaw",
       "category": "Weapon",
       "quantity": "20",
@@ -442,16 +450,34 @@
       "id": 33
     },
     {
-      "name": "Sunscreen",
-      "category": "Misc",
-      "quantity": "1",
-      "id": 34
-    },
-    {
       "name": "Firewood",
       "category": "Gear",
       "quantity": "9",
       "id": 35
+    },
+    {
+      "name": "Powdered Milk",
+      "category": "Food",
+      "quantity": "3",
+      "id": 36
+    },
+    {
+      "name": "Band Aids",
+      "category": "Misc",
+      "quantity": "100",
+      "id": 37
+    },
+    {
+      "name": "Peanuts",
+      "category": "Food",
+      "quantity": "3",
+      "id": 38
+    },
+    {
+      "name": "Shotgun",
+      "category": "Weapon",
+      "quantity": "5",
+      "id": 39
     }
   ],
   "messages": [
@@ -474,16 +500,16 @@
       "id": 9
     },
     {
-      "body": "Omg not funny",
-      "userName": "emloggins",
-      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
-      "id": 8
-    },
-    {
       "body": "Aliens are so real, and I'm sure they look exactly how the media potrays them.",
       "userName": "shelley01",
       "userId": "gQTcYcbpCSYQOqWeCK0d3hTELag1",
       "id": 10
+    },
+    {
+      "body": "ALERT. SIGHTING AT NSS.",
+      "userName": "emloggins",
+      "userId": "qp2SVOI0A6OpQQ6eHwj0PWa51qJ2",
+      "id": 11
     }
   ]
 }

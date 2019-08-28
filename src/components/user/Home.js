@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Grid, Message, Container, Header, Button } from 'semantic-ui-react';
-import { userInfo } from 'os';
 import Carousel from './Carousel';
 import WelcomeMessage from './WelcomeMessage'
 import './Home.css'

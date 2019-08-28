@@ -6,6 +6,7 @@
     "bootstrap": "^4.3.1",
     "chart.js": "^2.8.0",
     "firebase": "^6.1.0",
+    "json-server": "^0.15.0",
     "moment": "^2.24.0",
     "react": "^16.8.6",
     "react-chartjs": "^1.2.0",
@@ -20,7 +21,9 @@
     "semantic-ui-react": "^0.87.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run build && npm run json-serve",
+    "json-serve": "node server.js",
+    "start:dev": "concurrently \"npm run json-serve\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,5 +42,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2"
   }
 }

@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import FoodContainer from './itemCategories/FoodContainer'
-import GearContainer from './itemCategories/GearContainer';
 import ItemContainer from './ItemContainer'
 import './Item.css'
 

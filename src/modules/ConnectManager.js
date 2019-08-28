@@ -1,4 +1,6 @@
-const remoteURL = "http://localhost:8088"
+const remoteURL = process.env.NODE_ENV === 'production'
+    ? "/api"
+    : "http://localhost:8088/api";
 
 export default {
   getMessage (id) {

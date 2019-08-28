@@ -9,8 +9,7 @@ import ItemManager from '../../modules/ItemManager'
 import './Item.css'
 
 class ItemMain extends Component {
-
-
+    
     state = {
         chosenItems: [],
     }

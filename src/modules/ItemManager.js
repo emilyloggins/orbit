@@ -1,5 +1,7 @@
 
-const URL = "http://localhost:8088/items"
+const remoteURL = process.env.NODE_ENV === 'production'
+? "/api/items"
+: "http://localhost:8088/api/items";
 
 export default {
   getItem (id) {

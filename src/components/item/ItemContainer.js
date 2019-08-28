@@ -7,12 +7,10 @@ import { FaUtensils } from 'react-icons/fa'
 import { FaCampground } from 'react-icons/fa'
 import { FaSkullCrossbones } from 'react-icons/fa'
 import { FaToiletPaper } from 'react-icons/fa'
-
 import './Item.css'
 
 
 class ItemContainer extends Component {
-
     render() {
         return (
             <div className="category-div-main">
