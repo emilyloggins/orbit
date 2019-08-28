@@ -1,7 +1,7 @@
-const remoteURL = process.env.NODE_ENV === 'production'
+const URL = process.env.NODE_ENV === 'production'
     ? "/api/packs"
     : "http://localhost:8088/api/packs";
-    
+
 export default {
   getPack (userId) {
     return fetch(`${URL}/?userId=${userId}`).then(e => e.json())
