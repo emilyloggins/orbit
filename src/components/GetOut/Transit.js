@@ -21,14 +21,10 @@ class Transit extends Component {
                     <small className="text-muted">Click a station to view details.</small>
                     {
                         this.props.stations.map(station => {
-                            if (station.name !== "Nashville Zoo Station Inbound" && station.name !== "Nashville West Station Inbound") {
                                 return (
                                     <Station key={station.id}
                                         station={station} />
                                 )
-                            } else {
-                                return null;
-                            }
                         })
                     }
                 </Fade>

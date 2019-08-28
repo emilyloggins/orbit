@@ -10,17 +10,8 @@ class FoodContainer extends Component {
         ItemManager.deleteItem(itemId)
         .then(this.props.getJoinTableItems(this.props.chosenPack))
     }
-    // handleDelete = (itemId) => {
-    //     this.props.packItems.find((packItems) => {
-    //         if (packItems.itemId === itemId) {
-    //             this.props.deleteJoin(packItems.id)
-    //         }
-    //         this.props.getJoinTableItems(this.props.chosenPack)
-    //     })
-    // }
 
     render() {
-
         return (
             <div className="category-item-container">
                 <ListGroup>

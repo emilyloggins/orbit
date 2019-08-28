@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 export default class PackEditModal extends Component {
-
-
     render() {
         return (
             <Modal isOpen={this.props.toggleModal} toggle={this.props.handleClickNo}>

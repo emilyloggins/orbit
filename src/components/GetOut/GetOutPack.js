@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {
-    Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
+    Card, CardBody,
+    CardTitle, Button
 } from 'reactstrap';
 import PackedBags from './PackedBags'
 

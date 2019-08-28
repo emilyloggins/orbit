@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import { withRouter } from 'react-router'
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink, UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
+import { Collapse, Navbar, 
+    NavbarToggler, NavbarBrand, 
+    Nav, NavItem, NavLink
+} from 'reactstrap';
 import "./NavBar.css"
 import orbitIcon from '../../img/logo/OrbitLogo2.png'
 

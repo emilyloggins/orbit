@@ -44,7 +44,8 @@
     margin: 0 1em 0 1em;
 }
 .category-drop-down {
-width: 7em;
+    width: 7em;
+    background-color: #86C232;
 }
 .new-item-btn {
     margin-left: 1em;
@@ -65,7 +66,6 @@ width: 7em;
     font-size: 1em;
 }
 .new-item-header {
-    /* display: flex; */
     justify-content: space-around;
     justify-content: flex-start;
     padding: 1em;
@@ -98,7 +98,7 @@ width: 7em;
     height: 800px;
     display: inline-flex;
     flex-direction: column;
-    background-color: #1D343C;
+    background-color: #474b4f;
     opacity: 0.9;
     box-shadow: 10px 10px 5px black;
 }

@@ -4,10 +4,7 @@ import './GetOut.css'
 import { FaExclamationTriangle } from 'react-icons/fa'
 
 export default class TransitModal extends Component {
-
-
     render() {
-
         return (
             <Modal className="getout-modal" isOpen={this.props.toggleModal} toggle={this.props.handleClickNo}>
                 <ModalHeader>
